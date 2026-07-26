@@ -5,6 +5,7 @@
 Published HTML lives alongside this stub. Instructional density source: [MODULES-SOURCE-v3.md](reference/MODULES-SOURCE-v3.md).
 
 **Living process:** [CURSOR-MATT-SKILLS-PROCESS.md](reference/CURSOR-MATT-SKILLS-PROCESS.md)  
+**Instructor textbook:** [Cursor-AI-dev-Instructor-Textbook-v4.md](reference/Cursor-AI-dev-Instructor-Textbook-v4.md) · [read online](instructor-textbook.html)  
 **Workshop agenda:** [WORKSHOP-AGENDA.md](reference/WORKSHOP-AGENDA.md)  
 **Quick reference:** [QUICK-REFERENCE.md](reference/QUICK-REFERENCE.md)
 

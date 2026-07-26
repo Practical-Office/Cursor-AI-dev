@@ -8,6 +8,7 @@
 
 - Living process lives in `docs/reference/CURSOR-MATT-SKILLS-PROCESS.md`. Course modules lag it.
 - Instructional density for HTML modules: `docs/reference/MODULES-SOURCE-v3.md`.
+- Instructor textbook (enforcement): `docs/reference/Cursor-AI-dev-Instructor-Textbook-v4.md` → online page `docs/instructor-textbook.html`.
 - All domain language is defined in CONTEXT.md. Use exact terms.
 - Skills are installed via `npx skills@latest add mattpocock/skills`. Run `/setup-matt-pocock-skills` once per student repo before any engineering skill work.
 - Prefer the current mattpocock/skills taxonomy and main flow over any custom or outdated versions.

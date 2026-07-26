@@ -2,7 +2,7 @@
 
 **Duration:** 5 full days (or compressed 3.5-day intensive)  
 **Audience:** Competent software engineers with basic Cursor experience  
-**Artifacts:** Published Course HTML (`docs/`), this agenda, living process, certification evidence pack  
+**Artifacts:** Published Course HTML (`docs/`), this agenda, living process, [Instructor Textbook](../instructor-textbook.html) (`docs/reference/Cursor-AI-dev-Instructor-Textbook-v4.md`), certification evidence pack  
 **Living process:** CURSOR-MATT-SKILLS-PROCESS.md  
 **Certification:** Evidence Pack + lead review (`docs/certification.html`)
 
@@ -17,6 +17,7 @@
 |-----|--------|
 | Learners | Complete **Setup** (setup.html) — skills installed, `/setup-matt-pocock-skills` run once in their own repo |
 | Facilitator | Confirm live site or local `python3 -m http.server` in `docs/` |
+| Facilitator | Read [Instructor Textbook](../instructor-textbook.html); memorize reset scripts |
 | Facilitator | Print or share quick-reference.html |
 | Facilitator | Have real backlog items ready for each pair (or seeded tickets) |
 

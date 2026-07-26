@@ -24,8 +24,9 @@ gh api -X POST repos/Practical-Office/Cursor-AI-dev/pages \
 
 - [ ] https://practical-office.github.io/Cursor-AI-dev/ loads the hub
 - [ ] Setup + Modules 1–5 navigate and checklists persist in localStorage
-- [ ] Quick reference / Certification / Next steps / course-full print path work
+- [ ] Quick reference / Certification / Next steps / Instructor Textbook / course-full print path work
 - [ ] Living process link opens `docs/reference/CURSOR-MATT-SKILLS-PROCESS.md` on GitHub
+- [ ] Instructor Textbook page loads from `instructor-textbook.html` (source: `docs/reference/Cursor-AI-dev-Instructor-Textbook-v4.md`)
 - [ ] Hub https://practical-office.github.io/dev-sops/ links to this course
 
 ## Local preview

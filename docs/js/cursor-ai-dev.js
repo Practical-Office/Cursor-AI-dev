@@ -13,6 +13,7 @@
   const SETUP = { id: "setup", href: "setup.html", num: "⚙", label: "Setup", meta: "30m" };
 
   const REFERENCE = [
+    { id: "instructor-textbook", href: "instructor-textbook.html", num: "IT", label: "Instructor textbook" },
     { id: "next-steps", href: "next-steps.html", num: "→", label: "Next steps" },
     { id: "certification", href: "certification.html", num: "✓", label: "Certification" },
   ];
