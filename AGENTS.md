@@ -1,5 +1,9 @@
 # AGENTS.md — Cursor + Matt Pocock Skills Course
 
+> **Canonical repo:** [`Practical-Office/Cursor-AI-dev`](https://github.com/Practical-Office/Cursor-AI-dev)  
+> **Live course:** https://practical-office.github.io/Cursor-AI-dev/  
+> **Local preview:** `cd docs && python3 -m http.server 4177`
+
 ## Course repo conventions
 
 - Living process lives in `docs/reference/CURSOR-MATT-SKILLS-PROCESS.md`. Course modules lag it.
