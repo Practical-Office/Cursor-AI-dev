@@ -19,7 +19,7 @@ Not prompt monkeys. Not first-draft speed. Measured by rework reduction, domain-
 | Living process (edit here) | `docs/reference/CURSOR-MATT-SKILLS-PROCESS.md` |
 | Published course (HTML) | `docs/*.html` (GitHub Pages) |
 | Workshop agenda | `docs/reference/WORKSHOP-AGENDA.md` |
-| Module source | `docs/reference/MODULES-SOURCE.md` |
+| Module source (HTML conversion) | `docs/reference/MODULES-SOURCE-v3.md` |
 | Quick reference | `docs/quick-reference.html` · `docs/reference/QUICK-REFERENCE.md` |
 | Certification | `docs/certification.html` |
 

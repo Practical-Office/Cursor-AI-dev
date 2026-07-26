@@ -26,7 +26,7 @@
 <body class="print-page" data-page="course-full" data-base="" data-file="course-full.html">
   <div class="main">
     <header class="topbar no-print" style="position:static;display:flex;justify-content:space-between;align-items:center;padding:1rem 0;margin-bottom:1rem">
-      <div class="topbar-title">Full course — print</div>
+      <div class="topbar-title">Full course — print (v3)</div>
       <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
         <a class="btn btn-ghost btn-sm" href="index.html">← Hub</a>
         <button type="button" class="btn btn-primary btn-sm" id="printCourse">Print / Save as PDF</button>
@@ -34,78 +34,73 @@
     </header>
     <main class="content">
       <section class="hero">
-        <span class="status-chip">Practical AI · Printable path</span>
+        <span class="status-chip">Practical AI · Printable path · v3</span>
         <h1>Cursor + Matt Skills</h1>
-        <p class="hero-lede">5-day course + Setup hard gate. Use <strong>Print → Save as PDF</strong>. Interactive checklists live on the site pages linked below.</p>
+        <p class="hero-lede">New-Dev instructional density from MODULES-SOURCE-v3. Use <strong>Print → Save as PDF</strong>. Interactive checklists live on the site pages.</p>
       </section>
 
       <div class="section-card print-toc">
         <p class="eyebrow">Contents</p>
         <ol>
-          <li><a href="#why">Why (hub intro)</a></li>
           <li><a href="#setup">Setup</a> · <a href="setup.html">setup.html</a></li>
-          <li><a href="#m1">Module 1 — Reality Check</a> · <a href="module-1.html">module-1.html</a></li>
-          <li><a href="#m2">Module 2 — Grill + Spec</a> · <a href="module-2.html">module-2.html</a></li>
-          <li><a href="#m3">Module 3 — Tickets + Implement</a> · <a href="module-3.html">module-3.html</a></li>
-          <li><a href="#m4">Module 4 — Debug / Review</a> · <a href="module-4.html">module-4.html</a></li>
-          <li><a href="#m5">Module 5 — Full Workflow</a> · <a href="module-5.html">module-5.html</a></li>
+          <li><a href="#m1">Module 1</a> · <a href="module-1.html">module-1.html</a></li>
+          <li><a href="#m2">Module 2</a> · <a href="module-2.html">module-2.html</a></li>
+          <li><a href="#m3">Module 3</a> · <a href="module-3.html">module-3.html</a></li>
+          <li><a href="#m4">Module 4</a> · <a href="module-4.html">module-4.html</a></li>
+          <li><a href="#m5">Module 5</a> · <a href="module-5.html">module-5.html</a></li>
           <li><a href="#ref">Quick reference</a> · <a href="quick-reference.html">quick-reference.html</a></li>
         </ol>
         <p style="margin-top:0.75rem;font-size:0.9rem;color:var(--ink-faint)">
-          Living process: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/CURSOR-MATT-SKILLS-PROCESS.md">CURSOR-MATT-SKILLS-PROCESS.md</a> ·
-          Workshop: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/WORKSHOP-AGENDA.md">WORKSHOP-AGENDA.md</a> ·
+          Process: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/CURSOR-MATT-SKILLS-PROCESS.md">CURSOR-MATT-SKILLS-PROCESS.md</a> ·
+          Source: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/MODULES-SOURCE-v3.md">MODULES-SOURCE-v3.md</a> ·
           Cert: <a href="certification.html">certification.html</a>
         </p>
       </div>
 
-      <section class="module" id="why">
-        <div class="module-header"><div class="module-badge">⌂</div><div><h2>Why</h2></div></div>
-        <p>Disciplined Cursor + mattpocock/skills work. Triage first · Three Pillars · Spec synthesis · Binary kill test · Red→Green only · Must-fix same day · Prototypes throwaway.</p>
-        <p style="margin-top:0.75rem"><strong>Chain:</strong> setup → triage → grill → /to-spec → /to-tickets → /implement → /code-review</p>
-      </section>
-
       <section class="module" id="setup">
-        <div class="module-header"><div class="module-badge">⚙</div><div><h2>Setup (hard gate)</h2><p class="module-time">~20–30 min</p></div></div>
+        <div class="module-header"><div class="module-badge">⚙</div><div><h2>Setup (hard gate)</h2><p class="module-time">~25–35 min</p></div></div>
+        <p>Without verified install, later modules invent process. Graded gate.</p>
         <ol>
-          <li><code>npx skills@latest add mattpocock/skills</code></li>
-          <li>Select engineering skills + <code>/setup-matt-pocock-skills</code></li>
-          <li>Run <code>/setup-matt-pocock-skills</code> in your real repo; verify tracker, labels, domain docs</li>
+          <li><code>npx skills@latest add mattpocock/skills</code> (official + setup skill)</li>
+          <li>Run <code>/setup-matt-pocock-skills</code> in real repo; verify tracker/labels/docs</li>
           <li>Recommended: <code>/setup-pre-commit</code></li>
         </ol>
-        <p style="margin-top:0.75rem"><strong>Gate:</strong> No Module 1 until setup output exists and is inspected.</p>
+        <p><strong>Fail if:</strong> skills global but invisible in repo; student skips to prompting; wrong skill set.</p>
       </section>
 
       <section class="module" id="m1">
         <div class="module-header"><div class="module-badge">1</div><div><h2>Reality Check &amp; Core Setup</h2><p class="module-time">Day 1</p></div></div>
-        <p>Cost of undisciplined AI · Composer vs Chat · Rules vs Skills · user- vs model-invoked · triage table · Three Pillars · committed CONTEXT.md/ADR (no verbal theater).</p>
+        <p><strong>Surfaces:</strong> Chat=thinking · Composer/Agent=build · Rules=always-on · Skills=on-demand.</p>
+        <p><strong>Taxonomy:</strong> user-invoked vs model-invoked is architecture. Do not type model-invoked as primary flow.</p>
+        <p><strong>Triage:</strong> foggy→/wayfinder · scoped+code→/grill-with-docs.</p>
+        <p><strong>Pillars:</strong> Context Engineering · Assumption Destruction · Stress Testing.</p>
+        <p><strong>Demo:</strong> raw accept vs weak grill vs full three-pillar grill. <strong>Deliverable:</strong> committed CONTEXT/ADR.</p>
       </section>
 
       <section class="module" id="m2">
-        <div class="module-header"><div class="module-badge">2</div><div><h2>Advanced Grilling + Specification</h2><p class="module-time">Day 2</p></div></div>
-        <p><code>/to-spec</code> synthesizes only. Mandatory: acceptance criteria, non-goals, residual risks. Unbroken grill→spec window. Prime with <code>@</code>.</p>
+        <div class="module-header"><div class="module-badge">2</div><div><h2>Grill + Spec</h2><p class="module-time">Day 2</p></div></div>
+        <p><code>/to-spec</code> synthesizes only. Mandatory: acceptance criteria, non-goals, residual risks. Unbroken grill→spec window. Incomplete → reject in room.</p>
       </section>
 
       <section class="module" id="m3">
-        <div class="module-header"><div class="module-badge">3</div><div><h2>Tickets + Implementation</h2><p class="module-time">Day 3</p></div></div>
-        <p>Vertical tracer-bullet tickets · binary kill test · <code>/implement</code> Red→Green only · CI-equivalent green · clear context between tickets · refactor deferred to review.</p>
+        <div class="module-header"><div class="module-badge">3</div><div><h2>Tickets + Implement</h2><p class="module-time">Day 3</p></div></div>
+        <p>Vertical tracer bullets · binary kill test · Red→Green only · CI-equivalent green · clear context between tickets · refactor in review.</p>
       </section>
 
       <section class="module" id="m4">
-        <div class="module-header"><div class="module-badge">4</div><div><h2>Debug, Review, Architecture, Prototype</h2><p class="module-time">Day 4</p></div></div>
-        <p><code>/diagnosing-bugs</code> · dual-axis <code>/code-review</code> · <code>/improve-codebase-architecture</code> · <code>/prototype</code> throwaway. Must-fix committed same day.</p>
+        <div class="module-header"><div class="module-badge">4</div><div><h2>Debug / Review / Prototype</h2><p class="module-time">Day 4</p></div></div>
+        <p><code>/diagnosing-bugs</code> · dual-axis review (named Fowler smells) · architecture deepenings · <code>/prototype</code> throwaway (LOGIC/UI). Must-fix same day.</p>
       </section>
 
       <section class="module" id="m5">
-        <div class="module-header"><div class="module-badge">5</div><div><h2>Full Workflow + Reality Check</h2><p class="module-time">Day 5</p></div></div>
-        <p>No new theory. Full E2E on real work. Instructor enforces chain. Three <code>/ask-matt</code> decision logs with agree/disagree sentences.</p>
+        <div class="module-header"><div class="module-badge">5</div><div><h2>Full Workflow</h2><p class="module-time">Day 5</p></div></div>
+        <p>No new theory. Full E2E on real work. Instructor enforces. Three <code>/ask-matt</code> decision logs with agree/disagree sentences.</p>
       </section>
 
       <section class="module" id="ref">
         <div class="module-header"><div class="module-badge">⚡</div><div><h2>Quick reference</h2></div></div>
-        <p><strong>Triage:</strong> foggy → /wayfinder · scoped+code → /grill-with-docs</p>
-        <p><strong>Pillars:</strong> Context Engineering · Assumption Destruction · Stress Testing</p>
-        <p><strong>Reject:</strong> incomplete specs · kill-test failures · refactor inside implement · unacted must-fix · hardened prototypes</p>
-        <p style="margin-top:0.75rem">Live page: <a href="quick-reference.html">quick-reference.html</a></p>
+        <p>Reject incomplete specs · kill-test failures · refactor inside implement · unacted must-fix · hardened prototypes.</p>
+        <p>Live: <a href="quick-reference.html">quick-reference.html</a></p>
       </section>
     </main>
   </div>

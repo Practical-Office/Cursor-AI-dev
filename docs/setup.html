@@ -25,48 +25,62 @@
       <main class="content" id="top">
 
         <section class="hero">
-          <span class="status-chip">Pre-requisite · hard gate · ~20–30 min</span>
+          <span class="status-chip">Pre-requisite · hard gate · ~25–35 min</span>
           <h1>Skills <em>setup</em></h1>
-          <p class="hero-lede">Skills installed and <code>/setup-matt-pocock-skills</code> verified in every student’s own repo before any engineering skill is used. Graded, not demoed.</p>
+          <p class="hero-lede">Without a verified install every later module invents process. Unconfigured agents produce confident fiction. Setup is graded, not optional.</p>
         </section>
 
         <div class="section-card">
-          <p class="eyebrow">Learning objectives</p>
-          <h3>What you will leave able to do</h3>
+          <p class="eyebrow">Why this exists</p>
+          <h3>What you leave able to do</h3>
           <ul>
-            <li>Install the Matt Pocock skills pack into Cursor.</li>
-            <li>Run <code>/setup-matt-pocock-skills</code> once in your real working repo.</li>
-            <li>Show setup output (issue tracker, triage labels, domain-doc layout) for inspection.</li>
+            <li>Install mattpocock/skills into Cursor.</li>
+            <li>Run <code>/setup-matt-pocock-skills</code> once in a real repo and show inspectable output.</li>
+            <li>State: Rules = always-on; Skills = on-demand.</li>
           </ul>
         </div>
 
         <div class="hard-truth">
-          <h3>Hard truth</h3>
-          <p>No student proceeds to Module 1 until the setup output exists in their repo. Skipping Setup means you invent process instead of using the shared chain — and your Evidence Pack fails.</p>
+          <h3>Hard gate</h3>
+          <p>No Module 1 until setup output (tracker, labels, domain-doc layout) exists in <strong>your own repo</strong>. Evidence Pack fails if missing.</p>
         </div>
 
         <div class="section-card">
-          <p class="eyebrow">Steps</p>
+          <p class="eyebrow">Exact steps</p>
           <h3>Install and verify</h3>
           <ol>
-            <li>Confirm Cursor is the primary surface (Composer / Agent mode preferred for building).</li>
-            <li>Run:
-              <pre class="code-block"><code>npx skills@latest add mattpocock/skills</code></pre>
-            </li>
-            <li>Select the official engineering skills and <strong>ensure you select <code>/setup-matt-pocock-skills</code></strong>.</li>
-            <li>In your <strong>real working repo</strong>, run <code>/setup-matt-pocock-skills</code>.</li>
-            <li>Verify output: issue tracker connection, triage labels, domain-doc layout visible.</li>
-            <li>(Recommended) Run <code>/setup-pre-commit</code> so local gates match CI.</li>
+            <li>Cursor open; Composer/Agent available (building surface). Chat is for thinking.</li>
+            <li><pre class="code-block"><code>npx skills@latest add mattpocock/skills</code></pre></li>
+            <li>Select official engineering skills <strong>and</strong> <code>/setup-matt-pocock-skills</code>.</li>
+            <li>Open your <strong>real</strong> working repo.</li>
+            <li>Run <code>/setup-matt-pocock-skills</code>; answer tracker / labels / doc layout.</li>
+            <li>Verify files written.</li>
+            <li>Recommended: <code>/setup-pre-commit</code> so local gates match CI.</li>
           </ol>
         </div>
 
         <div class="section-card">
+          <p class="eyebrow">Failure modes</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Failure</th><th>Fix</th></tr></thead>
+              <tbody>
+                <tr><td>Skills global but invisible in repo</td><td>Re-run setup inside target repo</td></tr>
+                <tr><td>Student skips and starts prompting</td><td>Block; no Module 1</td></tr>
+                <tr><td>Wrong skill set selected</td><td>Re-run installer; official + setup</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="section-card">
           <p class="eyebrow">Success</p>
-          <h3>Gate checklist</h3>
+          <h3>Binary checklist</h3>
           <ul class="checklist">
-            <li><label><input type="checkbox" data-progress="setup-c1" /> Skills pack installed; Cursor selected as target</label></li>
-            <li><label><input type="checkbox" data-progress="setup-c2" /> <code>/setup-matt-pocock-skills</code> output inspected in my real repo</label></li>
-            <li><label><input type="checkbox" data-progress="setup-c3" /> (Recommended) <code>/setup-pre-commit</code> run or CI-equivalent local gates confirmed</label></li>
+            <li><label><input type="checkbox" data-progress="setup-c1" /> Install completed</label></li>
+            <li><label><input type="checkbox" data-progress="setup-c2" /> Setup output visible in my real repo</label></li>
+            <li><label><input type="checkbox" data-progress="setup-c3" /> I can point at tracker / labels / domain-doc path files</label></li>
+            <li><label><input type="checkbox" data-progress="setup-c4" /> I can state Rules vs Skills difference</label></li>
           </ul>
         </div>
 

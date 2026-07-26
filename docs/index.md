@@ -1,12 +1,10 @@
-# Cursor + Matt Pocock Skills — 5-Day Course
+# Cursor + Matt Pocock Skills — 5-Day Course (v3)
 
-**Practical AI Engineering**
+**Practical AI Engineering** · Audience: new Dev
 
-This is the source for the published GitHub Pages course.  
-Convert to HTML following the exact pattern of bug-handling-sop (index.html hub + setup.html + module-1.html … module-5.html + quick-reference.html + certification.html).
+Published HTML lives alongside this stub. Instructional density source: [MODULES-SOURCE-v3.md](reference/MODULES-SOURCE-v3.md).
 
-**Living process (source of truth):** [CURSOR-MATT-SKILLS-PROCESS.md](reference/CURSOR-MATT-SKILLS-PROCESS.md)  
-**Module source:** [MODULES-SOURCE.md](reference/MODULES-SOURCE.md)  
+**Living process:** [CURSOR-MATT-SKILLS-PROCESS.md](reference/CURSOR-MATT-SKILLS-PROCESS.md)  
 **Workshop agenda:** [WORKSHOP-AGENDA.md](reference/WORKSHOP-AGENDA.md)  
 **Quick reference:** [QUICK-REFERENCE.md](reference/QUICK-REFERENCE.md)
 

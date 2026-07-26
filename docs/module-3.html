@@ -35,52 +35,56 @@
 
           <div class="section-card">
             <p class="eyebrow">Goal</p>
-            <h3>What this day is for</h3>
-            <p>Convert specs into tracer-bullet tickets that pass the binary kill test. Implement with Red→Green only. Local verification matches CI.</p>
+            <p>Convert a 3-section spec into tracer-bullet tickets that pass the binary kill test. Implement Red→Green only. Local verification matches real CI commands.</p>
           </div>
 
           <div class="section-card">
-            <p class="eyebrow">Teaching points</p>
-            <h3>Must land</h3>
+            <p class="eyebrow">Why</p>
+            <p>Good spec never sliced → large unreviewable diffs and context pollution. Horizontal slicing (“all schema first”) is the most common failure. “Just implement the whole spec” produces balls of mud.</p>
+          </div>
+
+          <div class="hard-truth">
+            <h3>Hard truth</h3>
+            <p>Binary kill test: fail if missing one-sentence user-observable behavior <strong>or</strong> missing/circular blockers. Re-slice immediately. No negotiation. Refactor is <strong>not</strong> inside <code>/implement</code>.</p>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Core concepts</p>
             <ul>
-              <li>Vertical slices that deliver end-to-end observable behavior. Horizontal layers are rejected on sight.</li>
-              <li><strong>Binary kill test:</strong> one-sentence user-observable behavior + recorded blockers (native links or explicit text edges). Fail either → re-slice immediately.</li>
-              <li><code>/implement</code> drives Red→Green at pre-agreed seams only. Refactor is a <code>/code-review</code> output.</li>
-              <li>Before any commit is complete, the project’s real CI-equivalent commands must be green.</li>
-              <li>Context is cleared between tickets. Each <code>/implement</code> starts fresh.</li>
+              <li><strong>Tracer-bullet tickets:</strong> vertical slices, end-to-end observable behavior, declare blockers, sized for one agent session.</li>
+              <li><strong>Binary kill test:</strong> one-sentence user-observable behavior + recorded blockers. Fail either → re-slice.</li>
+              <li><strong><code>/implement</code>:</strong> Red→Green only at seams. Refactor is a <code>/code-review</code> output. Runs CI-equivalent commands. Auto-invokes <code>/code-review</code>. Context cleared between tickets.</li>
+              <li><strong>Local verification matches CI:</strong> “tests pass in session” is not done. Pipeline commands must be green before commit is complete.</li>
             </ul>
           </div>
 
           <div class="section-card">
             <p class="eyebrow">Live demo</p>
-            <h3>Side-by-side</h3>
-            <p>Same small ticket: “just build it” vs full <code>/implement</code> path (Red→Green + auto review). Side-by-side diff, coverage, residual risk.</p>
+            <p>Same small ticket: “just build it” vs full <code>/implement</code> (Red→Green + CI + auto review). Compare diff, coverage, findings, residual risk.</p>
           </div>
 
           <div class="section-card">
             <p class="eyebrow">Practice</p>
-            <h3>Do the work</h3>
-            <p>Convert a Day 2 spec into tickets. Pair-review applies the binary kill test to every ticket. Take one ticket through <code>/implement</code>. Confirm Red→Green commits and that CI-matching commands were run.</p>
+            <p>Convert Day 2 spec → tickets. Pair-review applies kill test to every ticket; failures re-sliced on the spot. One ticket through <code>/implement</code>. Confirm Red→Green only, CI green, review auto-fired.</p>
           </div>
 
           <div class="section-card">
             <p class="eyebrow">Success criteria</p>
-            <h3>Binary checklist</h3>
             <ul class="checklist">
-              <li><label><input type="checkbox" data-progress="m3-c1" /> Ticket graph has zero circular blockers and zero tickets failing the one-sentence test</label></li>
-              <li><label><input type="checkbox" data-progress="m3-c2" /> At least one <code>/implement</code> diff shows Red→Green only (no in-loop refactor)</label></li>
+              <li><label><input type="checkbox" data-progress="m3-c1" /> Zero circular blockers; zero tickets failing one-sentence test</label></li>
+              <li><label><input type="checkbox" data-progress="m3-c2" /> ≥1 <code>/implement</code> diff is Red→Green only (no in-loop refactor)</label></li>
               <li><label><input type="checkbox" data-progress="m3-c3" /> I can state why refactor moved to code review</label></li>
             </ul>
           </div>
 
           <div class="section-card">
             <p class="eyebrow">Stop / Start</p>
-            <h3>Behavior change</h3>
             <ul>
               <li><strong>Stop</strong> teaching red-green-<strong>refactor</strong> inside implement. <strong>Start</strong> Red→Green only; refactor in review.</li>
-              <li><strong>Stop</strong> subjective ticket sizing. <strong>Start</strong> the binary kill test.</li>
+              <li><strong>Stop</strong> subjective sizing. <strong>Start</strong> binary kill test on every ticket.</li>
             </ul>
           </div>
+
         </section>
 
         <div class="page-nav no-print" id="pageNav"></div>

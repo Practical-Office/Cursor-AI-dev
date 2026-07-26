@@ -35,52 +35,58 @@
 
           <div class="section-card">
             <p class="eyebrow">Goal</p>
-            <h3>What this day is for</h3>
-            <p>Give repeatable, model-invoked disciplines for cleaning AI-generated mess and settling design questions that cannot be answered on paper.</p>
+            <p>Repeatable model-invoked disciplines for cleaning AI mess and settling design questions that cannot be answered on paper.</p>
           </div>
 
           <div class="section-card">
-            <p class="eyebrow">Teaching points</p>
-            <h3>Must land</h3>
+            <p class="eyebrow">Why</p>
+            <p>AI creates mess at speed. Without systematic diagnosis, dual-axis review, and throwaway prototyping, teams ship the mess or invent ad-hoc cleanup every time.</p>
+          </div>
+
+          <div class="hard-truth">
+            <h3>Practice gate</h3>
+            <p>Every must-fix has a committed diff before day end. A review with zero fixes is a failed exercise. Prototypes are throwaway — never harden in place.</p>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Core concepts</p>
             <ul>
-              <li><code>/diagnosing-bugs</code> loop: reproduce → minimise → hypothesise → instrument → fix → regression-test. State the current hypothesis and next smallest experiment before changing code.</li>
-              <li>Dual-axis <code>/code-review</code>: Standards (repo conventions + explicit Fowler smells) ‖ Spec. Parallel sub-agents. Must-fix findings committed the same day.</li>
-              <li><code>/improve-codebase-architecture</code>: visual HTML report, then the skill itself grills the selected opportunity. Reject large-rewrite proposals.</li>
-              <li><code>/prototype</code>: throwaway code that answers one design question. Two exclusive branches (LOGIC terminal app / UI toggleable variants). Locate next to real code, mark as prototype, one command to run, no persistence by default, capture verdict on a throwaway branch, never harden into production.</li>
+              <li><strong><code>/diagnosing-bugs</code>:</strong> reproduce → minimise → hypothesise → instrument → fix → regression-test. State hypothesis + next smallest experiment <strong>before</strong> changing code. Model-invoked.</li>
+              <li><strong>Dual-axis <code>/code-review</code>:</strong> Standards (conventions + named Fowler smells) ‖ Spec (match ticket; “no spec available” if none). Parallel sub-agents. Must-fix same day.</li>
+              <li><strong><code>/improve-codebase-architecture</code>:</strong> HTML report of deepenings → skill grills the selected opportunity. Reject large-rewrite proposals.</li>
+              <li><strong><code>/prototype</code>:</strong> throwaway answer to <strong>one</strong> design question.
+                <ul>
+                  <li>Logic/state feel right? → LOGIC terminal app (print full state).</li>
+                  <li>What should it look like? → UI variants on one route + floating toggle bar.</li>
+                  <li>Rules: marked throwaway, next to real code, one command to run, no persistence default, no polish, capture verdict on throwaway branch, never harden in place.</li>
+                </ul>
+              </li>
             </ul>
           </div>
 
           <div class="section-card">
-            <p class="eyebrow">Live demo</p>
-            <h3>Side-by-side</h3>
-            <p>Practice gate: every must-fix finding from today’s reviews has a corresponding committed diff before 17:00. A review with zero fixes is a failed exercise.</p>
-          </div>
-
-          <div class="section-card">
             <p class="eyebrow">Practice</p>
-            <h3>Do the work</h3>
-            <p>Run diagnosing loop on a real defect; produce dual-axis review with named Fowler smells; ship must-fix fixes; produce one prototype on the correct branch, remove from main tree, record verdict.</p>
+            <p>Every must-fix committed before day end. ≥1 prototype on correct branch, removed from main, verdict recorded.</p>
           </div>
 
           <div class="section-card">
             <p class="eyebrow">Success criteria</p>
-            <h3>Binary checklist</h3>
             <ul class="checklist">
-              <li><label><input type="checkbox" data-progress="m4-c1" /> Diagnosing loop runnable with hypothesis stated before each fix attempt</label></li>
-              <li><label><input type="checkbox" data-progress="m4-c2" /> Dual-axis review names at least two Fowler smells by name</label></li>
-              <li><label><input type="checkbox" data-progress="m4-c3" /> Every must-fix has a committed fix</label></li>
-              <li><label><input type="checkbox" data-progress="m4-c4" /> One prototype on correct branch, removed from main tree, verdict recorded</label></li>
+              <li><label><input type="checkbox" data-progress="m4-c1" /> Diagnosing loop; hypothesis before each fix</label></li>
+              <li><label><input type="checkbox" data-progress="m4-c2" /> Review names ≥2 Fowler smells</label></li>
+              <li><label><input type="checkbox" data-progress="m4-c3" /> Every must-fix committed</label></li>
+              <li><label><input type="checkbox" data-progress="m4-c4" /> One prototype: correct branch, throwaway, verdict recorded</label></li>
             </ul>
           </div>
 
           <div class="section-card">
             <p class="eyebrow">Stop / Start</p>
-            <h3>Behavior change</h3>
             <ul>
-              <li><strong>Stop</strong> leaving review findings unacted. <strong>Start</strong> requiring committed fixes before day close.</li>
-              <li><strong>Stop</strong> settling “does this feel right?” during implement. <strong>Start</strong> routing them to <code>/prototype</code>.</li>
+              <li><strong>Stop</strong> leaving findings unacted. <strong>Start</strong> requiring committed fixes before close.</li>
+              <li><strong>Stop</strong> settling “does this feel right?” during implement. <strong>Start</strong> <code>/prototype</code> first.</li>
             </ul>
           </div>
+
         </section>
 
         <div class="page-nav no-print" id="pageNav"></div>

@@ -1,5 +1,5 @@
 (() => {
-  const STORAGE_KEY = "cursor-ai-dev-progress-v1";
+  const STORAGE_KEY = "cursor-ai-dev-progress-v3";
   const THEME_KEY = "cursor-ai-dev-theme";
 
   const MODULES = [
@@ -18,7 +18,7 @@
   ];
 
   const PROGRESS_IDS = [
-    "setup-c1", "setup-c2", "setup-c3",
+    "setup-c1", "setup-c2", "setup-c3", "setup-c4",
     "m1-c1", "m1-c2", "m1-c3", "m1-c4",
     "m2-c1", "m2-c2", "m2-c3",
     "m3-c1", "m3-c2", "m3-c3",
@@ -92,7 +92,7 @@
   function updateNavComplete() {
     const state = load();
     const byModule = {
-      setup: ["setup-c1", "setup-c2", "setup-c3"],
+      setup: ["setup-c1", "setup-c2", "setup-c3", "setup-c4"],
       "module-1": ["m1-c1", "m1-c2", "m1-c3", "m1-c4"],
       "module-2": ["m2-c1", "m2-c2", "m2-c3"],
       "module-3": ["m3-c1", "m3-c2", "m3-c3"],

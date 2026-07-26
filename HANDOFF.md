@@ -1,20 +1,24 @@
 # Handoff — Cursor-AI-dev
 
-## Current state (2026-07-25)
+## Current state (2026-07-25, v3 published)
 
-Published HTML course matches the bug-handling-sop Pages pattern.
+https://practical-office.github.io/Cursor-AI-dev/ — hub + Setup + Modules 1–5 + quick-ref + certification + printable path, rebuilt from `MODULES-SOURCE-v3.md` for a new-Dev audience.
 
-### Done
-- Living process document (`docs/reference/CURSOR-MATT-SKILLS-PROCESS.md`)
-- Module teaching content (`docs/reference/MODULES-SOURCE.md`)
-- Workshop agenda + quick reference markdown
-- CONTEXT.md + AGENTS.md
-- HTML hub: setup, modules 1–5, quick-reference, certification, next-steps, course-full
-- Shared CSS/JS/assets + `.nojekyll`
-- GitHub Pages from `/docs` on `main`
+### Source of truth order
+1. `docs/reference/CURSOR-MATT-SKILLS-PROCESS.md` (living process)
+2. `docs/reference/MODULES-SOURCE-v3.md` (instructional density)
+3. Published HTML modules (must lag the above)
 
-### Process rules that must not regress
-- Course modules lag the living process document.
-- User-invoked vs model-invoked taxonomy is non-negotiable.
-- Red→Green only inside `/implement`; refactor belongs to `/code-review`.
-- Binary artifact gates; no self-reported confidence metrics.
+### v3 instructional density
+- Foundational “why this exists” for each module
+- Full Cursor surface + taxonomy teaching
+- Failure-mode tables
+- Full live-demo scripts
+- Binary success criteria and stop/start preserved
+- Certification evidence pack rigor unchanged
+
+### Non-negotiables that must not regress
+- User-invoked vs model-invoked taxonomy
+- Red→Green only inside `/implement`
+- Binary artifact gates
+- Course modules lag living process
