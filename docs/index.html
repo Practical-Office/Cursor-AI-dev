@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cursor + Matt Skills — Practical AI</title>
+  <meta name="description" content="5-day Cursor + Matt Pocock skills onboarding for Practical AI. Triage, grill, spec, tickets, implement, review." />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/cursor-ai-dev.css" />
+</head>
+<body data-page="hub" data-base="" data-file="index.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Course hub</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="topbarTheme" aria-label="Toggle theme">Theme</button>
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+          <a class="btn btn-primary btn-sm" href="setup.html">Start with Setup →</a>
+        </div>
+      </header>
+      <main class="content" id="top">
+
+        <section class="hero">
+          <span class="status-chip">Practical AI engineering · 5-day course</span>
+          <h1>Cursor + Matt <em>Skills</em></h1>
+          <p class="hero-lede">Disciplined Cursor work with the mattpocock/skills system — triage before grill, implementable specs, tracer-bullet tickets, Red→Green only, dual-axis review. Measured by rework reduction, not first-draft speed.</p>
+        </section>
+
+        <div class="section-card" id="why">
+          <p class="eyebrow">Why</p>
+          <h3>Why a shared Cursor process matters</h3>
+          <p>Without a common chain, engineers invent prompt habits and ship unreviewed AI diffs. This course installs one end-to-end path so the team produces committed domain artifacts, kill-test tickets, and CI-green implement loops — not theater.</p>
+          <p style="margin-top:0.75rem"><strong>Principles:</strong> Triage first · Three Pillars (Context Engineering, Assumption Destruction, Stress Testing) · Spec synthesis only · Binary kill test · Red→Green only in <code>/implement</code> · Must-fix same day · Prototypes are throwaway.</p>
+          <p style="margin-top:0.75rem"><strong>Skills chain:</strong> <code>/setup-matt-pocock-skills</code> → triage (<code>/wayfinder</code> | <code>/grill-with-docs</code>) → <code>/to-spec</code> → <code>/to-tickets</code> → <code>/implement</code> → <code>/code-review</code>. Full skill pages: <a href="https://practical-office.github.io/dev-sops/skills.html">hub Skills</a>.</p>
+        </div>
+
+        <div class="card-grid">
+          <div class="stat-card"><strong>5 modules</strong><span>5 full days · or 3.5-day intensive</span></div>
+          <div class="stat-card"><strong>Setup first</strong><span>Hard gate before Module 1</span></div>
+          <div class="stat-card"><strong>Living process</strong><span>Process source of truth</span></div>
+          <div class="stat-card"><strong>Evidence Pack</strong><span>8 binary artifacts</span></div>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Foundational course</p>
+          <p>This course is the Cursor + Matt Skills foundation. Team Work ticket types still use the three loops:</p>
+          <div class="table-wrap" style="margin-top:0.75rem">
+            <table>
+              <thead><tr><th>Ticket Type</th><th>When</th><th>Course</th></tr></thead>
+              <tbody>
+                <tr><td><code>BML</code></td><td>Risky assumption / experiment</td><td><a href="https://practical-office.github.io/bml-onboarding/">Build-Measure-Learn</a></td></tr>
+                <tr><td><code>Bug</code></td><td>Broken known behavior</td><td><a href="https://practical-office.github.io/bug-handling-sop/">Bug Handling SOP</a></td></tr>
+                <tr><td><code>Update</code></td><td>Decided outcome — not a bet</td><td><a href="https://practical-office.github.io/update-sop/">Update Handling SOP</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin-top:0.75rem"><a href="https://practical-office.github.io/dev-sops/">← Back to hub</a> · Intake: <a href="https://github.com/orgs/Practical-Office/projects/2" target="_blank" rel="noopener noreferrer">Team Work</a></p>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Source of truth</p>
+          <p>The living process document is <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/CURSOR-MATT-SKILLS-PROCESS.md" target="_blank" rel="noopener noreferrer"><strong>CURSOR-MATT-SKILLS-PROCESS.md</strong></a>. Course modules teach it; when process changes, update the process doc first, then align the modules.</p>
+          <p style="margin-top:0.75rem">Facilitators: see the <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/WORKSHOP-AGENDA.md" target="_blank" rel="noopener noreferrer"><strong>Workshop Agenda</strong></a> (5-day or 3.5-day intensive).</p>
+        </div>
+
+        <div class="section-card" id="toc">
+          <p class="eyebrow">Table of contents</p>
+          <div class="table-wrap" style="margin:0;border:none;box-shadow:none">
+            <table>
+              <thead><tr><th>#</th><th>Page</th><th>Time</th></tr></thead>
+              <tbody>
+                <tr><td>—</td><td><a href="setup.html"><strong>Setup</strong> — skills install (hard gate)</a></td><td>~20–30 min</td></tr>
+                <tr><td>1</td><td><a href="module-1.html">Reality Check &amp; Core Setup</a></td><td>Day 1</td></tr>
+                <tr><td>2</td><td><a href="module-2.html">Advanced Grilling + Specification</a></td><td>Day 2</td></tr>
+                <tr><td>3</td><td><a href="module-3.html">Tickets + Implementation</a></td><td>Day 3</td></tr>
+                <tr><td>4</td><td><a href="module-4.html">Debug, Review, Architecture, Prototype</a></td><td>Day 4</td></tr>
+                <tr><td>5</td><td><a href="module-5.html">Full Workflow + Reality Check</a></td><td>Day 5</td></tr>
+                <tr><td>—</td><td><a href="quick-reference.html">Quick reference</a></td><td>print</td></tr>
+                <tr><td>—</td><td><a href="next-steps.html">Next steps</a> · <a href="certification.html">Certification</a></td><td>homework</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin:1rem 0 0;font-size:0.9rem;color:var(--ink-faint)">
+            Hub “Why” (above) is intro only — not a numbered module. Start at <a href="setup.html">Setup</a>, then Module 1. Course modules lag the living process — never the reverse.
+          </p>
+        </div>
+
+        <div class="print-actions no-print">
+          <p class="eyebrow">Save as PDF</p>
+          <p>Open the <a href="course-full.html">full course page</a> (Setup + Modules 1–5 + key reference), then <strong>Print → Save as PDF</strong>.</p>
+          <button type="button" class="btn btn-primary" id="printCourse" onclick="location.href='course-full.html'">Open printable course →</button>
+        </div>
+
+        <div class="page-nav no-print" id="pageNav"></div>
+      </main>
+    </div>
+  </div>
+  <script src="js/cursor-ai-dev.js"></script>
+</body>
+</html>

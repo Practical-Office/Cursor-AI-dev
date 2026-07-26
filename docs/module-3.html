@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Module 3 — Tickets + Implementation | Cursor + Matt Skills</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/cursor-ai-dev.css" />
+</head>
+<body data-page="module-3" data-base="" data-file="module-3.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Module 3 — Tickets + Implementation</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+
+        <section class="module" id="module-3">
+          <div class="module-header">
+            <div class="module-badge">3</div>
+            <div>
+              <h2>Tickets + Implementation</h2>
+              <p class="module-time">Day 3</p>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Goal</p>
+            <h3>What this day is for</h3>
+            <p>Convert specs into tracer-bullet tickets that pass the binary kill test. Implement with Red→Green only. Local verification matches CI.</p>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Teaching points</p>
+            <h3>Must land</h3>
+            <ul>
+              <li>Vertical slices that deliver end-to-end observable behavior. Horizontal layers are rejected on sight.</li>
+              <li><strong>Binary kill test:</strong> one-sentence user-observable behavior + recorded blockers (native links or explicit text edges). Fail either → re-slice immediately.</li>
+              <li><code>/implement</code> drives Red→Green at pre-agreed seams only. Refactor is a <code>/code-review</code> output.</li>
+              <li>Before any commit is complete, the project’s real CI-equivalent commands must be green.</li>
+              <li>Context is cleared between tickets. Each <code>/implement</code> starts fresh.</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Live demo</p>
+            <h3>Side-by-side</h3>
+            <p>Same small ticket: “just build it” vs full <code>/implement</code> path (Red→Green + auto review). Side-by-side diff, coverage, residual risk.</p>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Practice</p>
+            <h3>Do the work</h3>
+            <p>Convert a Day 2 spec into tickets. Pair-review applies the binary kill test to every ticket. Take one ticket through <code>/implement</code>. Confirm Red→Green commits and that CI-matching commands were run.</p>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Success criteria</p>
+            <h3>Binary checklist</h3>
+            <ul class="checklist">
+              <li><label><input type="checkbox" data-progress="m3-c1" /> Ticket graph has zero circular blockers and zero tickets failing the one-sentence test</label></li>
+              <li><label><input type="checkbox" data-progress="m3-c2" /> At least one <code>/implement</code> diff shows Red→Green only (no in-loop refactor)</label></li>
+              <li><label><input type="checkbox" data-progress="m3-c3" /> I can state why refactor moved to code review</label></li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Stop / Start</p>
+            <h3>Behavior change</h3>
+            <ul>
+              <li><strong>Stop</strong> teaching red-green-<strong>refactor</strong> inside implement. <strong>Start</strong> Red→Green only; refactor in review.</li>
+              <li><strong>Stop</strong> subjective ticket sizing. <strong>Start</strong> the binary kill test.</li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="page-nav no-print" id="pageNav"></div>
+      </main>
+    </div>
+  </div>
+  <script src="js/cursor-ai-dev.js"></script>
+</body>
+</html>

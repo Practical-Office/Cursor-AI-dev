@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Module 4 — Debug, Review, Architecture, Prototype | Cursor + Matt Skills</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/cursor-ai-dev.css" />
+</head>
+<body data-page="module-4" data-base="" data-file="module-4.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Module 4 — Debug, Review, Architecture, Prototype</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+
+        <section class="module" id="module-4">
+          <div class="module-header">
+            <div class="module-badge">4</div>
+            <div>
+              <h2>Debug, Review, Architecture, Prototype</h2>
+              <p class="module-time">Day 4</p>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Goal</p>
+            <h3>What this day is for</h3>
+            <p>Give repeatable, model-invoked disciplines for cleaning AI-generated mess and settling design questions that cannot be answered on paper.</p>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Teaching points</p>
+            <h3>Must land</h3>
+            <ul>
+              <li><code>/diagnosing-bugs</code> loop: reproduce → minimise → hypothesise → instrument → fix → regression-test. State the current hypothesis and next smallest experiment before changing code.</li>
+              <li>Dual-axis <code>/code-review</code>: Standards (repo conventions + explicit Fowler smells) ‖ Spec. Parallel sub-agents. Must-fix findings committed the same day.</li>
+              <li><code>/improve-codebase-architecture</code>: visual HTML report, then the skill itself grills the selected opportunity. Reject large-rewrite proposals.</li>
+              <li><code>/prototype</code>: throwaway code that answers one design question. Two exclusive branches (LOGIC terminal app / UI toggleable variants). Locate next to real code, mark as prototype, one command to run, no persistence by default, capture verdict on a throwaway branch, never harden into production.</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Live demo</p>
+            <h3>Side-by-side</h3>
+            <p>Practice gate: every must-fix finding from today’s reviews has a corresponding committed diff before 17:00. A review with zero fixes is a failed exercise.</p>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Practice</p>
+            <h3>Do the work</h3>
+            <p>Run diagnosing loop on a real defect; produce dual-axis review with named Fowler smells; ship must-fix fixes; produce one prototype on the correct branch, remove from main tree, record verdict.</p>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Success criteria</p>
+            <h3>Binary checklist</h3>
+            <ul class="checklist">
+              <li><label><input type="checkbox" data-progress="m4-c1" /> Diagnosing loop runnable with hypothesis stated before each fix attempt</label></li>
+              <li><label><input type="checkbox" data-progress="m4-c2" /> Dual-axis review names at least two Fowler smells by name</label></li>
+              <li><label><input type="checkbox" data-progress="m4-c3" /> Every must-fix has a committed fix</label></li>
+              <li><label><input type="checkbox" data-progress="m4-c4" /> One prototype on correct branch, removed from main tree, verdict recorded</label></li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Stop / Start</p>
+            <h3>Behavior change</h3>
+            <ul>
+              <li><strong>Stop</strong> leaving review findings unacted. <strong>Start</strong> requiring committed fixes before day close.</li>
+              <li><strong>Stop</strong> settling “does this feel right?” during implement. <strong>Start</strong> routing them to <code>/prototype</code>.</li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="page-nav no-print" id="pageNav"></div>
+      </main>
+    </div>
+  </div>
+  <script src="js/cursor-ai-dev.js"></script>
+</body>
+</html>

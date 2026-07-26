@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cursor + Matt Skills — Full course (print)</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/cursor-ai-dev.css" />
+  <style>
+    .print-page .app { display: block; }
+    .print-page .sidebar, .print-page .overlay, .print-page .topbar { display: none !important; }
+    .print-page .main { margin: 0; max-width: 48rem; margin-inline: auto; padding: 1.5rem; }
+    .print-page .module { break-inside: avoid; margin-bottom: 2.5rem; page-break-after: always; }
+    .print-page .module:last-of-type { page-break-after: auto; }
+    .print-page .print-toc a { color: inherit; }
+    @media print {
+      .no-print { display: none !important; }
+      .print-page .module { page-break-after: always; }
+      .print-page .module:last-of-type { page-break-after: auto; }
+    }
+  </style>
+</head>
+<body class="print-page" data-page="course-full" data-base="" data-file="course-full.html">
+  <div class="main">
+    <header class="topbar no-print" style="position:static;display:flex;justify-content:space-between;align-items:center;padding:1rem 0;margin-bottom:1rem">
+      <div class="topbar-title">Full course — print</div>
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
+        <a class="btn btn-ghost btn-sm" href="index.html">← Hub</a>
+        <button type="button" class="btn btn-primary btn-sm" id="printCourse">Print / Save as PDF</button>
+      </div>
+    </header>
+    <main class="content">
+      <section class="hero">
+        <span class="status-chip">Practical AI · Printable path</span>
+        <h1>Cursor + Matt Skills</h1>
+        <p class="hero-lede">5-day course + Setup hard gate. Use <strong>Print → Save as PDF</strong>. Interactive checklists live on the site pages linked below.</p>
+      </section>
+
+      <div class="section-card print-toc">
+        <p class="eyebrow">Contents</p>
+        <ol>
+          <li><a href="#why">Why (hub intro)</a></li>
+          <li><a href="#setup">Setup</a> · <a href="setup.html">setup.html</a></li>
+          <li><a href="#m1">Module 1 — Reality Check</a> · <a href="module-1.html">module-1.html</a></li>
+          <li><a href="#m2">Module 2 — Grill + Spec</a> · <a href="module-2.html">module-2.html</a></li>
+          <li><a href="#m3">Module 3 — Tickets + Implement</a> · <a href="module-3.html">module-3.html</a></li>
+          <li><a href="#m4">Module 4 — Debug / Review</a> · <a href="module-4.html">module-4.html</a></li>
+          <li><a href="#m5">Module 5 — Full Workflow</a> · <a href="module-5.html">module-5.html</a></li>
+          <li><a href="#ref">Quick reference</a> · <a href="quick-reference.html">quick-reference.html</a></li>
+        </ol>
+        <p style="margin-top:0.75rem;font-size:0.9rem;color:var(--ink-faint)">
+          Living process: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/CURSOR-MATT-SKILLS-PROCESS.md">CURSOR-MATT-SKILLS-PROCESS.md</a> ·
+          Workshop: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/WORKSHOP-AGENDA.md">WORKSHOP-AGENDA.md</a> ·
+          Cert: <a href="certification.html">certification.html</a>
+        </p>
+      </div>
+
+      <section class="module" id="why">
+        <div class="module-header"><div class="module-badge">⌂</div><div><h2>Why</h2></div></div>
+        <p>Disciplined Cursor + mattpocock/skills work. Triage first · Three Pillars · Spec synthesis · Binary kill test · Red→Green only · Must-fix same day · Prototypes throwaway.</p>
+        <p style="margin-top:0.75rem"><strong>Chain:</strong> setup → triage → grill → /to-spec → /to-tickets → /implement → /code-review</p>
+      </section>
+
+      <section class="module" id="setup">
+        <div class="module-header"><div class="module-badge">⚙</div><div><h2>Setup (hard gate)</h2><p class="module-time">~20–30 min</p></div></div>
+        <ol>
+          <li><code>npx skills@latest add mattpocock/skills</code></li>
+          <li>Select engineering skills + <code>/setup-matt-pocock-skills</code></li>
+          <li>Run <code>/setup-matt-pocock-skills</code> in your real repo; verify tracker, labels, domain docs</li>
+          <li>Recommended: <code>/setup-pre-commit</code></li>
+        </ol>
+        <p style="margin-top:0.75rem"><strong>Gate:</strong> No Module 1 until setup output exists and is inspected.</p>
+      </section>
+
+      <section class="module" id="m1">
+        <div class="module-header"><div class="module-badge">1</div><div><h2>Reality Check &amp; Core Setup</h2><p class="module-time">Day 1</p></div></div>
+        <p>Cost of undisciplined AI · Composer vs Chat · Rules vs Skills · user- vs model-invoked · triage table · Three Pillars · committed CONTEXT.md/ADR (no verbal theater).</p>
+      </section>
+
+      <section class="module" id="m2">
+        <div class="module-header"><div class="module-badge">2</div><div><h2>Advanced Grilling + Specification</h2><p class="module-time">Day 2</p></div></div>
+        <p><code>/to-spec</code> synthesizes only. Mandatory: acceptance criteria, non-goals, residual risks. Unbroken grill→spec window. Prime with <code>@</code>.</p>
+      </section>
+
+      <section class="module" id="m3">
+        <div class="module-header"><div class="module-badge">3</div><div><h2>Tickets + Implementation</h2><p class="module-time">Day 3</p></div></div>
+        <p>Vertical tracer-bullet tickets · binary kill test · <code>/implement</code> Red→Green only · CI-equivalent green · clear context between tickets · refactor deferred to review.</p>
+      </section>
+
+      <section class="module" id="m4">
+        <div class="module-header"><div class="module-badge">4</div><div><h2>Debug, Review, Architecture, Prototype</h2><p class="module-time">Day 4</p></div></div>
+        <p><code>/diagnosing-bugs</code> · dual-axis <code>/code-review</code> · <code>/improve-codebase-architecture</code> · <code>/prototype</code> throwaway. Must-fix committed same day.</p>
+      </section>
+
+      <section class="module" id="m5">
+        <div class="module-header"><div class="module-badge">5</div><div><h2>Full Workflow + Reality Check</h2><p class="module-time">Day 5</p></div></div>
+        <p>No new theory. Full E2E on real work. Instructor enforces chain. Three <code>/ask-matt</code> decision logs with agree/disagree sentences.</p>
+      </section>
+
+      <section class="module" id="ref">
+        <div class="module-header"><div class="module-badge">⚡</div><div><h2>Quick reference</h2></div></div>
+        <p><strong>Triage:</strong> foggy → /wayfinder · scoped+code → /grill-with-docs</p>
+        <p><strong>Pillars:</strong> Context Engineering · Assumption Destruction · Stress Testing</p>
+        <p><strong>Reject:</strong> incomplete specs · kill-test failures · refactor inside implement · unacted must-fix · hardened prototypes</p>
+        <p style="margin-top:0.75rem">Live page: <a href="quick-reference.html">quick-reference.html</a></p>
+      </section>
+    </main>
+  </div>
+  <script src="js/cursor-ai-dev.js"></script>
+</body>
+</html>

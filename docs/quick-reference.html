@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quick reference | Cursor + Matt Skills</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/cursor-ai-dev.css" />
+</head>
+<body data-page="quick-reference" data-base="" data-file="quick-reference.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Quick reference</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" onclick="window.print()">Print</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+
+        <section class="hero">
+          <span class="status-chip">One-pager</span>
+          <h1>Cursor + Matt <em>quick reference</em></h1>
+          <p class="hero-lede">Print this. Keep it on the desk.</p>
+        </section>
+
+        <div class="section-card">
+          <h3>Taxonomy</h3>
+          <p><strong>User-invoked</strong> (you type): ask-matt, grill-with-docs, wayfinder, triage, improve-codebase-architecture, setup-matt-pocock-skills, to-spec, to-tickets, implement</p>
+          <p style="margin-top:0.5rem"><strong>Model-invoked</strong> (agent reaches): prototype, diagnosing-bugs, research, tdd, domain-modeling, codebase-design, code-review, resolving-merge-conflicts</p>
+        </div>
+
+        <div class="section-card">
+          <h3>Triage first</h3>
+          <ul>
+            <li>Foggy / &gt;1 session → <code>/wayfinder</code></li>
+            <li>Scoped + codebase → <code>/grill-with-docs</code></li>
+            <li>No codebase → prime, then <code>/grill-with-docs</code> once code exists</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <h3>Main chain</h3>
+          <div class="copy-row no-print" style="margin-bottom:0.75rem">
+            <button type="button" class="btn btn-primary btn-sm" data-copy-template>Copy chain</button>
+            <span class="copy-feedback" aria-live="polite"></span>
+          </div>
+          <pre class="code-block"><code>setup → triage → grill → /to-spec (3 sections) → /to-tickets (kill test) → /implement (Red→Green + CI) → /code-review (auto)</code></pre>
+        </div>
+
+        <div class="section-card">
+          <h3>Three Pillars</h3>
+          <ol>
+            <li>Context Engineering</li>
+            <li>Assumption Destruction</li>
+            <li>Stress Testing</li>
+          </ol>
+        </div>
+
+        <div class="section-card">
+          <h3>Non-negotiables</h3>
+          <ul>
+            <li>Spec missing any of: acceptance criteria / non-goals / residual risks → reject</li>
+            <li>Ticket fails one-sentence behavior or missing blockers → re-slice</li>
+            <li>Refactor is <strong>not</strong> inside implement; it is a code-review output</li>
+            <li>Local CI-equivalent commands must be green before commit</li>
+            <li>Must-fix review findings committed the same day</li>
+            <li>Prototype is throwaway; capture verdict; never harden in place</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <h3>Router</h3>
+          <p><code>/ask-matt</code> when unsure. Log the decision.</p>
+        </div>
+
+        <div class="page-nav no-print" id="pageNav"></div>
+      </main>
+    </div>
+  </div>
+  <script src="js/cursor-ai-dev.js"></script>
+</body>
+</html>

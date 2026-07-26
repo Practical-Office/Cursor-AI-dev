@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certification | Cursor + Matt Skills</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/cursor-ai-dev.css" />
+</head>
+<body data-page="certification" data-base="" data-file="certification.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Certification</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+
+        <section class="hero">
+          <span class="status-chip">Evidence Pack · within 5 business days</span>
+          <h1>Cursor Skills <em>certification</em></h1>
+          <p class="hero-lede">Full artifact trail on real shipping work. Missing any required artifact → fail. No partial credit.</p>
+        </section>
+
+        <div class="hard-truth">
+          <h3>What “certified” means</h3>
+          <p>You can run the preferred chain end-to-end on real work and show linked proof — not self-reported confidence.</p>
+        </div>
+
+        <div class="section-card">
+          <h3>Required artifacts (8)</h3>
+          <ol>
+            <li>Proof of <code>/setup-matt-pocock-skills</code> completion.</li>
+            <li>Triage decision record + transcript.</li>
+            <li>Published 3-section spec (acceptance criteria · non-goals · residual risks).</li>
+            <li>Ticket graph passing the binary kill test.</li>
+            <li>At least one <code>/implement</code> Red→Green diff + CI-matching verification evidence.</li>
+            <li>Dual-axis <code>/code-review</code> transcript naming ≥2 Fowler smells + committed must-fix fixes.</li>
+            <li>Three <code>/ask-matt</code> transcripts with agreement/deviation sentences.</li>
+            <li>(If used) <code>/prototype</code> throwaway branch + recorded verdict.</li>
+          </ol>
+        </div>
+
+        <div class="section-card">
+          <h3>Self-attest checklist</h3>
+          <ul class="checklist">
+            <li><label><input type="checkbox" data-progress="cert-1" /> Setup proof linked</label></li>
+            <li><label><input type="checkbox" data-progress="cert-2" /> Triage record + transcript linked</label></li>
+            <li><label><input type="checkbox" data-progress="cert-3" /> 3-section spec published</label></li>
+            <li><label><input type="checkbox" data-progress="cert-4" /> Kill-test ticket graph linked</label></li>
+            <li><label><input type="checkbox" data-progress="cert-5" /> Red→Green implement + CI evidence</label></li>
+            <li><label><input type="checkbox" data-progress="cert-6" /> Dual-axis review + committed must-fix</label></li>
+            <li><label><input type="checkbox" data-progress="cert-7" /> Three ask-matt logs with agree/disagree sentences</label></li>
+            <li><label><input type="checkbox" data-progress="cert-8" /> Prototype verdict (or N/A documented)</label></li>
+          </ul>
+          <p style="margin-top:0.75rem;font-size:0.9rem;color:var(--ink-faint)">A lead must still review the pack. Self-attest is not approval.</p>
+        </div>
+
+        <div class="section-card">
+          <h3>Suggested pack outline</h3>
+          <pre class="code-block"><code># Evidence Pack — [Your name] — [Date]
+
+## 1. Setup
+[Link / screenshot of /setup-matt-pocock-skills output]
+
+## 2. Triage
+[Decision + transcript]
+
+## 3. Spec
+[Link to 3-section spec]
+
+## 4. Tickets
+[Kill-test graph]
+
+## 5. Implement
+[Red→Green commits + CI commands/output]
+
+## 6. Code review
+[Dual-axis transcript · Fowler smells · must-fix commit SHAs]
+
+## 7. ask-matt (×3)
+[Transcript + one agree/disagree sentence each]
+
+## 8. Prototype (if used)
+[Branch + verdict]
+
+## Lead review
+Reviewer: @…
+Verdict: [approved | needs revision]</code></pre>
+        </div>
+
+        <div class="page-nav no-print" id="pageNav"></div>
+      </main>
+    </div>
+  </div>
+  <script src="js/cursor-ai-dev.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Setup — Skills install | Cursor + Matt Skills</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/cursor-ai-dev.css" />
+</head>
+<body data-page="setup" data-base="" data-file="setup.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Setup</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+
+        <section class="hero">
+          <span class="status-chip">Pre-requisite · hard gate · ~20–30 min</span>
+          <h1>Skills <em>setup</em></h1>
+          <p class="hero-lede">Skills installed and <code>/setup-matt-pocock-skills</code> verified in every student’s own repo before any engineering skill is used. Graded, not demoed.</p>
+        </section>
+
+        <div class="section-card">
+          <p class="eyebrow">Learning objectives</p>
+          <h3>What you will leave able to do</h3>
+          <ul>
+            <li>Install the Matt Pocock skills pack into Cursor.</li>
+            <li>Run <code>/setup-matt-pocock-skills</code> once in your real working repo.</li>
+            <li>Show setup output (issue tracker, triage labels, domain-doc layout) for inspection.</li>
+          </ul>
+        </div>
+
+        <div class="hard-truth">
+          <h3>Hard truth</h3>
+          <p>No student proceeds to Module 1 until the setup output exists in their repo. Skipping Setup means you invent process instead of using the shared chain — and your Evidence Pack fails.</p>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Steps</p>
+          <h3>Install and verify</h3>
+          <ol>
+            <li>Confirm Cursor is the primary surface (Composer / Agent mode preferred for building).</li>
+            <li>Run:
+              <pre class="code-block"><code>npx skills@latest add mattpocock/skills</code></pre>
+            </li>
+            <li>Select the official engineering skills and <strong>ensure you select <code>/setup-matt-pocock-skills</code></strong>.</li>
+            <li>In your <strong>real working repo</strong>, run <code>/setup-matt-pocock-skills</code>.</li>
+            <li>Verify output: issue tracker connection, triage labels, domain-doc layout visible.</li>
+            <li>(Recommended) Run <code>/setup-pre-commit</code> so local gates match CI.</li>
+          </ol>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Success</p>
+          <h3>Gate checklist</h3>
+          <ul class="checklist">
+            <li><label><input type="checkbox" data-progress="setup-c1" /> Skills pack installed; Cursor selected as target</label></li>
+            <li><label><input type="checkbox" data-progress="setup-c2" /> <code>/setup-matt-pocock-skills</code> output inspected in my real repo</label></li>
+            <li><label><input type="checkbox" data-progress="setup-c3" /> (Recommended) <code>/setup-pre-commit</code> run or CI-equivalent local gates confirmed</label></li>
+          </ul>
+        </div>
+
+        <div class="page-nav no-print" id="pageNav"></div>
+      </main>
+    </div>
+  </div>
+  <script src="js/cursor-ai-dev.js"></script>
+</body>
+</html>

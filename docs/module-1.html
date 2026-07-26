@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Module 1 — Reality Check &amp; Core Setup | Cursor + Matt Skills</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/cursor-ai-dev.css" />
+</head>
+<body data-page="module-1" data-base="" data-file="module-1.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Module 1 — Reality Check &amp; Core Setup</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+
+        <section class="module" id="module-1">
+          <div class="module-header">
+            <div class="module-badge">1</div>
+            <div>
+              <h2>Reality Check &amp; Core Setup</h2>
+              <p class="module-time">Day 1</p>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Goal</p>
+            <h3>What this day is for</h3>
+            <p>Make the cost of undisciplined AI usage visible. Install taxonomy. Drill triage-before-grill.</p>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Teaching points</p>
+            <h3>Must land</h3>
+            <ul>
+              <li>First-draft speed is not scored. Rework count and review cycles are.</li>
+              <li>Composer / Agent is the building surface. Chat is for thinking.</li>
+              <li>Rules = always-on static context. Skills = on-demand, cost context only when invoked.</li>
+              <li>User-invoked vs model-invoked is architecture, not trivia.</li>
+              <li><strong>Triage table:</strong>
+                <ul>
+                  <li>Foggy / multi-session → <code>/wayfinder</code></li>
+                  <li>Scoped + codebase → <code>/grill-with-docs</code> (reaches <code>/domain-modeling</code>)</li>
+                  <li>No codebase → light priming, then <code>/grill-with-docs</code> once code exists</li>
+                </ul>
+              </li>
+              <li>Three Pillars are properties of the grilling engine, not exclusive to one skill.</li>
+              <li>Verbal “share what changed” is theater. Committed <code>CONTEXT.md</code> / ADR artifact is the deliverable.</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Live demo</p>
+            <h3>Side-by-side</h3>
+            <p>Identical small task: raw accept-everything vs weak grill vs full three-pillar <code>/grill-with-docs</code>. Side-by-side: questions, assumptions destroyed, residual risk, clarity.</p>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Practice</p>
+            <h3>Do the work</h3>
+            <p>Pairs take two real backlog items. Triage first (write the one-sentence reasoning). Run the correct user-invoked skill. Deliverable: committed <code>CONTEXT.md</code> entry or ADR stub. No artifact → no credit.</p>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Success criteria</p>
+            <h3>Binary checklist</h3>
+            <ul class="checklist">
+              <li><label><input type="checkbox" data-progress="m1-c1" /> <code>/setup-matt-pocock-skills</code> output verified</label></li>
+              <li><label><input type="checkbox" data-progress="m1-c2" /> At least one committed CONTEXT.md / ADR from a real item</label></li>
+              <li><label><input type="checkbox" data-progress="m1-c3" /> Correct triage of a new item without prompting</label></li>
+              <li><label><input type="checkbox" data-progress="m1-c4" /> User-invoked vs model-invoked stated correctly with examples</label></li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Stop / Start</p>
+            <h3>Behavior change</h3>
+            <ul>
+              <li><strong>Stop</strong> defaulting every item into <code>/grill-with-docs</code>. <strong>Start</strong> triage first.</li>
+              <li><strong>Stop</strong> accepting verbal share. <strong>Start</strong> requiring committed artifact.</li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="page-nav no-print" id="pageNav"></div>
+      </main>
+    </div>
+  </div>
+  <script src="js/cursor-ai-dev.js"></script>
+</body>
+</html>
