@@ -33,9 +33,29 @@
             </div>
           </div>
 
+          <div class="concept-block">
+            <p class="eyebrow">Concept — Context Engineering</p>
+            <h3>What context is</h3>
+            <p>Context is everything the agent can see: <strong>rules</strong>, <strong>skills</strong>, <strong><code>@</code> files</strong>, <strong>chat history</strong>, and <strong>tool results</strong>. It costs tokens.</p>
+            <ul>
+              <li><strong>Too little context</strong> → confident fiction (agent invents what it cannot see).</li>
+              <li><strong>Too much context</strong> → dilution (agent attends to noise, misses the seam).</li>
+              <li><strong>Sweet spot</strong> → minimal correct <code>@</code> attach for the decision at hand.</li>
+            </ul>
+            <p><strong>When to compact vs start fresh:</strong> Keep grill → spec in one unbroken window. Do not compact until after tickets are written. Clear context between implementation tickets.</p>
+            <div class="self-check" style="margin-top:1rem">
+              <p class="eyebrow">Quick cue — @ attach quality</p>
+              <ul class="checklist">
+                <li><label><input type="checkbox" /> Empty <code>@</code> — agent guesses (fail)</label></li>
+                <li><label><input type="checkbox" /> Kitchen-sink <code>@</code> — diluted attention (fail)</label></li>
+                <li><label><input type="checkbox" /> Minimal correct <code>@</code> — properly primed (pass)</label></li>
+              </ul>
+            </div>
+          </div>
+
           <div class="section-card">
             <p class="eyebrow">Goal</p>
-            <p>Triage-then-grill becomes default. Produce a 3-section, implementable specification via synthesis only.</p>
+            <p>Publish a three-section, implementable specification via synthesis only. Routing was Day 1 — today’s focus is spec quality.</p>
           </div>
 
           <div class="section-card">
@@ -48,14 +68,45 @@
             <p><code>/to-spec</code> does <strong>not</strong> interview. Missing any of acceptance criteria, non-goals, or residual risks → reject on the spot.</p>
           </div>
 
+          <div class="concept-block">
+            <p class="eyebrow">Concept — Structures &amp; fences</p>
+            <h3>Why fences exist</h3>
+            <p>Each fence blocks a predictable failure mode:</p>
+            <ul>
+              <li><strong>Rules vs Skills</strong> — Rules are always-on; skills cost context on demand. Fence: bloated always-on context that drowns the task.</li>
+              <li><strong>Human gates</strong> — You type orchestrators; agent reaches specialists. Fence: typing model-invoked skills as primary steps.</li>
+              <li><strong>Binary reject rules</strong> — Incomplete spec sections are rejected, not scored partially. Fence: “good enough” specs that fail in implement.</li>
+              <li><strong>Vertical slices = one context window</strong> — Tickets fit one agent session. Fence: multi-session tickets and context pollution.</li>
+            </ul>
+          </div>
+
           <div class="section-card">
             <p class="eyebrow">Core concepts</p>
             <ul>
               <li><code>/to-spec</code> publishes a clean spec from the conversation that already happened.</li>
               <li><strong>Three mandatory sections</strong> (any missing → reject): acceptance criteria (verifiable), non-goals, residual risks.</li>
               <li>Keep grill + spec in one unbroken window. Do not compact until after tickets. Implementation starts fresh later.</li>
-              <li>Context Engineering is not optional — prime <code>@</code> files/folders yourself.</li>
+              <li><strong>Weak-context</strong> <code>/to-spec</code> (empty or wrong <code>@</code>) produces soft output. <strong>Properly primed</strong> <code>/to-spec</code> produces implementable specs.</li>
             </ul>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Worked example — bad vs good spec</p>
+            <div class="spec-compare">
+              <div class="spec-bad">
+                <strong>Bad (reject)</strong>
+                <p style="margin:0.5rem 0 0"><em>Acceptance:</em> “User can manage notifications.”</p>
+                <p style="margin:0.35rem 0 0"><em>Non-goals:</em> (missing)</p>
+                <p style="margin:0.35rem 0 0"><em>Residual risks:</em> “Might be slow.”</p>
+                <p style="margin:0.5rem 0 0;font-size:0.85rem">Fails: vague acceptance, no non-goals, unverifiable risk.</p>
+              </div>
+              <div class="spec-good">
+                <strong>Good (pass)</strong>
+                <p style="margin:0.5rem 0 0"><em>Acceptance:</em> “Given a logged-in user on Settings, toggling email digest off persists after refresh; audit log records the change.”</p>
+                <p style="margin:0.35rem 0 0"><em>Non-goals:</em> Push notifications, SMS, admin bulk-edit.</p>
+                <p style="margin:0.35rem 0 0"><em>Residual risks:</em> Email provider rate limits may delay digest send — monitor queue depth; no retry UI in this slice.</p>
+              </div>
+            </div>
           </div>
 
           <div class="section-card">
@@ -65,14 +116,15 @@
 
           <div class="section-card">
             <p class="eyebrow">Practice</p>
-            <p>Triage → full three-pillar grill → <code>/to-spec</code>. Group review of <strong>every</strong> spec. Incomplete sections rejected in the room.</p>
+            <p>Route (if needed) → full three-pillar grill → <code>/to-spec</code>.</p>
+            <p style="margin-top:0.75rem"><strong>Group review:</strong> Every spec is reviewed by peers (or instructor). <strong>Who reviews:</strong> another pair or rotating reviewer — not the author. <strong>Reject rule:</strong> any missing or vague mandatory section → sent back immediately; no partial credit.</p>
           </div>
 
           <div class="section-card">
             <p class="eyebrow">Success criteria</p>
             <ul class="checklist">
               <li><label><input type="checkbox" data-progress="m2-c1" /> Every published spec has all three mandatory sections (inspected)</label></li>
-              <li><label><input type="checkbox" data-progress="m2-c2" /> ≥1 item correctly triaged with written reasoning</label></li>
+              <li><label><input type="checkbox" data-progress="m2-c2" /> ≥1 item correctly routed with written reasoning (Day 1 skill — spot-check only)</label></li>
               <li><label><input type="checkbox" data-progress="m2-c3" /> Instructor spot-checked underlying grill transcript for ≥1 of my specs</label></li>
             </ul>
           </div>
@@ -81,9 +133,11 @@
             <p class="eyebrow">Stop / Start</p>
             <ul>
               <li><strong>Stop</strong> forcing foggy/oversized items through single-session grill. <strong>Start</strong> <code>/wayfinder</code> first.</li>
-              <li><strong>Stop</strong> accepting incomplete specs. <strong>Start</strong> rejecting on the spot.</li>
+              <li><strong>Stop</strong> accepting incomplete specs. <strong>Start</strong> rejecting on the spot in group review.</li>
             </ul>
           </div>
+
+          <p class="footer-note"><a href="glossary.html">Glossary</a> · <a href="quick-reference.html">Quick reference</a></p>
 
         </section>
 

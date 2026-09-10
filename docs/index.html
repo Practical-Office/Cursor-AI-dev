@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cursor + Matt Skills — Practical AI</title>
-  <meta name="description" content="5-day Cursor + Matt Pocock skills onboarding (v4) for Practical AI. Triage, grill, spec, tickets, implement, review." />
+  <meta name="description" content="5-day Cursor + Matt Pocock skills onboarding for Practical AI. Route before grill, spec, slice-test tickets, implement, review." />
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,14 +29,14 @@
         <section class="hero">
           <span class="status-chip">Practical AI engineering · 5-day course · v4</span>
           <h1>Cursor + Matt <em>Skills</em></h1>
-          <p class="hero-lede">Disciplined Cursor work for a new Dev: triage before grill, implementable specs, tracer-bullet tickets, Red→Green only, dual-axis review. Measured by rework reduction — not first-draft speed.</p>
+          <p class="hero-lede">Disciplined Cursor work for a new Dev: route before grill, implementable specs, tracer-bullet tickets, Red→Green only, dual-axis review. Measured by rework reduction — not first-draft speed.</p>
         </section>
         <div class="section-card" id="why">
           <p class="eyebrow">Why</p>
           <h3>Why a shared Cursor process matters</h3>
-          <p>Most new Cursor users treat the agent as autocomplete. Accept → ship → discover mess later. Without a common chain, engineers invent prompt habits and ship unreviewed AI diffs. This course installs one end-to-end path so the team produces committed domain artifacts, ticket-kill-test tickets, and CI-green implement loops — not theater.</p>
-          <p style="margin-top:0.75rem"><strong>Principles:</strong> Triage decision procedure first (one-sentence reasoning before grill) · Three Pillars (Context Engineering, Assumption Destruction, Stress Testing) · Spec synthesis only (acceptance criteria + non-goals + residual risks) · Ticket binary kill test (one-sentence user-observable behavior + non-circular blockers) · Red→Green only in <code>/implement</code> · Must-fix same day · Prototypes are throwaway · Domain decisions require committed CONTEXT.md / ADR.</p>
-          <p style="margin-top:0.75rem"><strong>Skills chain:</strong> <code>/setup-matt-pocock-skills</code> → triage (<code>/wayfinder</code> | <code>/grill-with-docs</code>) → <code>/to-spec</code> → <code>/to-tickets</code> → <code>/implement</code> → <code>/code-review</code>. Full skill pages: <a href="https://practical-office.github.io/dev-sops/skills.html">hub Skills</a>.</p>
+          <p>Most new Cursor users treat the agent as autocomplete. Accept → ship → discover mess later. Without a common chain, engineers invent prompt habits and ship unreviewed AI diffs. This course installs one end-to-end path so the team produces committed domain artifacts, slice-test tickets, and CI-green implement loops — not theater.</p>
+          <p style="margin-top:0.75rem"><strong>Principles:</strong> <strong>Route before grill</strong> (one-sentence routing decision before any grilling skill — see <a href="module-1.html">Module 1</a>) · Three Pillars (Context Engineering, Assumption Destruction, Stress Testing) · <strong>Spec synthesis only</strong> (<code>/to-spec</code> publishes; it does not interview — see <a href="module-2.html">Module 2</a>) · Ticket <strong>slice test</strong> (one-sentence user-observable behavior + non-circular blockers; reserve <em>kill test</em> for BML) · Red→Green only in <code>/implement</code> · Must-fix same day · Prototypes are throwaway · Domain decisions require committed <code>CONTEXT.md</code> / ADR.</p>
+          <p style="margin-top:0.75rem"><strong>Skills chain:</strong> <code>/setup-matt-pocock-skills</code> → route (<code>/wayfinder</code> | <code>/grill-with-docs</code>; tracker <code>/triage</code> when issues need label movement) → <code>/to-spec</code> → <code>/to-tickets</code> → <code>/implement</code> (auto <code>/code-review</code>). Full skill pages: <a href="https://practical-office.github.io/dev-sops/skills.html">hub Skills</a>. <a href="glossary.html">Glossary →</a></p>
         </div>
         <div class="card-grid">
           <div class="stat-card"><strong>5 modules</strong><span>5 full days · or 3.5-day intensive</span></div>
@@ -61,8 +61,9 @@
         </div>
         <div class="section-card">
           <p class="eyebrow">Source of truth</p>
-          <p>Living process: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/CURSOR-MATT-SKILLS-PROCESS.md" target="_blank" rel="noopener noreferrer"><strong>CURSOR-MATT-SKILLS-PROCESS.md</strong></a>. Instructional density: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/MODULES-SOURCE-v4.md" target="_blank" rel="noopener noreferrer"><strong>MODULES-SOURCE-v4.md</strong></a>. Course modules lag both — never lead them.</p>
-          <p style="margin-top:0.75rem">Facilitators: <a href="instructor-textbook.html"><strong>Instructor Textbook</strong></a> (enforcement: failure modes, reset scripts, Evidence Pack gates) · <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/WORKSHOP-AGENDA.md" target="_blank" rel="noopener noreferrer"><strong>Workshop Agenda</strong></a> (5-day or 3.5-day intensive).</p>
+          <p>Living process: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/CURSOR-MATT-SKILLS-PROCESS.md" target="_blank" rel="noopener noreferrer"><strong>CURSOR-MATT-SKILLS-PROCESS.md</strong></a>. Instructional density: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/MODULES-SOURCE-v4.md" target="_blank" rel="noopener noreferrer"><strong>MODULES-SOURCE-v4.md</strong></a>. Published HTML modules lag the living process — never lead it.</p>
+          <p style="margin-top:0.75rem"><strong>Teacher Manual</strong> = <a href="instructor-textbook.html"><strong>Instructor Textbook v4</strong></a> + <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/WORKSHOP-AGENDA.md" target="_blank" rel="noopener noreferrer"><strong>WORKSHOP-AGENDA</strong></a>. Learner HTML pages are the student surface; the textbook is the enforcement layer.</p>
+          <p style="margin-top:0.75rem;font-size:0.9rem;color:var(--ink-faint)"><strong>Facilitator ban:</strong> Do not teach this cohort from <code>Practical-Office/cursor-skills</code> AI-Development-SOP if it contradicts the living process (e.g. <code>/to-issues</code>, refactor-in-loop <code>/tdd</code>). Use this course chain only. Cold facilitators: prepare Day 2 demos (sample grill transcript + weak vs strong three-section specs).</p>
         </div>
         <div class="section-card" id="toc">
           <p class="eyebrow">Table of contents</p>
@@ -76,6 +77,7 @@
                 <tr><td>3</td><td><a href="module-3.html">Tickets + Implementation</a></td><td>Day 3</td></tr>
                 <tr><td>4</td><td><a href="module-4.html">Debug, Review, Architecture, Prototype</a></td><td>Day 4</td></tr>
                 <tr><td>5</td><td><a href="module-5.html">Full Workflow + Reality Check</a></td><td>Day 5</td></tr>
+                <tr><td>—</td><td><a href="glossary.html">Glossary</a></td><td>reference</td></tr>
                 <tr><td>—</td><td><a href="quick-reference.html">Quick reference</a></td><td>print</td></tr>
                 <tr><td>—</td><td><a href="instructor-textbook.html">Instructor Textbook</a></td><td>facilitators</td></tr>
                 <tr><td>—</td><td><a href="next-steps.html">Next steps</a> · <a href="certification.html">Certification</a></td><td>homework</td></tr>

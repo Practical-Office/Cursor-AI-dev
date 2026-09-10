@@ -13,6 +13,7 @@
   const SETUP = { id: "setup", href: "setup.html", num: "⚙", label: "Setup", meta: "30m" };
 
   const REFERENCE = [
+    { id: "glossary", href: "glossary.html", num: "G", label: "Glossary" },
     { id: "instructor-textbook", href: "instructor-textbook.html", num: "IT", label: "Instructor textbook" },
     { id: "next-steps", href: "next-steps.html", num: "→", label: "Next steps" },
     { id: "certification", href: "certification.html", num: "✓", label: "Certification" },
@@ -32,6 +33,7 @@
     "index.html",
     SETUP.href,
     ...MODULES.map((m) => m.href),
+    "glossary.html",
     "next-steps.html",
     "certification.html",
     "quick-reference.html",
@@ -43,11 +45,11 @@
     "https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/CURSOR-MATT-SKILLS-PROCESS.md";
   const REPO_URL = "https://github.com/Practical-Office/Cursor-AI-dev";
 
-  const CHAIN_TEMPLATE = `setup → triage (/wayfinder | /grill-with-docs)
+  const CHAIN_TEMPLATE = `setup → route (/wayfinder | /grill-with-docs)
   → /to-spec (acceptance · non-goals · residual risks)
-  → /to-tickets (binary kill test)
-  → /implement (Red→Green + CI-equivalent green)
-  → /code-review (Standards ‖ Spec; must-fix same day)`;
+  → /to-tickets (slice test)
+  → /implement (Red→Green + CI-equivalent green → auto /code-review)
+  → must-fix committed same day`;
 
   const body = document.body;
   const base = body.dataset.base || "";

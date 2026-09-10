@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glossary | Cursor + Matt Skills</title>
+  <meta name="description" content="Course glossary — domain language for the Cursor + Matt Pocock skills chain." />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/cursor-ai-dev.css" />
+</head>
+<body data-page="glossary" data-base="" data-file="glossary.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Glossary</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" onclick="window.print()">Print</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+
+        <section class="hero">
+          <span class="status-chip">Domain language</span>
+          <h1>Course <em>glossary</em></h1>
+          <p class="hero-lede">Exact terms used across modules. Sourced from <code>CONTEXT.md</code> and teaching vocabulary. Use these words consistently in artifacts and reviews.</p>
+        </section>
+
+        <div class="section-card">
+          <p class="eyebrow">Routing &amp; intake</p>
+          <dl>
+            <div class="glossary-term">
+              <dt>Route before grill</dt>
+              <dd>Before any grilling skill, write a one-sentence reason for the skill you will type. Foggy or multi-session work → <code>/wayfinder</code>. Scoped work with a codebase → <code>/grill-with-docs</code>. This is a <strong>routing decision</strong>, not the same as the <code>/triage</code> tracker skill.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt><code>/triage</code> (tracker skill)</dt>
+              <dd>User-invoked skill that moves existing issues through the label state machine defined at setup. Use when issues need role movement in the tracker — not as a substitute for route-before-grill on new work.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt>Foggy / weak-context</dt>
+              <dd>Backlog item is underspecified, spans more than one session, or you cannot name the correct <code>@</code> files yet. Route to <code>/wayfinder</code> first — do not force a single-session grill.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt>Properly primed</dt>
+              <dd>You attached the minimal correct <code>@</code> files and folders before invoking a skill. The agent has the right code and docs in context — not an empty attach list, not a kitchen-sink dump.</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Skills taxonomy</p>
+          <dl>
+            <div class="glossary-term">
+              <dt>User-invoked skill</dt>
+              <dd>Typed by the human. Model invocation disabled. Orchestrators — e.g. <code>/implement</code>, <code>/to-spec</code>, <code>/wayfinder</code>.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt>Model-invoked skill</dt>
+              <dd>Reached by the agent or an orchestrator. Never a typed primary flow step — e.g. <code>/code-review</code> (auto from <code>/implement</code>), <code>/tdd</code>, <code>/domain-modeling</code>.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt>Three Pillars</dt>
+              <dd>Properties of the grilling engine: Context Engineering, Assumption Destruction, Stress Testing. Not exclusive to one skill.</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Specification &amp; tickets</p>
+          <dl>
+            <div class="glossary-term">
+              <dt>Three-section spec</dt>
+              <dd>Output of <code>/to-spec</code> (synthesis only): acceptance criteria, non-goals, residual risks. Missing any section → reject.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt>Tracer-bullet ticket</dt>
+              <dd>Vertical slice delivering end-to-end observable behavior, with blocking edges declared. Sized for one focused agent session.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt>Slice test</dt>
+              <dd>Binary gate on every ticket: one-sentence user-observable behavior <strong>and</strong> recorded blockers. Fail either → re-slice immediately. (Reserve <em>kill test</em> for BML experiments.)</dd>
+            </div>
+            <div class="glossary-term">
+              <dt>Group review</dt>
+              <dd>Room-level inspection of specs, tickets, or diffs. Peers or instructor reject incomplete sections or failing tickets on the spot — no partial credit.</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Implementation &amp; review</p>
+          <dl>
+            <div class="glossary-term">
+              <dt>Red→Green only</dt>
+              <dd>TDD loop inside <code>/implement</code>: failing test at the seam, then minimal code to pass. Refactor is deferred to <code>/code-review</code>.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt>Refactor</dt>
+              <dd>Improving structure without changing behavior. In this course, refactor happens in <code>/code-review</code> — not inside the <code>/implement</code> loop.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt>CI (continuous integration)</dt>
+              <dd>Same automated checks your PR pipeline runs. Local verification must match those commands. “Agent said tests passed” is not done — pipeline green is done.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt>Dual-axis review</dt>
+              <dd><code>/code-review</code> inspects two axes in parallel: <strong>Standards</strong> (repo conventions and code-quality patterns) and <strong>Spec</strong> (match to originating ticket). Must-fix findings get committed before you leave.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt>Pre-Build review</dt>
+              <dd>Separate agent review of ticket + plan <strong>before</strong> <code>/implement</code>. Record ≥2 concrete findings — surfaces gaps before code is written.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt>Must-fix</dt>
+              <dd>Review finding that blocks merge. Requires a committed diff before end of session — not a verbal promise.</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Context &amp; artifacts</p>
+          <dl>
+            <div class="glossary-term">
+              <dt>Context</dt>
+              <dd>Everything the agent can see: rules, skills, <code>@</code> files, chat history, tool results. Costs tokens; wrong amount produces confident fiction or diluted attention.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt>Issue tracker</dt>
+              <dd>Tool hosting repo issues (GitHub Issues, Linear, or local <code>.scratch/</code> markdown). Skills such as <code>/to-tickets</code>, <code>/to-spec</code>, <code>/triage</code> read and write here.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt>Issue</dt>
+              <dd>Single tracked unit inside the issue tracker — bug, task, spec, or slice from <code>/to-tickets</code>.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt>Evidence artifact</dt>
+              <dd>Inspectable committed output proving a step occurred — e.g. <code>CONTEXT.md</code> entry, ADR stub, spec link, CI log. Chat recap alone does not count.</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Prototype &amp; BML</p>
+          <dl>
+            <div class="glossary-term">
+              <dt><code>/prototype</code></dt>
+              <dd>Throwaway answer to one design question. Lives on a throwaway branch or folder; verdict captured; never merged to the default branch.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt>Kill test (BML only)</dt>
+              <dd>Binary pass/fail for Build-Measure-Learn experiments — not the same as the ticket <strong>slice test</strong>. See the <a href="https://practical-office.github.io/bml-onboarding/">BML course</a>.</dd>
+            </div>
+          </dl>
+        </div>
+
+        <p class="footer-note">Canonical definitions: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/CONTEXT.md" target="_blank" rel="noopener noreferrer">CONTEXT.md</a> in the repo root.</p>
+
+        <div class="page-nav no-print" id="pageNav"></div>
+      </main>
+    </div>
+  </div>
+  <script src="js/cursor-ai-dev.js"></script>
+</body>
+</html>
