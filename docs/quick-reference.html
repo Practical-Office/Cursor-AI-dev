@@ -25,24 +25,25 @@
       <main class="content" id="top">
 
         <section class="hero">
-          <span class="status-chip">One-pager · v3</span>
+          <span class="status-chip">One-pager</span>
           <h1>Cursor + Matt <em>quick reference</em></h1>
-          <p class="hero-lede">Print this. Keep it on the desk.</p>
+          <p class="hero-lede">Print this. Keep it on the desk. Full terms: <a href="glossary.html">Glossary</a>.</p>
         </section>
 
         <div class="section-card">
           <h3>Taxonomy</h3>
           <p><strong>User-invoked</strong> (you type): ask-matt, grill-with-docs, wayfinder, triage, improve-codebase-architecture, setup-matt-pocock-skills, to-spec, to-tickets, implement</p>
           <p style="margin-top:0.5rem"><strong>Model-invoked</strong> (agent reaches): prototype, diagnosing-bugs, research, tdd, domain-modeling, codebase-design, code-review, resolving-merge-conflicts</p>
-          <p style="margin-top:0.75rem;font-size:0.9rem;color:var(--ink-faint)">Do not type model-invoked skills as primary flow steps. <code>/implement</code> reaches <code>/code-review</code>; <code>/grill-with-docs</code> reaches <code>/domain-modeling</code>.</p>
+          <p style="margin-top:0.75rem;font-size:0.9rem;color:var(--ink-faint)">Do not type model-invoked skills as primary flow steps. <code>/implement</code> reaches <code>/tdd</code> and auto <code>/code-review</code>; <code>/grill-with-docs</code> reaches <code>/domain-modeling</code>.</p>
         </div>
 
         <div class="section-card">
-          <h3>Triage first</h3>
+          <h3>Route before grill</h3>
           <ul>
-            <li>Foggy / &gt;1 session → <code>/wayfinder</code></li>
-            <li>Scoped + codebase → <code>/grill-with-docs</code></li>
+            <li><strong>Foggy</strong> / weak-context / &gt;1 session → <code>/wayfinder</code></li>
+            <li>Scoped + properly primed <code>@</code> → <code>/grill-with-docs</code></li>
             <li>No codebase → prime, then <code>/grill-with-docs</code> once code exists</li>
+            <li>Existing issues need label movement → <code>/triage</code> (tracker skill — separate from routing)</li>
           </ul>
         </div>
 
@@ -52,7 +53,13 @@
             <button type="button" class="btn btn-primary btn-sm" data-copy-template>Copy chain</button>
             <span class="copy-feedback" aria-live="polite"></span>
           </div>
-          <pre class="code-block"><code>setup → triage → grill → /to-spec (3 sections) → /to-tickets (kill test) → /implement (Red→Green + CI) → /code-review (auto)</code></pre>
+          <pre class="code-block"><code>setup → route (/wayfinder | /grill-with-docs)
+  → /to-spec (3 sections · synthesis only)
+  → /to-tickets (slice test)
+  → pre-Build review (≥2 findings)
+  → /implement (Red→Green + CI)
+      └─ auto /code-review
+  → must-fix committed</code></pre>
         </div>
 
         <div class="section-card">
@@ -68,17 +75,17 @@
           <h3>Non-negotiables</h3>
           <ul>
             <li>Spec missing any of: acceptance criteria / non-goals / residual risks → reject</li>
-            <li>Ticket fails one-sentence behavior or missing blockers → re-slice</li>
-            <li>Refactor is <strong>not</strong> inside implement; it is a code-review output</li>
-            <li>Local CI-equivalent commands must be green before commit</li>
+            <li>Ticket fails slice test (one-sentence behavior or blockers) → re-slice</li>
+            <li>Refactor is <strong>not</strong> inside implement; it is a <code>/code-review</code> output</li>
+            <li>CI = same commands as PR pipeline — “agent said tests passed” ≠ done</li>
             <li>Must-fix review findings committed the same day</li>
-            <li>Prototype is throwaway; capture verdict; never harden in place</li>
+            <li>Prototype is throwaway branch/folder; never merge to default branch</li>
           </ul>
         </div>
 
         <div class="section-card">
           <h3>Router</h3>
-          <p><code>/ask-matt</code> when unsure. Log the decision.</p>
+          <p><code>/ask-matt</code> when unsure. Log: “For [situation], I routed to <code>/skill</code> because [reason]. Agreed / deviated because [one sentence].”</p>
         </div>
 
         <div class="page-nav no-print" id="pageNav"></div>

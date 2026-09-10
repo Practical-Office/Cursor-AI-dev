@@ -44,32 +44,56 @@
           </div>
 
           <div class="hard-truth">
-            <h3>Rules</h3>
+            <h3>Practice-gate rules</h3>
             <ul>
               <li>Zero new theoretical content.</li>
-              <li>Instructor = enforcement only (force pillars, kill bad tickets, stop context pollution).</li>
+              <li>Instructor = enforcement only (force pillars, reject tickets failing slice test, stop context pollution).</li>
               <li>Real open work only.</li>
+              <li>Every must-fix committed before session end.</li>
+              <li>Pre-Build review recorded when implement starts.</li>
             </ul>
           </div>
 
           <div class="section-card">
             <p class="eyebrow">Executed chain</p>
-            <pre class="code-block"><code>triage (/wayfinder | /grill-with-docs)
-  → /to-spec (if multi-session)
-  → /to-tickets (kill test)
-  → /implement (Red→Green, CI, clear context)
-  → /code-review (auto)</code></pre>
+            <pre class="code-block"><code>/setup-matt-pocock-skills  (once — hard gate)
+→ route (/wayfinder | /grill-with-docs)
+→ /to-spec  (synthesis; 3 sections)
+→ /to-tickets  (slice test)
+→ pre-Build review  (ticket + plan; ≥2 findings)
+→ /implement  (Red→Green + CI-equivalent green)
+    └─ auto /code-review  (model-invoked; Standards ‖ Spec)
+→ must-fix committed</code></pre>
+            <p style="margin-top:0.75rem;font-size:0.9rem;color:var(--ink-faint)"><code>/code-review</code> is nested under <code>/implement</code> — not a separate typed chain step.</p>
           </div>
 
           <div class="section-card">
             <p class="eyebrow">Group reviews</p>
-            <p>Diffs + dual-axis output. What would ship? Residual risk explicit. Smells named.</p>
+            <p>Diffs + dual-axis output. What would ship? Residual risk explicit. Code-quality patterns named on Standards axis.</p>
           </div>
 
           <div class="section-card">
             <p class="eyebrow"><code>/ask-matt</code> decision log</p>
             <p>Three real scenarios from your week → skill routing decision → one sentence agreement/disagreement each.</p>
-            <p style="margin-top:0.75rem"><strong>Deliverable:</strong> three transcripts + three sentences. Not freeform prose.</p>
+            <p style="margin-top:0.75rem"><strong>Sentence template:</strong> “For [situation], I routed to <code>/skill-name</code> because [one-sentence reason]. The skill agreed / I deviated because [one sentence].”</p>
+            <p style="margin-top:0.5rem"><strong>Deliverable:</strong> three transcripts + three sentences. Not freeform prose.</p>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Day 1 → 5 evidence artifact types</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Day</th><th>Artifact type</th></tr></thead>
+                <tbody>
+                  <tr><td>Setup</td><td>Inspectable setup output (tracker, labels, domain-doc path)</td></tr>
+                  <tr><td>1</td><td>Committed <code>CONTEXT.md</code> / ADR + routing decision</td></tr>
+                  <tr><td>2</td><td>Three-section spec (all sections complete)</td></tr>
+                  <tr><td>3</td><td>Slice-test ticket graph + Red→Green implement diff + CI evidence</td></tr>
+                  <tr><td>4</td><td>Dual-axis review + committed must-fix + prototype verdict (if used)</td></tr>
+                  <tr><td>5</td><td>Full chain on real work + three <code>/ask-matt</code> logs</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div class="section-card">
@@ -88,6 +112,8 @@
               <li><strong>Stop</strong> new theory on Day 5. <strong>Start</strong> grounding discussion only in today’s artifacts.</li>
             </ul>
           </div>
+
+          <p class="footer-note"><a href="glossary.html">Glossary</a> · <a href="certification.html">Certification</a> · <a href="quick-reference.html">Quick reference</a></p>
 
         </section>
 
