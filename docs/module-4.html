@@ -45,25 +45,27 @@
 
           <div class="hard-truth">
             <h3>Practice gate</h3>
-            <p><strong>Must-fix</strong> = a blocking review finding. Every must-fix has a committed diff before day end. A review with zero fixes is a failed exercise. Prototypes are throwaway — never harden in place.</p>
-          </div>
-
-          <div class="section-card">
-            <p class="eyebrow">Pre-Build agent review (taught once)</p>
-            <p>After tickets and plan exist, <strong>before</strong> Build / <code>/implement</code>: run a <strong>separate</strong> review agent (Grok architect preferred; a separate Cursor agent is fine) on ticket + plan. That agent must return about <strong>two</strong> concrete improvements or disagreements — not a rubber stamp. Record findings (issue comment, plan note, or CONTEXT/ADR pointer). Then proceed to implement. This is <em>not</em> the post-implement dual-axis closeout review below.</p>
+            <p>Every must-fix has a committed diff before day end. A review with zero fixes is a failed exercise. Prototypes are throwaway — never harden in place, never merge to the default branch.</p>
           </div>
 
           <div class="section-card">
             <p class="eyebrow">Core concepts</p>
             <ul>
               <li><strong><code>/diagnosing-bugs</code>:</strong> reproduce → minimise → hypothesise → instrument → fix → regression-test. State hypothesis + next smallest experiment <strong>before</strong> changing code. Model-invoked.</li>
-              <li><strong><a href="glossary.html">Dual-axis</a> <code>/code-review</code></strong> (post-implement closeout; auto from <code>/implement</code>): (1) <strong>Spec</strong> — does the diff match the ticket/spec; (2) <strong>Standards</strong> — is the code messy vs repo conventions. Parallel sub-agents. Must-fix same day.</li>
+              <li><strong>Dual-axis <code>/code-review</code>:</strong> two parallel inspections —
+                <ul>
+                  <li><strong>Standards</strong> — repo conventions and concrete code-quality patterns (duplication, unclear naming, scattered change, etc.). Name the pattern explicitly.</li>
+                  <li><strong>Spec</strong> — does the diff match the originating ticket? (“no spec available” if none).</li>
+                </ul>
+                Must-fix findings require a committed diff before you leave.
+              </li>
+              <li><strong>Pre-Build review:</strong> Before <code>/implement</code>, run a separate agent review of ticket + plan. Record ≥2 concrete findings (gaps, risks, missing seams). Surfaces problems before code is written.</li>
               <li><strong><code>/improve-codebase-architecture</code>:</strong> HTML report of deepenings → skill grills the selected opportunity. Reject large-rewrite proposals.</li>
-              <li><strong><code>/prototype</code>:</strong> throwaway answer to <strong>one</strong> design question.
+              <li><strong><code>/prototype</code>:</strong> throwaway answer to <strong>one</strong> design question on a <strong>throwaway branch or folder</strong>.
                 <ul>
                   <li>Logic/state feel right? → LOGIC terminal app (print full state).</li>
                   <li>What should it look like? → UI variants on one route + floating toggle bar.</li>
-                  <li>Rules: marked throwaway, next to real code, one command to run, no persistence default, no polish, capture verdict on throwaway branch, never harden in place.</li>
+                  <li>Rules: marked throwaway, next to real code, one command to run, no persistence default, no polish, capture verdict, <strong>never merge to default branch</strong>.</li>
                 </ul>
               </li>
             </ul>
@@ -71,16 +73,16 @@
 
           <div class="section-card">
             <p class="eyebrow">Practice</p>
-            <p>Every must-fix committed before day end. ≥1 prototype on a <strong>throwaway branch</strong> (or clearly marked throwaway folder). <strong>Never merge to the team’s default branch.</strong> Record the verdict on the ticket.</p>
+            <p>Every must-fix committed before day end. ≥1 prototype on throwaway branch/folder, removed from default branch, verdict recorded. Pre-Build review on at least one ticket before implement.</p>
           </div>
 
           <div class="section-card">
             <p class="eyebrow">Success criteria</p>
             <ul class="checklist">
               <li><label><input type="checkbox" data-progress="m4-c1" /> Diagnosing loop; hypothesis before each fix</label></li>
-              <li><label><input type="checkbox" data-progress="m4-c2" /> Separate agent reviewed ticket + plan before Build; ≥2 concrete findings recorded</label></li>
-              <li><label><input type="checkbox" data-progress="m4-c3" /> Every must-fix committed</label></li>
-              <li><label><input type="checkbox" data-progress="m4-c4" /> One prototype: throwaway branch, verdict recorded, not on default branch</label></li>
+              <li><label><input type="checkbox" data-progress="m4-c2" /> Review names ≥2 concrete code-quality patterns + spec-axis findings</label></li>
+              <li><label><input type="checkbox" data-progress="m4-c3" /> Every must-fix committed before leaving</label></li>
+              <li><label><input type="checkbox" data-progress="m4-c4" /> One prototype: throwaway branch/folder, verdict recorded, not on default branch</label></li>
             </ul>
           </div>
 
@@ -89,8 +91,11 @@
             <ul>
               <li><strong>Stop</strong> leaving findings unacted. <strong>Start</strong> requiring committed fixes before close.</li>
               <li><strong>Stop</strong> settling “does this feel right?” during implement. <strong>Start</strong> <code>/prototype</code> first.</li>
+              <li><strong>Stop</strong> merging prototype branches. <strong>Start</strong> capturing verdict and deleting throwaway work.</li>
             </ul>
           </div>
+
+          <p class="footer-note"><a href="glossary.html">Glossary</a> · <a href="quick-reference.html">Quick reference</a></p>
 
         </section>
 

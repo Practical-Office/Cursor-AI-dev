@@ -7,10 +7,10 @@
 
 This document is a review, not a permission to edit the live course. Keep the published site frozen until priorities in this file are chosen.
 
-**Implementation status (2026-09-16):** P0+P1 accepted and implemented per grill decisions below. P2 (real MODULES-SOURCE-v4 republish) deferred.
+**Implementation status (2026-09-16):** P0+P1 done on learner HTML (merged to `main` via PR #1). P2 MODULES-SOURCE-v4 republish already on `main` via PR #1 — not deferred. PR #2 rebased onto `main`: reference layer (CONTEXT, AGENTS, living process, instructor textbook v4 md, workshop agenda) restored; learner surface stays main.
 
 **Locked grill decisions:**
-- **Q1:** P0 + P1 now; P2 deferred
+- **Q1:** P0 + P1 now; P2 landed on main with PR #1
 - **Q2:** Rename everywhere → **Route before grill**; `/triage` = tracker intake only
 - **Q3:** Item 15 pre-Build agent review — **taught once on Day 4**; not Evidence Pack hard gate
 - **Q4:** **Slice test** rename in learner HTML + CONTEXT + living process (alias: formerly binary kill test; not BML kill)

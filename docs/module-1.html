@@ -36,7 +36,8 @@
           <div class="section-card">
             <p class="eyebrow">Goal</p>
             <h3>What this day is for</h3>
-            <p>Make the cost of undisciplined AI usage visible. Install taxonomy. Drill <a href="glossary.html#route-before-grill">route before grill</a> until automatic.</p>
+            <p>Make the cost of undisciplined AI usage visible. Install taxonomy. Drill <strong>route before grill</strong> until automatic. Practice one worked example of each Three Pillar.</p>
+            <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--ink-faint)">Day 2 publishes a three-section spec — it does not re-drill routing. Nail routing here.</p>
           </div>
 
           <div class="section-card">
@@ -46,7 +47,7 @@
 
           <div class="hard-truth">
             <h3>Hard truth</h3>
-            <p>Grilling without all Three Pillars is theater. Chat explanation is allowed — credit requires a committed <code>CONTEXT.md</code> entry or ADR stub in <strong>your working repo</strong> (from <a href="setup.html">Setup</a> domain-doc layout). Verbal recap alone is not the deliverable.</p>
+            <p>Grilling without all Three Pillars is theater. Verbal “share what changed” does not count — committed <code>CONTEXT.md</code> / ADR is the deliverable.</p>
           </div>
 
           <div class="section-card">
@@ -64,19 +65,19 @@
             <h3>Skill taxonomy (architecture)</h3>
             <p><strong>User-invoked</strong> (you type): ask-matt, grill-with-docs, wayfinder, triage, improve-codebase-architecture, setup-matt-pocock-skills, to-spec, to-tickets, implement</p>
             <p style="margin-top:0.5rem"><strong>Model-invoked</strong> (agent reaches; not typed as normal flow step): prototype, diagnosing-bugs, research, tdd, domain-modeling, codebase-design, code-review, resolving-merge-conflicts</p>
-            <p style="margin-top:0.75rem"><strong>Worked example:</strong> <em>You type</em> <code>/implement</code>. <em>The agent then runs</em> <code>/code-review</code>. Typing <code>/code-review</code> as the main step is the wrong architecture. Same pattern: <code>/grill-with-docs</code> → <code>/domain-modeling</code>.</p>
-            <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--ink-faint)">Skill pages: <a href="https://practical-office.github.io/dev-sops/skills.html">hub Skills</a> · Process: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/CURSOR-MATT-SKILLS-PROCESS.md" target="_blank" rel="noopener noreferrer">living process</a> · <a href="glossary.html">Glossary</a></p>
+            <p style="margin-top:0.75rem"><strong>Worked example — user-invoked vs model-invoked:</strong> You type <code>/implement</code> on a tracer-bullet ticket (user-invoked). The agent reaches <code>/tdd</code> for Red→Green, then auto-invokes <code>/code-review</code> (model-invoked). You do <strong>not</strong> type <code>/code-review</code> as a separate chain step.</p>
+            <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--ink-faint)">Skill pages: <a href="https://practical-office.github.io/dev-sops/skills.html">hub Skills</a> · Process: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/CURSOR-MATT-SKILLS-PROCESS.md" target="_blank" rel="noopener noreferrer">living process</a></p>
           </div>
 
           <div class="section-card">
             <h3>Route before grill</h3>
-            <p>Decide which typed grilling skill fits <strong>before</strong> you grill. This gate is <em>not</em> the same as typing <code>/triage</code> — see the next block.</p>
+            <p>Before any grilling skill, write a one-sentence routing decision. This is <strong>not</strong> the same as the <code>/triage</code> tracker skill (see below).</p>
             <div class="table-wrap">
               <table>
                 <thead><tr><th>Situation</th><th>Typed skill</th></tr></thead>
                 <tbody>
-                  <tr><td><a href="glossary.html">Foggy</a> / &gt;1 session — cannot name the outcome in one sentence</td><td><code>/wayfinder</code></td></tr>
-                  <tr><td>Scoped + codebase</td><td><code>/grill-with-docs</code></td></tr>
+                  <tr><td><strong>Foggy</strong> — underspecified or &gt;1 session; weak-context (cannot name correct <code>@</code> files yet)</td><td><code>/wayfinder</code></td></tr>
+                  <tr><td><strong>Scoped + codebase</strong> — properly primed with minimal correct <code>@</code> attach</td><td><code>/grill-with-docs</code></td></tr>
                   <tr><td>No codebase yet</td><td>Prime, then <code>/grill-with-docs</code> once code exists</td></tr>
                 </tbody>
               </table>
@@ -85,17 +86,17 @@
           </div>
 
           <div class="section-card">
-            <h3><code>/triage</code> = tracker intake</h3>
-            <p>Use when work is <strong>already an issue or PR</strong> in the tracker: categorize, set state, verify, brief the agent. May grill <em>inside</em> triage. Day 1 pair practice on backlog items stays route → grill/wayfinder → committed CONTEXT/ADR unless the item is a real tracker issue.</p>
+            <h3><code>/triage</code> — tracker intake (separate)</h3>
+            <p><code>/triage</code> is a <strong>user-invoked tracker skill</strong> that moves existing issues through the label state machine defined at <a href="setup.html">Setup</a>. Use it when issues need role movement — not as a substitute for route-before-grill on new work.</p>
           </div>
 
           <div class="section-card">
             <h3>Three Pillars</h3>
-            <p>Properties of the grilling engine — not exclusive to one skill. One example question each:</p>
+            <p>Properties of the grilling engine — not exclusive to one skill. Day 1: one worked example of each pillar on a real item.</p>
             <ol>
-              <li><strong>Context Engineering</strong> — attach the right <code>@</code> files first. Example: “Which files must be attached before we decide the API shape?”</li>
-              <li><strong>Assumption Destruction</strong> — attack one unstated bet. Example: “What are we assuming about user permissions that we have not verified?”</li>
-              <li><strong>Stress Testing</strong> — failure at scale or removal. Example: “What breaks at 10× load, or if we remove this feature next quarter?”</li>
+              <li><strong>Context Engineering</strong> — correct <code>@</code> files/folders first. Wrong context → confident wrong answers.</li>
+              <li><strong>Assumption Destruction</strong> — force assumptions open; attack them. Facts = look up yourself; decisions = grill.</li>
+              <li><strong>Stress Testing</strong> — failure modes, scale, future regret, removal test.</li>
             </ol>
           </div>
 
@@ -113,8 +114,8 @@
 
           <div class="section-card">
             <p class="eyebrow">Practice (pairs)</p>
-            <p>Two real backlog items each. Write one-sentence <strong>route</strong> decision (Wayfinder vs Grill). Run the correct user-invoked skill.</p>
-            <p style="margin-top:0.75rem"><strong>Deliverable (binary):</strong> committed <code>CONTEXT.md</code> entry or ADR stub per item in your repo. Chat recap does not count. No artifact → no credit.</p>
+            <p>Two real backlog items each. Write one-sentence <strong>routing</strong> decision (not just “triage”). Run the correct user-invoked skill.</p>
+            <p style="margin-top:0.75rem"><strong>Deliverable (binary):</strong> committed <code>CONTEXT.md</code> entry or ADR stub per item. Verbal share does not count. No artifact → no credit.</p>
           </div>
 
           <div class="section-card">
@@ -125,20 +126,22 @@
           <div class="section-card">
             <p class="eyebrow">Success criteria</p>
             <ul class="checklist">
-              <li><label><input type="checkbox" data-progress="m1-c1" /> Setup gate still holds — tracker, labels, and domain-doc layout from <a href="setup.html">Setup</a> visible in this repo</label></li>
+              <li><label><input type="checkbox" data-progress="m1-c1" /> Setup gate still holds — I can point at tracker, labels, and domain-doc path files from <a href="setup.html">Setup</a></label></li>
               <li><label><input type="checkbox" data-progress="m1-c2" /> ≥1 committed CONTEXT.md / ADR from real item</label></li>
-              <li><label><input type="checkbox" data-progress="m1-c3" /> I can route a new item (Wayfinder vs Grill) and say when I’d use <code>/triage</code> instead (tracker intake)</label></li>
-              <li><label><input type="checkbox" data-progress="m1-c4" /> I can give one typed skill and one skill the agent reaches (see worked example above)</label></li>
+              <li><label><input type="checkbox" data-progress="m1-c3" /> Correct routing of new item without prompting (one-sentence reason recorded)</label></li>
+              <li><label><input type="checkbox" data-progress="m1-c4" /> User-invoked vs model-invoked stated with examples (e.g. /implement → auto /code-review)</label></li>
             </ul>
           </div>
 
           <div class="section-card">
             <p class="eyebrow">Stop / Start</p>
             <ul>
-              <li><strong>Stop</strong> defaulting everything to <code>/grill-with-docs</code>. <strong>Start</strong> route before grill.</li>
-              <li><strong>Stop</strong> treating chat-only recap as the deliverable. <strong>Start</strong> requiring a committed <code>CONTEXT.md</code> entry or ADR.</li>
+              <li><strong>Stop</strong> defaulting everything to <code>/grill-with-docs</code>. <strong>Start</strong> route before grill with a written one-sentence reason.</li>
+              <li><strong>Stop</strong> treating chat recap as the graded record. <strong>Start</strong> requiring committed <code>CONTEXT.md</code> / ADR before credit.</li>
             </ul>
           </div>
+
+          <p class="footer-note"><a href="glossary.html">Glossary</a> · <a href="quick-reference.html">Quick reference</a></p>
 
         </section>
 
