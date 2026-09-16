@@ -1,7 +1,7 @@
 # Cursor + Matt Pocock Skills — Living Process
 
-**Version:** 1.0  
-**Last Updated:** July 25, 2026  
+**Version:** 1.1  
+**Last Updated:** September 16, 2026  
 **Owner:** Practical AI Engineering  
 **Purpose:** Single source of truth for the preferred skill chain, taxonomy, and non-negotiable rules when using Cursor + mattpocock/skills.
 
@@ -62,20 +62,23 @@ SETUP (once per repo — hard gate)
   /setup-matt-pocock-skills
   /setup-pre-commit          (local gates must match CI)
 
-TRIAGE FIRST (typed)
+ROUTE BEFORE GRILL (typed — not the /triage skill)
   Foggy / >1 session?          → /wayfinder
   Scoped + codebase exists?    → /grill-with-docs
                                  (reaches model-invoked /domain-modeling)
   No codebase yet?             → light priming → /grill-with-docs once code appears
 
+TRACKER INTAKE (when work is already an issue/PR)
+  /triage                      — categorize, state, verify, brief; may grill inside
+
 MAIN BUILD
-  1. (triaged grilling skill)
+  1. (routed grilling skill)
   2. /to-spec          — synthesis only; three mandatory sections; never an interview
-  3. /to-tickets        — tracer-bullet vertical slices + recorded blockers; binary kill test
+  3. /to-tickets        — tracer-bullet vertical slices + recorded blockers; slice test
   4. /implement         — Red → Green only at seams; runs project CI-equivalent commands;
                           auto-invokes /code-review at closeout
                           (refactor is a code-review output, never inside the loop)
-  5. /code-review       — dual-axis (Standards + named Fowler smells, Spec) — model-invoked
+  5. /code-review       — dual-axis (Standards ‖ Spec) — model-invoked
 
 SUPPORTING (model-invoked or opportunistic)
   /prototype            — throwaway answer to one design question (LOGIC or UI branch)
@@ -94,10 +97,10 @@ ROUTER
 
 ## 4. Non-Negotiable Rules
 
-1. **Triage before grill.** Never default every item into `/grill-with-docs`.
+1. **Route before grill.** Never default every item into `/grill-with-docs`. The route gate is not the same as typing `/triage`.
 2. **Three Pillars** are properties of the underlying grilling engine: Context Engineering, Assumption Destruction, Stress Testing. Grilling without all three is theater.
 3. **`/to-spec` is synthesis only.** A spec missing acceptance criteria, non-goals, or residual risks fails review.
-4. **Vertical tracer-bullet tickets only.** Binary kill test: one-sentence user-observable behavior + recorded blockers. Fail either → re-slice immediately.
+4. **Vertical tracer-bullet tickets only.** Slice test: one-sentence user-observable behavior + recorded blockers. Fail either → re-slice immediately. Not BML kill criteria.
 5. **Red → Green only inside `/implement`.** Refactor belongs to `/code-review`.
 6. **Local verification matches CI.** Before any commit is considered complete, the project’s real CI-equivalent commands must be green.
 7. **Dual-axis review findings are acted on the same day.** Must-fix items require a committed fix.
@@ -115,7 +118,9 @@ ROUTER
 
 ---
 
-## 6. Ticket Binary Kill Test
+## 6. Ticket Slice Test
+
+Formerly “binary kill test.” Not BML experiment kill criteria.
 
 A ticket fails and must be re-sliced if:
 
