@@ -33,22 +33,9 @@
             </div>
           </div>
 
-          <div class="concept-block">
-            <p class="eyebrow">Concept — TDD why (before implement drills)</p>
-            <h3>Why Red→Green only — and where refactor lives</h3>
-            <p>Classical TDD is red → green → <strong>refactor</strong>. This course locks <strong>Red→Green only</strong> inside <code>/implement</code> because:</p>
-            <ul>
-              <li><strong>Red</strong> proves the seam/contract — a failing test at the boundary you are about to change.</li>
-              <li><strong>Green</strong> proves minimal behavior — smallest code to pass; no drive-by cleanup.</li>
-              <li><strong>Refactor belongs in <code>/code-review</code></strong> — the implementing agent self-approving its own refactor pollutes context and skips a second pair of eyes.</li>
-            </ul>
-            <p><strong>Seams / characterizing tests:</strong> Put tests at module boundaries (API, service interface, UI hook). Characterizing tests capture current behavior before you change it — so red is meaningful, not arbitrary.</p>
-            <p style="font-size:0.9rem;color:var(--ink-faint)">Contrast classical red-green-refactor once, then lock Red→Green-only for all course work.</p>
-          </div>
-
           <div class="section-card">
             <p class="eyebrow">Goal</p>
-            <p>Convert a 3-section spec into tracer-bullet tickets that pass the <strong>slice test</strong>. Implement Red→Green only. Local verification matches real CI commands.</p>
+            <p>Convert a 3-section spec into tracer-bullet tickets that pass the <a href="glossary.html#slice-test">slice test</a>. Implement Red→Green only. Local verification matches real <a href="glossary.html">CI</a> commands.</p>
           </div>
 
           <div class="section-card">
@@ -58,7 +45,7 @@
 
           <div class="hard-truth">
             <h3>Hard truth</h3>
-            <p><strong>Slice test:</strong> fail if missing one-sentence user-observable behavior <strong>or</strong> missing/circular blockers. Re-slice immediately. No negotiation. (Reserve <em>kill test</em> for BML experiments.)</p>
+            <p><a href="glossary.html#slice-test">Slice test</a>: fail if missing one-sentence user-observable behavior <strong>or</strong> missing/circular blockers. Re-slice immediately. No negotiation. This is <strong>not</strong> the BML experiment kill. <a href="glossary.html">Refactor</a> is <strong>not</strong> inside <code>/implement</code>.</p>
           </div>
 
           <div class="section-card">
@@ -66,9 +53,8 @@
             <ul>
               <li><strong>Tracer-bullet tickets:</strong> vertical slices, end-to-end observable behavior, declare blockers, sized for one agent session.</li>
               <li><strong>Slice test:</strong> one-sentence user-observable behavior + recorded blockers. Fail either → re-slice.</li>
-              <li><strong>Refactor:</strong> improving structure without changing behavior. Happens in <code>/code-review</code> — not inside the <code>/implement</code> loop.</li>
-              <li><strong><code>/implement</code>:</strong> Red→Green only at seams. Runs <strong>CI-equivalent commands</strong> (same checks as your PR pipeline). Auto-invokes <code>/code-review</code>. Context cleared between tickets.</li>
-              <li><strong>CI = pipeline green:</strong> “Agent said tests passed” ≠ done. Run the same commands your PR runs. Pipeline green before commit is complete.</li>
+              <li><strong><code>/implement</code>:</strong> Red→Green only at seams. <strong>Refactor</strong> = cleanup that does not add the ticket’s user-visible behavior; it happens in <code>/code-review</code>, not during implement. Runs CI-equivalent commands. Auto-invokes <code>/code-review</code>. Context cleared between tickets.</li>
+              <li><strong>CI vs session green:</strong> CI = the same checks the project runs on the pull request (e.g. the repo’s test/lint script). “Agent said tests passed” is not done. Run that command locally; it must be green before implement is complete.</li>
             </ul>
           </div>
 
@@ -79,7 +65,7 @@
 
           <div class="section-card">
             <p class="eyebrow">Practice</p>
-            <p>Convert Day 2 spec → tickets. Pair-review applies <strong>slice test</strong> to every ticket; failures re-sliced on the spot. One ticket through <code>/implement</code>. Confirm Red→Green only, CI green, review auto-fired.</p>
+            <p>Convert Day 2 spec → tickets. Pair-review applies slice test to every ticket; failures re-sliced on the spot. One ticket through <code>/implement</code>. Confirm Red→Green only, CI green, review auto-fired.</p>
           </div>
 
           <div class="section-card">
@@ -87,20 +73,17 @@
             <ul class="checklist">
               <li><label><input type="checkbox" data-progress="m3-c1" /> Zero circular blockers; zero tickets failing slice test</label></li>
               <li><label><input type="checkbox" data-progress="m3-c2" /> ≥1 <code>/implement</code> diff is Red→Green only (no in-loop refactor)</label></li>
-              <li><label><input type="checkbox" data-progress="m3-c3" /> I ran CI-equivalent commands locally and can show pipeline-green evidence</label></li>
+              <li><label><input type="checkbox" data-progress="m3-c3" /> I can say refactor is cleanup after behavior exists, in review, not during implement</label></li>
             </ul>
           </div>
 
           <div class="section-card">
             <p class="eyebrow">Stop / Start</p>
             <ul>
-              <li><strong>Stop</strong> teaching red-green-<strong>refactor</strong> inside implement. <strong>Start</strong> Red→Green only; refactor in <code>/code-review</code>.</li>
+              <li><strong>Stop</strong> teaching red-green-<strong>refactor</strong> inside implement. <strong>Start</strong> Red→Green only; refactor in review.</li>
               <li><strong>Stop</strong> subjective sizing. <strong>Start</strong> slice test on every ticket.</li>
-              <li><strong>Stop</strong> trusting “tests passed” in chat. <strong>Start</strong> running the same commands CI runs.</li>
             </ul>
           </div>
-
-          <p class="footer-note"><a href="glossary.html">Glossary</a> · <a href="quick-reference.html">Quick reference</a></p>
 
         </section>
 

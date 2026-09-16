@@ -15,7 +15,7 @@
 
 ## Preferred skill chain (summary)
 
-`/setup-matt-pocock-skills` → triage (`/wayfinder` | `/grill-with-docs`) → `/to-spec` → `/to-tickets` → `/implement` (Red→Green + CI-matching verification) → `/code-review` (model-invoked)
+`/setup-matt-pocock-skills` → route (`/wayfinder` | `/grill-with-docs`; `/triage` when tracker intake) → `/to-spec` → `/to-tickets` → `/implement` (Red→Green + CI-matching verification) → `/code-review` (model-invoked)
 
 ## Non-negotiables for agent work in this repo
 

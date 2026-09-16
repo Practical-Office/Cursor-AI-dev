@@ -20,9 +20,9 @@ Preferred chain (non-negotiable):
 
 ```
 /setup-matt-pocock-skills  (once per repo — hard gate)
-→ triage decision (/wayfinder | /grill-with-docs | /triage)
+→ route before grill (/wayfinder | /grill-with-docs); /triage when tracker intake
 → /to-spec                 (synthesis only; three mandatory sections)
-→ /to-tickets              (tracer-bullet vertical slices; binary kill test)
+→ /to-tickets              (tracer-bullet vertical slices; slice test)
 → /implement               (Red→Green only at seams; CI-matching commands; auto-closes with /code-review)
 → /code-review             (model-invoked; Standards ‖ Spec)
 ```
@@ -84,7 +84,7 @@ Engineer pastes feature request into Agent, accepts bulk suggestions, merges. Ha
 
 Students leave able to state in one sentence why Agent is preferred for multi-file work.
 
-## Triage before grill (mandatory)
+## Route before grill (mandatory — not the `/triage` skill)
 
 Most common early-cohort failure: default every item into `/grill-with-docs`. That skill is correct for scoped work when a codebase already exists. It is wrong for foggy or multi-session work.
 
@@ -93,9 +93,8 @@ Most common early-cohort failure: default every item into `/grill-with-docs`. Th
 | Foggy or >1 agent session | `/wayfinder` |
 | Scoped + codebase exists | `/grill-with-docs` |
 | No codebase yet | light priming → `/grill-with-docs` the moment code exists |
-| Existing issues that need role movement | `/triage` (state machine of triage roles) |
 
-`/triage` is distinct from the triage decision table. It moves issues through the label state machine defined by setup. Do not collapse the two.
+**`/triage` (tracker intake)** — separate block: existing issue/PR needs categorize, state, verify, brief. May grill inside triage. Do not collapse with the route-before-grill gate.
 
 ## Three Pillars (properties of the grilling engine)
 
@@ -120,7 +119,7 @@ Students state the difference in residual risk and reviewability in one sentence
 
 ## Instructor reset scripts
 
-- Defaulting to grill: “Triage decision missing. State the one-sentence reason for the skill you chose. Restart.”
+- Defaulting to grill: “Route decision missing. State the one-sentence reason for the skill you chose. Restart.”
 - No artifact: “CONTEXT.md / ADR not committed. Credit is zero until the file exists.”
 - Typing model-invoked skill as primary: “Architecture misunderstanding. `/implement` reaches `/code-review`. Restart from the correct user-invoked skill.”
 
@@ -162,7 +161,7 @@ Same grilled conversation → weak-context `/to-spec` vs properly primed `/to-sp
 
 Horizontal slicing produces intermediate states that cannot be demoed and diffs no one wants to review. Multi-session tickets recreate the context pollution the process exists to prevent. Teaching “red-green-refactor” inside `/implement` contradicts the current `tdd` skill definition and mixes concerns the process separated.
 
-## Vertical tracer-bullet rule + binary kill test
+## Vertical tracer-bullet rule + slice test
 
 A ticket fails and must be re-sliced immediately if:
 - it cannot state, in one sentence, a user-observable behavior change, **or**
@@ -185,7 +184,7 @@ Same small ticket: “just build it” vs full `/implement`. Show diffs, test co
 
 ## Instructor reset
 
-- Kill-test failure: “Ticket fails binary kill test. Re-slice now. One-sentence behavior + blockers required.”
+- Slice-test failure: “Ticket fails slice test. Re-slice now. One-sentence behavior + blockers required.”
 - Refactor inside loop: “Refactor is a code-review output. Revert the refactoring commits. Restart Red→Green only.”
 - Local green / CI red: “CI-equivalent commands are red. Not done. Fix inside this session.”
 
@@ -200,7 +199,7 @@ Paste-the-error-and-pray fixes symptoms. `/diagnosing-bugs` forces: reproduce �
 ## Dual-axis review (exact)
 
 Parallel sub-agents, fresh context:
-- **Standards** — repo conventions + Fowler baseline (Mysterious Name, Duplicated Code, Feature Envy, Data Clumps, Primitive Obsession, Repeated Switches, Shotgun Surgery, Divergent Change, Speculative Generality, Message Chains, Middle Man, Refused Bequest). Name the smell explicitly.
+- **Standards** — repo conventions and code messiness vs project norms. (Facilitators may optionally name Fowler smells for enrichment; not a learner gate.)
 - **Spec** — does the code implement the originating ticket/spec? If no spec can be found, report “no spec available”; do not invent requirements.
 
 Gate: every must-fix finding is committed as a fix the same day. Findings without commits = failed exercise.
@@ -225,7 +224,9 @@ Rules (from current skill):
 
 ## Instructor enforcement on Day 4
 
-Force named smells. Force same-day commits for every must-fix. Force at least one correctly branched prototype that is removed from main and has a recorded verdict. Use real diffs from Day 3.
+Force dual-axis Spec ‖ Standards findings. Force same-day commits for every must-fix. Force at least one correctly branched throwaway prototype (never merged to default branch) with a recorded verdict. Use real diffs from Day 3.
+
+**Pre-Build agent review (taught once):** After tickets and plan exist, before Build / `/implement`, run a separate review agent on ticket + plan; capture ~2 concrete findings (plan note or issue comment). Not a substitute for dual-axis closeout review.
 
 Reset language: “Must-fix finding has no committed fix. Day is not complete. Fix now.”
 
@@ -237,7 +238,7 @@ Reset language: “Must-fix finding has no committed fix. Day is not complete. F
 
 Process practiced only when there is no deadline is not learned. Day 5 is pure execution on real open work, group review of artifacts, and structured `/ask-matt` decision log.
 
-Instructor job: enforcement only. Force missing pillars, kill tickets that fail the binary kill test, stop context pollution, protect the working session from new lecture content. Any “reality check” discussion is grounded solely in the artifacts just produced.
+Instructor job: enforcement only. Force missing pillars, kill tickets that fail the slice test, stop context pollution, protect the working session from new lecture content. Any “reality check” discussion is grounded solely in the artifacts just produced.
 
 ## `/ask-matt` decision log (closing artifact)
 
@@ -247,11 +248,11 @@ Three real scenarios from the student’s own week → routing decision the skil
 
 In the repo and the tracker:
 - Completed `/setup-matt-pocock-skills` output.
-- At least one triage decision with written reasoning.
+- At least one route-before-grill decision with written reasoning.
 - Published specification with all three mandatory sections.
-- Ticket graph that passes the binary kill test.
+- Ticket graph that passes the slice test.
 - At least one Red→Green `/implement` diff with CI-matching commands green.
-- Dual-axis review that names concrete Fowler smells and has committed fixes for every must-fix.
+- Dual-axis review (Spec ‖ Standards) with committed fixes for every must-fix.
 - Three `/ask-matt` transcripts with written agreement or deviation.
 - (If used) prototype on throwaway branch with recorded verdict.
 
@@ -262,7 +263,7 @@ Self-reported confidence is not a metric. The Evidence Pack is the metric.
 # Cross-cutting teaching principles (enforcement)
 
 1. Artifacts over affirmation. If it is not in the repo or the tracker, it did not happen.
-2. Binary gates over gradients. Incomplete specs, tickets that fail the kill test, reviews without fixes are rejected, not scored partially.
+2. Binary gates over gradients. Incomplete specs, tickets that fail the slice test, reviews without fixes are rejected, not scored partially.
 3. Demo the cost. Every major teaching point has a side-by-side on the same real item. Residual risk and reviewability are the argument.
 4. Enforce in the room. Circulation is mandatory. Pairs that drift into chat-only or skip triage are stopped and reset with the scripts above.
 5. Modules lag the living process. When the process document changes, modules and this textbook are updated afterward. The process never lags the course.
@@ -277,7 +278,7 @@ Before the first day:
 - [ ] Official skills installed and `/setup-matt-pocock-skills` run in a real repo; three config files produced.
 - [ ] One complete preferred-chain cycle executed on a real team item; Evidence Pack items 1–6 produced personally.
 - [ ] Side-by-side residual-risk demo prepared on a real backlog item.
-- [ ] Reset scripts memorized for the five most common failure modes (skip setup, default grill, incomplete spec, kill-test failure, findings without fixes).
+- [ ] Reset scripts memorized for the five most common failure modes (skip setup, default grill, incomplete spec, slice-test failure, findings without fixes).
 - [ ] Certification inspection checklist printed.
 
 If any item is missing, the instructor is not ready. Do not start the cohort.
@@ -289,13 +290,13 @@ If any item is missing, the instructor is not ready. Do not start the cohort.
 Within 5 business days the student submits the Evidence Pack on real shipping work. Lead reviewer inspects only the artifacts:
 
 1. Setup output files present and correct.
-2. Triage decision + reasoning committed or in tracker.
+2. Route-before-grill decision + reasoning committed or in tracker.
 3. Spec published with all three sections; incomplete → fail.
-4. Ticket graph passes binary kill test; any failure → fail.
+4. Ticket graph passes slice test; any failure → fail.
 5. At least one Red→Green implement diff; CI commands green; no in-loop refactor.
-6. Dual-axis review names ≥2 Fowler smells; every must-fix has a committed fix same day.
+6. Dual-axis review (Spec ‖ Standards); every must-fix has a committed fix same day.
 7. Three `/ask-matt` transcripts + one-sentence agreement/deviation each.
-8. (If claimed) prototype branch exists, marked throwaway, verdict recorded, removed from main.
+8. (If claimed) prototype on throwaway branch, verdict recorded, never merged to default branch.
 
 Missing any required artifact → fail. No partial credit. No self-report accepted.
 
@@ -313,9 +314,9 @@ The course succeeds only when engineers ship higher-quality work with less rewor
 
 # Stop / Start directives for instructors
 
-- Stop accepting verbal confirmation of setup, triage, or review. Start requiring the committed file or tracker entry before credit.
+- Stop accepting verbal confirmation of setup, routing, or review. Start requiring the committed file or tracker entry before credit.
 - Stop teaching red-green-refactor inside `/implement`. Start Red→Green only; refactor is a code-review output (current `tdd` skill).
-- Stop allowing incomplete specs or tickets that fail the kill test to proceed. Start rejecting on the spot.
+- Stop allowing incomplete specs or tickets that fail the slice test to proceed. Start rejecting on the spot.
 - Stop leaving must-fix findings unacted. Start requiring same-day committed fixes.
 - Stop inventing personal “when to use what” frameworks. Start from `/ask-matt` transcripts only.
 - Stop letting the course lead the living process. Start updating modules and this textbook only after the process document changes.

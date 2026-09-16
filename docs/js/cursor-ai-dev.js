@@ -45,11 +45,11 @@
     "https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/CURSOR-MATT-SKILLS-PROCESS.md";
   const REPO_URL = "https://github.com/Practical-Office/Cursor-AI-dev";
 
-  const CHAIN_TEMPLATE = `setup → route (/wayfinder | /grill-with-docs)
+  const CHAIN_TEMPLATE = `setup → route (/wayfinder | /grill-with-docs); /triage when tracker intake
   → /to-spec (acceptance · non-goals · residual risks)
   → /to-tickets (slice test)
-  → /implement (Red→Green + CI-equivalent green → auto /code-review)
-  → must-fix committed same day`;
+  → /implement (Red→Green + CI-equivalent green; auto /code-review)
+  → dual-axis closeout review (Standards ‖ Spec; must-fix same day)`;
 
   const body = document.body;
   const base = body.dataset.base || "";

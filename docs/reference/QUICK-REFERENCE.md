@@ -1,29 +1,19 @@
 # Quick Reference — Cursor + Matt Pocock Skills
 
-**Print this. Keep it on the desk.** Full terms: `docs/glossary.html`.
+**Print this. Keep it on the desk.**
 
 ## Taxonomy
 - **User-invoked** (you type): ask-matt, grill-with-docs, wayfinder, triage, improve-codebase-architecture, setup-matt-pocock-skills, to-spec, to-tickets, implement
 - **Model-invoked** (agent reaches): prototype, diagnosing-bugs, research, tdd, domain-modeling, codebase-design, code-review, resolving-merge-conflicts
 
-Do not type model-invoked skills as primary flow steps. `/implement` reaches `/tdd` and auto `/code-review`; `/grill-with-docs` reaches `/domain-modeling`.
-
-## Route before grill
-- **Foggy** / weak-context / >1 session → `/wayfinder`
-- Scoped + properly primed `@` → `/grill-with-docs`
+## Route before grill (not `/triage`)
+- Foggy / >1 session → `/wayfinder`
+- Scoped + codebase → `/grill-with-docs`
 - No codebase → prime, then `/grill-with-docs` once code exists
-- Existing issues need label movement → `/triage` (tracker skill — separate from routing)
+- Existing issue/PR needs tracker intake → `/triage`
 
 ## Main chain
-```
-setup → route (/wayfinder | /grill-with-docs)
-  → /to-spec (3 sections · synthesis only)
-  → /to-tickets (slice test)
-  → pre-Build review (≥2 findings)
-  → /implement (Red→Green + CI)
-      └─ auto /code-review
-  → must-fix committed
-```
+setup → route (`/wayfinder` | `/grill-with-docs`; `/triage` when tracker intake) → `/to-spec` (3 sections) → `/to-tickets` (slice test) → `/implement` (Red→Green + CI; auto `/code-review`)
 
 ## Three Pillars
 1. Context Engineering
@@ -32,11 +22,11 @@ setup → route (/wayfinder | /grill-with-docs)
 
 ## Non-negotiables
 - Spec missing any of: acceptance criteria / non-goals / residual risks → reject
-- Ticket fails slice test (one-sentence behavior or blockers) → re-slice
-- Refactor is **not** inside implement; it is a `/code-review` output
-- CI = same commands as PR pipeline — "agent said tests passed" ≠ done
+- Ticket fails slice test (one-sentence behavior or missing blockers) → re-slice
+- Refactor is **not** inside implement; it is a code-review output
+- Local CI-equivalent commands must be green before commit
 - Must-fix review findings committed the same day
-- Prototype is throwaway branch/folder; never merge to default branch
+- Prototype is throwaway; capture verdict; never harden in place
 
 ## Router
-`/ask-matt` when unsure. Log: "For [situation], I routed to `/skill` because [reason]. Agreed / deviated because [one sentence]."
+`/ask-matt` when unsure. Log the decision.

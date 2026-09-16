@@ -10,15 +10,19 @@
 
 **Model-invoked skill**: Reached by the agent or by an orchestrator. Never a typed primary flow step.
 
+**Route before grill**: Before any grilling skill, decide which typed skill fits (`/wayfinder` or `/grill-with-docs`). Write one sentence of reasoning. This is not the same as typing `/triage`.
+
+**`/triage` (tracker intake)**: User-invoked skill for work already in the issue tracker — categorize, set state, verify, brief the agent. May grill inside triage. Different job from the route-before-grill gate.
+
 **Tracer-bullet ticket**: A vertical slice that delivers end-to-end observable behavior and declares its blocking edges. Sized for one focused agent session.
 
-**Binary kill test**: One-sentence user-observable behavior + recorded blockers. Fail either → re-slice.
+**Slice test**: One-sentence user-observable behavior + recorded blockers. Fail either → re-slice. Formerly called “binary kill test.” Not the BML experiment kill criteria.
 
 **Three Pillars**: Context Engineering, Assumption Destruction, Stress Testing — properties of the underlying grilling engine.
 
 **Red→Green only**: The TDD loop inside `/implement`. Refactor is deferred to `/code-review`.
 
-**Dual-axis review**: Standards (repo conventions + Fowler smells) ‖ Spec (match to originating ticket). Parallel sub-agents.
+**Dual-axis review**: Standards (repo conventions and code messiness vs project norms) ‖ Spec (match to originating ticket). Parallel sub-agents. Post-implement closeout; auto from `/implement`.
 
 ## Relationships
 
