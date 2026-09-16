@@ -1,8 +1,8 @@
-# Cursor + Matt Pocock Skills — 5-Day Course (v3)
+# Cursor + Matt Pocock Skills — 5-Day Course (v4)
 
-**Practical AI Engineering** · Audience: new Dev
+**Practical AI Engineering** · Audience: competent software engineers with basic Cursor experience
 
-Published HTML lives alongside this stub. Instructional density source: [MODULES-SOURCE-v3.md](reference/MODULES-SOURCE-v3.md).
+Published HTML lives alongside this stub. Instructional density source: [MODULES-SOURCE-v4.md](reference/MODULES-SOURCE-v4.md).
 
 **Living process:** [CURSOR-MATT-SKILLS-PROCESS.md](reference/CURSOR-MATT-SKILLS-PROCESS.md)  
 **Instructor textbook:** [Cursor-AI-dev-Instructor-Textbook-v4.md](reference/Cursor-AI-dev-Instructor-Textbook-v4.md) · [read online](instructor-textbook.html)  

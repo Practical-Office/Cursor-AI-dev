@@ -1,5 +1,7 @@
 # Module Source Content — Cursor + Matt Pocock Skills Course
 
+> **Historical — do not teach from this file.** Use [`MODULES-SOURCE-v4.md`](MODULES-SOURCE-v4.md) and the living process. Kept for repo history only.
+
 This file is the source for the five HTML modules + setup.  
 Convert to the same HTML pattern used in bug-handling-sop (module-N.html, setup.html, index.html).  
 Tone: direct, process-first, zero fluff, zero cheerleading. Audience = competent engineers.

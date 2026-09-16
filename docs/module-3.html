@@ -62,6 +62,29 @@
           </div>
 
           <div class="section-card">
+            <p class="eyebrow">Worked example — bad vs good ticket</p>
+            <h3>Horizontal slice fails; tracer bullet passes</h3>
+            <p><strong>Bad (reject — horizontal slice)</strong></p>
+            <ul>
+              <li>Title: “Add notifications schema and API”</li>
+              <li>Behavior: (missing one-sentence user-observable change)</li>
+              <li>Blockers: “Depends on auth refactor” (circular — auth ticket depends on this)</li>
+            </ul>
+            <p style="margin-top:0.75rem"><strong>Good (pass — tracer bullet)</strong></p>
+            <ul>
+              <li>Title: “Email digest toggle persists on Settings”</li>
+              <li>Behavior: “Given a logged-in user on Settings, toggling email digest off persists after refresh.”</li>
+              <li>Blockers: “Requires user-settings row (exists)” / “Blocks bulk admin edit (future ticket)”</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Pre-Build review (before <code>/implement</code>)</p>
+            <h3>Review ticket + plan first</h3>
+            <p>Separate agent review of ticket + plan. Record ≥2 concrete findings (gaps, risks, missing seams). Surfaces problems <strong>before</strong> code is written. Run this on Day 3 before your first <code>/implement</code>.</p>
+          </div>
+
+          <div class="section-card">
             <p class="eyebrow">Core concepts</p>
             <ul>
               <li><strong>Tracer-bullet tickets:</strong> vertical slices, end-to-end observable behavior, declare blockers, sized for one agent session.</li>
@@ -79,15 +102,16 @@
 
           <div class="section-card">
             <p class="eyebrow">Practice</p>
-            <p>Convert Day 2 spec → tickets. Pair-review applies <strong>slice test</strong> to every ticket; failures re-sliced on the spot. One ticket through <code>/implement</code>. Confirm Red→Green only, CI green, review auto-fired.</p>
+            <p>Convert Day 2 spec → tickets. Pair-review applies <strong>slice test</strong> to every ticket; failures re-sliced on the spot. <strong>Pre-Build review</strong> on the ticket you will implement (≥2 findings recorded). One ticket through <code>/implement</code>. Confirm Red→Green only, CI green, review auto-fired.</p>
           </div>
 
           <div class="section-card">
             <p class="eyebrow">Success criteria</p>
             <ul class="checklist">
               <li><label><input type="checkbox" data-progress="m3-c1" /> Zero circular blockers; zero tickets failing slice test</label></li>
-              <li><label><input type="checkbox" data-progress="m3-c2" /> ≥1 <code>/implement</code> diff is Red→Green only (no in-loop refactor)</label></li>
-              <li><label><input type="checkbox" data-progress="m3-c3" /> I ran CI-equivalent commands locally and can show pipeline-green evidence</label></li>
+              <li><label><input type="checkbox" data-progress="m3-c2" /> Pre-Build review recorded (≥2 concrete findings) before <code>/implement</code></label></li>
+              <li><label><input type="checkbox" data-progress="m3-c3" /> ≥1 <code>/implement</code> diff is Red→Green only (no in-loop refactor)</label></li>
+              <li><label><input type="checkbox" data-progress="m3-c4" /> I ran CI-equivalent commands locally and can show pipeline-green evidence</label></li>
             </ul>
           </div>
 

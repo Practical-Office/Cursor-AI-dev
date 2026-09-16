@@ -1,5 +1,7 @@
 # MODULES-SOURCE v3 — Cursor-AI-dev
 
+> **Historical — do not teach from this file.** Use [`MODULES-SOURCE-v4.md`](MODULES-SOURCE-v4.md) and the living process. Kept for repo history only.
+
 **Version:** 3.0 | **Updated:** 2026-07-25  
 **Audience:** New Dev (basic coding experience; little disciplined Cursor/agent practice)  
 **Tone:** Direct. Process-first. Zero cheerleading.  

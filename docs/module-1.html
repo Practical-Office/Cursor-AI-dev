@@ -41,8 +41,8 @@
           </div>
 
           <div class="section-card">
-            <p class="eyebrow">Why for a new Dev</p>
-            <p>Most new Cursor users treat the agent as autocomplete. Accept → ship → discover mess later. Cost is rework hours and review cycles, not first-draft speed. This module makes the cost visible on a real ticket.</p>
+            <p class="eyebrow">Why for competent engineers</p>
+            <p>Even experienced engineers treat the agent as autocomplete. Accept → ship → discover mess later. Cost is rework hours and review cycles, not first-draft speed. This module makes the cost visible on a real ticket.</p>
           </div>
 
           <div class="hard-truth">
@@ -66,28 +66,23 @@
             <p><strong>User-invoked</strong> (you type): ask-matt, grill-with-docs, wayfinder, triage, improve-codebase-architecture, setup-matt-pocock-skills, to-spec, to-tickets, implement</p>
             <p style="margin-top:0.5rem"><strong>Model-invoked</strong> (agent reaches; not typed as normal flow step): prototype, diagnosing-bugs, research, tdd, domain-modeling, codebase-design, code-review, resolving-merge-conflicts</p>
             <p style="margin-top:0.75rem"><strong>Worked example — user-invoked vs model-invoked:</strong> You type <code>/implement</code> on a tracer-bullet ticket (user-invoked). The agent reaches <code>/tdd</code> for Red→Green, then auto-invokes <code>/code-review</code> (model-invoked). You do <strong>not</strong> type <code>/code-review</code> as a separate chain step.</p>
-            <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--ink-faint)">Skill pages: <a href="https://practical-office.github.io/dev-sops/skills.html">hub Skills</a> · Process: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/CURSOR-MATT-SKILLS-PROCESS.md" target="_blank" rel="noopener noreferrer">living process</a></p>
+            <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--ink-faint)">Process: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/CURSOR-MATT-SKILLS-PROCESS.md" target="_blank" rel="noopener noreferrer">living process</a>. External <a href="https://practical-office.github.io/dev-sops/skills.html">skills hub</a> may list SOP names this course bans — use this course chain only.</p>
           </div>
 
           <div class="section-card">
             <h3>Route before grill</h3>
-            <p>Before any grilling skill, write a one-sentence routing decision. This is <strong>not</strong> the same as the <code>/triage</code> tracker skill (see below).</p>
+            <p>Before any grilling skill, write a one-sentence routing decision. See <a href="glossary.html">glossary</a> for <code>/triage</code> (tracker intake — separate from routing).</p>
             <div class="table-wrap">
               <table>
                 <thead><tr><th>Situation</th><th>Typed skill</th></tr></thead>
                 <tbody>
-                  <tr><td><strong>Foggy</strong> — underspecified or &gt;1 session; weak-context (cannot name correct <code>@</code> files yet)</td><td><code>/wayfinder</code></td></tr>
-                  <tr><td><strong>Scoped + codebase</strong> — properly primed with minimal correct <code>@</code> attach</td><td><code>/grill-with-docs</code></td></tr>
-                  <tr><td>No codebase yet</td><td>Prime, then <code>/grill-with-docs</code> once code exists</td></tr>
+                  <tr><td><strong>Foggy</strong> — underspecified or &gt;1 session; <a href="glossary.html">weak-context</a> (cannot name correct <code>@</code> files yet)</td><td><code>/wayfinder</code></td></tr>
+                  <tr><td><strong>Scoped + codebase</strong> — <a href="glossary.html">properly primed</a> with minimal correct <code>@</code> attach</td><td><code>/grill-with-docs</code></td></tr>
+                  <tr><td>No codebase yet</td><td>Route via <code>/wayfinder</code> or scaffold minimal repo; when code exists, attach minimal correct <code>@</code> → <code>/grill-with-docs</code></td></tr>
                 </tbody>
               </table>
             </div>
             <p style="margin-top:0.75rem">Never default every item into <code>/grill-with-docs</code>.</p>
-          </div>
-
-          <div class="section-card">
-            <h3><code>/triage</code> — tracker intake (separate)</h3>
-            <p><code>/triage</code> is a <strong>user-invoked tracker skill</strong> that moves existing issues through the label state machine defined at <a href="setup.html">Setup</a>. Use it when issues need role movement — not as a substitute for route-before-grill on new work.</p>
           </div>
 
           <div class="section-card">

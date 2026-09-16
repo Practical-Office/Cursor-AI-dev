@@ -61,10 +61,10 @@
 
       <section class="module" id="setup">
         <div class="module-header"><div class="module-badge">⚙</div><div><h2>Setup (hard gate)</h2><p class="module-time">~25–35 min</p></div></div>
-        <p>Without verified install, later modules invent process. Graded gate.</p>
+        <p>Without verified install, later modules invent process. Graded gate. Rules = always-on; Skills = on-demand.</p>
         <ol>
           <li><code>npx skills@latest add mattpocock/skills</code> (official + setup skill)</li>
-          <li>Run <code>/setup-matt-pocock-skills</code> in real repo; verify tracker/labels/docs</li>
+          <li>Run <code>/setup-matt-pocock-skills</code> in real repo; verify triage-labels, CONTEXT, docs/adr</li>
           <li>Recommended: <code>/setup-pre-commit</code></li>
         </ol>
         <p><strong>Fail if:</strong> skills global but invisible in repo; student skips to prompting; wrong skill set.</p>
@@ -74,7 +74,7 @@
         <div class="module-header"><div class="module-badge">1</div><div><h2>Reality Check &amp; Core Setup</h2><p class="module-time">Day 1</p></div></div>
         <p><strong>Surfaces:</strong> Chat=thinking · Composer/Agent=build · Rules=always-on · Skills=on-demand.</p>
         <p><strong>Taxonomy:</strong> user-invoked vs model-invoked is architecture. Do not type model-invoked as primary flow.</p>
-        <p><strong>Route before grill:</strong> foggy/weak-context→/wayfinder · scoped+properly primed→/grill-with-docs. /triage = tracker skill only.</p>
+        <p><strong>Route before grill:</strong> foggy/weak-context→/wayfinder · scoped+properly primed→/grill-with-docs · no codebase→wayfinder/scaffold then grill. /triage = tracker skill only.</p>
         <p><strong>Pillars:</strong> Context Engineering · Assumption Destruction · Stress Testing.</p>
         <p><strong>Demo:</strong> raw accept vs weak grill vs full three-pillar grill. <strong>Deliverable:</strong> committed CONTEXT/ADR.</p>
       </section>
@@ -86,12 +86,12 @@
 
       <section class="module" id="m3">
         <div class="module-header"><div class="module-badge">3</div><div><h2>Tickets + Implement</h2><p class="module-time">Day 3</p></div></div>
-        <p>Vertical tracer bullets · slice test · Red→Green only · CI = PR pipeline · clear context between tickets · refactor in code-review.</p>
+        <p>Vertical tracer bullets · slice test · pre-Build review (≥2 findings) before implement · Red→Green only · CI = PR pipeline · clear context between tickets · refactor in code-review.</p>
       </section>
 
       <section class="module" id="m4">
         <div class="module-header"><div class="module-badge">4</div><div><h2>Debug / Review / Prototype</h2><p class="module-time">Day 4</p></div></div>
-        <p><code>/diagnosing-bugs</code> · dual-axis review (Standards ‖ Spec) · pre-Build review · <code>/prototype</code> throwaway branch (LOGIC/UI). Must-fix committed before leave.</p>
+        <p><code>/diagnosing-bugs</code> (hypothesis before code) · dual-axis review (Standards ‖ Spec) · <code>/prototype</code> throwaway branch (LOGIC/UI). Must-fix committed before leave.</p>
       </section>
 
       <section class="module" id="m5">
