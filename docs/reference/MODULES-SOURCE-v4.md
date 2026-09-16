@@ -207,7 +207,7 @@ Route (if needed) → full three-pillar grill → `/to-spec`.
 ### Success criteria (binary)
 - [ ] Every published spec has all three mandatory sections (inspected)
 - [ ] ≥1 item correctly routed with written reasoning (Day 1 skill — spot-check only)
-- [ ] Instructor spot-checked underlying grill transcript for ≥1 spec per student
+- [ ] Reviewer spot-checked underlying grill transcript for ≥1 of my specs
 
 ### Stop / Start
 - Stop forcing foggy/oversized items through single-session grill. Start `/wayfinder` first.
@@ -276,16 +276,16 @@ Convert Day 2 spec → tickets. Pair-review applies **slice test** to every tick
 - [ ] Student ran CI-equivalent commands locally and can show pipeline-green evidence
 
 ### Stop / Start
-- Stop teaching red-green-**refactor** inside implement. Start Red→Green only; refactor in `/code-review`.
+- Stop doing red-green-**refactor** inside implement. Start Red→Green only; refactor in `/code-review`.
 - Stop subjective sizing. Start slice test on every ticket.
 - Stop trusting "tests passed" in chat. Start running the same commands CI runs.
 
 ---
 
-## MODULE 4 — Debugging, Review, Architecture, Prototype (Day 4)
+## MODULE 4 — Debug, Review, Architecture, Prototype (Day 4)
 
 ### Goal
-Repeatable model-invoked disciplines for cleaning AI mess and settling design questions that cannot be answered on paper.
+Repeatable disciplines for cleaning AI mess and settling design questions that cannot be answered on paper: model-invoked diagnosing, review, and prototype; user-invoked `/improve-codebase-architecture` when you choose to deepen structure.
 
 ### Why
 AI creates mess at speed. Without systematic diagnosis, dual-axis review, and throwaway prototyping, teams ship the mess or invent ad-hoc cleanup every time.
@@ -378,7 +378,7 @@ Deliverable: three transcripts + three sentences. Not freeform prose.
 ### Week success criteria (binary, inspected)
 - [ ] One complete end-to-end cycle with full artifact trail
 - [ ] Three `/ask-matt` transcripts + agreement/deviation sentences
-- [ ] Instructor has direct evidence of quality improvement Day 1 → Day 5
+- [ ] I can point to concrete artifacts showing quality improvement Day 1 → Day 5 (not self-report alone)
 
 ### Stop / Start
 - Stop hand-building personal frameworks. Start from `/ask-matt` transcripts.
