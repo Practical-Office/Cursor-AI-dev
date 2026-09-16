@@ -59,7 +59,6 @@
                 </ul>
                 Must-fix findings require a committed diff before you leave.
               </li>
-              <li><strong>Pre-Build review:</strong> Before <code>/implement</code>, run a separate agent review of ticket + plan. Record ≥2 concrete findings (gaps, risks, missing seams). Surfaces problems before code is written.</li>
               <li><strong><code>/improve-codebase-architecture</code>:</strong> HTML report of deepenings → skill grills the selected opportunity. Reject large-rewrite proposals.</li>
               <li><strong><code>/prototype</code>:</strong> throwaway answer to <strong>one</strong> design question on a <strong>throwaway branch or folder</strong>.
                 <ul>
@@ -72,8 +71,15 @@
           </div>
 
           <div class="section-card">
+            <p class="eyebrow">Worked example — diagnosing loop cue</p>
+            <h3>Hypothesis before code</h3>
+            <p><strong>Bad:</strong> “Fix the timeout” → agent edits retry logic with no hypothesis.</p>
+            <p style="margin-top:0.5rem"><strong>Good:</strong> “Hypothesis: upstream API returns 503 under load. Next experiment: log response status on failing path only. If 503 confirmed, add circuit breaker at client seam.”</p>
+          </div>
+
+          <div class="section-card">
             <p class="eyebrow">Practice</p>
-            <p>Every must-fix committed before day end. ≥1 prototype on throwaway branch/folder, removed from default branch, verdict recorded. Pre-Build review on at least one ticket before implement.</p>
+            <p>Every must-fix committed before day end. ≥1 prototype on throwaway branch/folder, removed from default branch, verdict recorded. (Pre-Build review was taught on Day 3 — apply before every <code>/implement</code>.)</p>
           </div>
 
           <div class="section-card">

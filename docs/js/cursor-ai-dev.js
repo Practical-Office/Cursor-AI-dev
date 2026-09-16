@@ -48,6 +48,7 @@
   const CHAIN_TEMPLATE = `setup → route (/wayfinder | /grill-with-docs)
   → /to-spec (acceptance · non-goals · residual risks)
   → /to-tickets (slice test)
+  → pre-Build review (≥2 findings)
   → /implement (Red→Green + CI-equivalent green → auto /code-review)
   → must-fix committed same day`;
 

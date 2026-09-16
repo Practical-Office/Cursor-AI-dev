@@ -42,13 +42,17 @@ Without a verified install every later module invents process. Unconfigured agen
 ### Hard gate
 No Module 1 until setup output (tracker, labels, domain-doc layout) exists in the student's own repo. Evidence Pack fails if missing.
 
+### Rules vs Skills (teach before checklist)
+- **Rules** = always-on static context in `.cursor/rules/` (short, specific, point at examples). Loaded every session.
+- **Skills** = on-demand workflows invoked by typing `/skill-name`. Cost context only when invoked.
+
 ### Exact steps
 1. Cursor open; Composer/Agent available (building surface). Chat is for thinking.
 2. `npx skills@latest add mattpocock/skills`
 3. Select official engineering skills **and** `/setup-matt-pocock-skills`
 4. Open **real** working repo
 5. Run `/setup-matt-pocock-skills`; answer tracker / labels / doc layout
-6. Verify files written
+6. Verify files written (`docs/agents/triage-labels.md`, `CONTEXT.md`, `docs/adr/`)
 7. Recommended: `/setup-pre-commit` so local gates match CI
 
 ### Binary checklist
@@ -73,8 +77,8 @@ Make the cost of undisciplined AI usage visible. Install taxonomy. Drill **route
 
 Day 2 publishes a three-section spec — it does not re-drill routing. Nail routing here.
 
-### Why for a new Dev
-Most new Cursor users treat the agent as autocomplete. Accept → ship → discover mess later. Cost is rework hours and review cycles, not first-draft speed. This module makes the cost visible on a real ticket.
+### Why for competent engineers
+Even experienced engineers treat the agent as autocomplete. Accept → ship → discover mess later. Cost is rework hours and review cycles, not first-draft speed. This module makes the cost visible on a real ticket.
 
 ### Hard truth
 Grilling without all Three Pillars is theater. Verbal "share what changed" does not count — committed `CONTEXT.md` / ADR is the deliverable.
@@ -101,12 +105,9 @@ Typing `/code-review` or `/domain-modeling` as primary flow = architecture misun
 |-----------|-------------|
 | **Foggy** — underspecified or >1 session; weak-context (cannot name correct `@` files yet) | `/wayfinder` |
 | **Scoped + codebase** — properly primed with minimal correct `@` attach | `/grill-with-docs` |
-| No codebase yet | Prime, then `/grill-with-docs` once code exists |
+| No codebase yet | Route via `/wayfinder` or scaffold minimal repo; when code exists, attach minimal correct `@` (properly primed — see glossary) → `/grill-with-docs` |
 
-Never default every item into `/grill-with-docs`.
-
-**`/triage` — tracker intake (separate)**  
-User-invoked tracker skill that moves existing issues through the label state machine defined at Setup. Use when issues need role movement — not as substitute for route-before-grill on new work.
+Never default every item into `/grill-with-docs`. For existing issues that need label movement in the tracker, use `/triage` — see glossary.
 
 **Three Pillars** (grilling engine properties — one worked example each on Day 1)
 1. Context Engineering — correct `@` files/folders first. Wrong context → confident wrong answers.
@@ -237,6 +238,24 @@ Good spec never sliced → large unreviewable diffs and context pollution. Horiz
 ### Hard truth
 **Slice test:** fail if missing one-sentence user-observable behavior **or** missing/circular blockers. Re-slice immediately. No negotiation. Reserve *kill test* for BML experiments.
 
+### Worked example — bad vs good ticket
+
+**Bad (reject — horizontal slice)**
+- Title: "Add notifications schema and API"
+- Behavior: (missing one-sentence user-observable change)
+- Blockers: "Depends on auth refactor" (circular — auth ticket depends on this)
+
+Fails slice test: no user-observable behavior; circular blockers.
+
+**Good (pass — tracer bullet)**
+- Title: "Email digest toggle persists on Settings"
+- Behavior: "Given a logged-in user on Settings, toggling email digest off persists after refresh."
+- Blockers: "Requires user-settings row (exists)" / "Blocks bulk admin edit (future ticket)"
+
+### Pre-Build review (before `/implement`)
+
+Separate agent review of ticket + plan. Record ≥2 concrete findings (gaps, risks, missing seams). Surfaces problems before code is written. Run this **before** the first `/implement` on Day 3.
+
 ### Core concepts
 - **Tracer-bullet tickets:** vertical slices, end-to-end observable behavior, declare blockers, sized for one agent session.
 - **Slice test:** one-sentence user-observable behavior + recorded blockers. Fail either → re-slice.
@@ -248,10 +267,11 @@ Good spec never sliced → large unreviewable diffs and context pollution. Horiz
 Same small ticket: "just build it" vs full `/implement` (Red→Green + CI + auto review). Compare diff, coverage, findings, residual risk.
 
 ### Practice
-Convert Day 2 spec → tickets. Pair-review applies **slice test** to every ticket; failures re-sliced on the spot. One ticket through `/implement`. Confirm Red→Green only, CI green, review auto-fired.
+Convert Day 2 spec → tickets. Pair-review applies **slice test** to every ticket; failures re-sliced on the spot. **Pre-Build review** on the ticket you will implement (≥2 findings recorded). One ticket through `/implement`. Confirm Red→Green only, CI green, review auto-fired.
 
 ### Success criteria (binary)
 - [ ] Zero circular blockers; zero tickets failing slice test
+- [ ] Pre-Build review recorded (≥2 concrete findings) before `/implement`
 - [ ] ≥1 `/implement` diff is Red→Green only (no in-loop refactor)
 - [ ] Student ran CI-equivalent commands locally and can show pipeline-green evidence
 
@@ -279,15 +299,20 @@ Every must-fix has a committed diff before day end. A review with zero fixes is 
   - **Standards** — repo conventions and concrete code-quality patterns (duplication, unclear naming, scattered change, etc.). Name the pattern explicitly.
   - **Spec** — does the diff match the originating ticket? ("no spec available" if none).
   Must-fix findings require committed diff before leaving.
-- **Pre-Build review:** Before `/implement`, separate agent review of ticket + plan. Record ≥2 concrete findings (gaps, risks, missing seams).
 - **`/improve-codebase-architecture`:** HTML report of deepenings → skill grills the selected opportunity. Reject large-rewrite proposals.
 - **`/prototype`:** throwaway answer to **one** design question on **throwaway branch or folder**.
   - Logic/state feel right? → LOGIC terminal app (print full state).
   - What should it look like? → UI variants on one route + floating toggle bar.
   - Rules: marked throwaway, next to real code, one command to run, no persistence default, no polish, capture verdict, **never merge to default branch**.
 
+### Worked example — diagnosing loop cue
+
+**Bad:** "Fix the timeout" → agent edits retry logic with no hypothesis.
+
+**Good:** "Hypothesis: upstream API returns 503 under load. Next experiment: log response status on failing path only. If 503 confirmed, add circuit breaker at client seam."
+
 ### Practice
-Every must-fix committed before day end. ≥1 prototype on throwaway branch/folder, removed from default branch, verdict recorded. Pre-Build review on at least one ticket before implement.
+Every must-fix committed before day end. ≥1 prototype on throwaway branch/folder, removed from default branch, verdict recorded. (Pre-Build review was taught on Day 3 — apply it before every `/implement`.)
 
 ### Success criteria (binary)
 - [ ] Diagnosing loop; hypothesis before each fix
@@ -346,7 +371,7 @@ Deliverable: three transcripts + three sentences. Not freeform prose.
 | Setup | Inspectable setup output (tracker, labels, domain-doc path) |
 | 1 | Committed CONTEXT.md / ADR + routing decision |
 | 2 | Three-section spec (all sections complete) |
-| 3 | Slice-test ticket graph + Red→Green implement diff + CI evidence |
+| 3 | Slice-test ticket graph + pre-Build review (≥2 findings) + Red→Green implement diff + CI evidence |
 | 4 | Dual-axis review + committed must-fix + prototype verdict (if used) |
 | 5 | Full chain on real work + three `/ask-matt` logs |
 

@@ -66,7 +66,8 @@ ROUTE BEFORE GRILL (typed — not the /triage skill)
   Foggy / >1 session?          → /wayfinder
   Scoped + codebase exists?    → /grill-with-docs
                                  (reaches model-invoked /domain-modeling)
-  No codebase yet?             → light priming → /grill-with-docs once code appears
+  No codebase yet?             → route via /wayfinder or scaffold minimal repo;
+                                 attach minimal correct @ when code exists → /grill-with-docs
 
 TRACKER INTAKE (when work is already an issue/PR)
   /triage                      — categorize, state, verify, brief; may grill inside
@@ -75,10 +76,12 @@ MAIN BUILD
   1. (routed grilling skill)
   2. /to-spec          — synthesis only; three mandatory sections; never an interview
   3. /to-tickets        — tracer-bullet vertical slices + recorded blockers; slice test
-  4. /implement         — Red → Green only at seams; runs project CI-equivalent commands;
+  4. pre-Build review   — separate agent review of ticket + plan; ≥2 concrete findings
+                          (gaps, risks, missing seams) before code is written
+  5. /implement         — Red → Green only at seams; runs project CI-equivalent commands;
                           auto-invokes /code-review at closeout
                           (refactor is a code-review output, never inside the loop)
-  5. /code-review       — dual-axis (Standards ‖ Spec) — model-invoked
+  6. /code-review       — dual-axis (Standards ‖ Spec) — model-invoked
 
 SUPPORTING (model-invoked or opportunistic)
   /prototype            — throwaway answer to one design question (LOGIC or UI branch)
@@ -101,12 +104,13 @@ ROUTER
 2. **Three Pillars** are properties of the underlying grilling engine: Context Engineering, Assumption Destruction, Stress Testing. Grilling without all three is theater.
 3. **`/to-spec` is synthesis only.** A spec missing acceptance criteria, non-goals, or residual risks fails review.
 4. **Vertical tracer-bullet tickets only.** Slice test: one-sentence user-observable behavior + recorded blockers. Fail either → re-slice immediately. Not BML kill criteria.
-5. **Red → Green only inside `/implement`.** Refactor belongs to `/code-review`.
-6. **Local verification matches CI.** Before any commit is considered complete, the project’s real CI-equivalent commands must be green.
-7. **Dual-axis review findings are acted on the same day.** Must-fix items require a committed fix.
-8. **`/prototype` for design questions that cannot be settled on paper.** Throwaway from day one; capture verdict; never harden into production code inside the prototype.
-9. **CONTEXT.md + ADRs are mandatory.** Vague language is rejected.
-10. **Measure only real experiments.** No fake Measure/Learn. No self-reported confidence as a success metric.
+5. **Pre-Build review before `/implement`.** Separate agent review of ticket + plan. Record ≥2 concrete findings. Surfaces gaps before code is written.
+6. **Red → Green only inside `/implement`.** Refactor belongs to `/code-review`.
+7. **Local verification matches CI.** Before any commit is considered complete, the project’s real CI-equivalent commands must be green.
+8. **Dual-axis review findings are acted on the same day.** Must-fix items require a committed fix.
+9. **`/prototype` for design questions that cannot be settled on paper.** Throwaway from day one; capture verdict; never harden into production code inside the prototype.
+10. **CONTEXT.md + ADRs are mandatory.** Vague language is rejected.
+11. **Measure only real experiments.** No fake Measure/Learn. No self-reported confidence as a success metric.
 
 ---
 

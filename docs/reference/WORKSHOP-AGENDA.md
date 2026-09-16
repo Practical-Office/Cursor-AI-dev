@@ -47,7 +47,7 @@ If Setup is incomplete for most of the room, spend the first block verifying ins
 | Block | Time | Content | Facilitator notes |
 |-------|------|---------|-------------------|
 | 0 | 20 m | Homework audit | Reject any missing route reasoning or artifact |
-| 1 | 15 m | Route gate | Foggy → `/wayfinder`; clear → `/grill-with-docs` |
+| 1 | 15 m | Context Engineering recap | Routing was Day 1 — today’s focus is spec quality |
 | 2 | 70 m | Three Pillars advanced | Live weak vs strong grill |
 | 3 | 90 m | Heavy grilling practice | Destroyed assumptions list required |
 | 4 | 75 m | `/to-spec` | Synthesis only; three mandatory sections |
@@ -64,9 +64,10 @@ If Setup is incomplete for most of the room, spend the first block verifying ins
 |-------|------|---------|-------------------|
 | 0 | 20 m | Spec audit | Reject incomplete sections |
 | 1 | 85 m | `/to-tickets` + slice test | Vertical only; one-sentence behavior + blockers |
-| 2 | 90 m | Spec → Tickets practice | Slice test applied to every ticket |
-| 3 | 75 m | `/implement` Red→Green | Refactor deferred; CI-matching commands required |
-| 4 | 90 m | Full implement practice | Context cleared; review auto-fires |
+| 2 | 75 m | Spec → Tickets practice | Slice test applied to every ticket |
+| 3 | 30 m | Pre-Build review (taught once) | Ticket + plan; ≥2 concrete findings recorded |
+| 4 | 75 m | `/implement` Red→Green | Refactor deferred; CI-matching commands required |
+| 5 | 90 m | Full implement practice | Context cleared; review auto-fires |
 | Close | 30 m | Recap + homework | Finish one ticket overnight |
 
 **Hard stop/start:** Stop teaching red-green-**refactor** inside implement. Start Red→Green only.
@@ -79,7 +80,7 @@ If Setup is incomplete for most of the room, spend the first block verifying ins
 |-------|------|---------|-------------------|
 | 0 | 20 m | Diff audit | Dual-axis Spec ‖ Standards |
 | 1 | 85 m | `/diagnosing-bugs` | Hypothesis before every code change |
-| 2 | 90 m | Dual-axis `/code-review` + pre-Build agent review (taught once) | Must-fix committed same day |
+| 2 | 90 m | Dual-axis `/code-review` | Must-fix committed same day |
 | 3 | 75 m | `/improve-codebase-architecture` | HTML report → built-in grill |
 | 4 | 45 m | `/prototype` | Correct branch; throwaway; capture verdict |
 | 5 | 60 m | Combined practice + fix gate | Every must-fix has a committed diff |

@@ -11,7 +11,7 @@ Do not type model-invoked skills as primary flow steps. `/implement` reaches `/t
 ## Route before grill
 - **Foggy** / weak-context / >1 session → `/wayfinder`
 - Scoped + properly primed `@` → `/grill-with-docs`
-- No codebase → prime, then `/grill-with-docs` once code exists
+- No codebase → route via `/wayfinder` or scaffold; when code exists, attach minimal correct `@` → `/grill-with-docs`
 - Existing issues need label movement → `/triage` (tracker skill — separate from routing)
 
 ## Main chain

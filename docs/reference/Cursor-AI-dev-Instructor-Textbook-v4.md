@@ -2,7 +2,7 @@
 ## Instructor Textbook (v4 — operational)
 
 **Audience:** Instructors who must teach and enforce the course under real pressure, and engineers who must defend the process.  
-**Companion artifacts:** Living process (`CURSOR-MATT-SKILLS-PROCESS.md`), module source (`MODULES-SOURCE-v3.md` and successors), workshop agenda, Evidence Pack.  
+**Companion artifacts:** Living process (`CURSOR-MATT-SKILLS-PROCESS.md`), module source (`MODULES-SOURCE-v4.md`), workshop agenda, Evidence Pack.  
 **Rule:** Course modules lag the living process. This textbook lags both and expands them for enforcement. It does not invent process.  
 **Skills pin:** `npx skills@latest add mattpocock/skills` (official engineering set + `/setup-matt-pocock-skills`). Detect drift by comparing skill front-matter against the living process taxonomy every cohort.
 
@@ -23,6 +23,7 @@ Preferred chain (non-negotiable):
 → route before grill (/wayfinder | /grill-with-docs); /triage when tracker intake
 → /to-spec                 (synthesis only; three mandatory sections)
 → /to-tickets              (tracer-bullet vertical slices; slice test)
+→ pre-Build review         (ticket + plan; ≥2 concrete findings)
 → /implement               (Red→Green only at seams; CI-matching commands; auto-closes with /code-review)
 → /code-review             (model-invoked; Standards ‖ Spec)
 ```
@@ -168,6 +169,10 @@ A ticket fails and must be re-sliced immediately if:
 - its blocking edges are missing or circular.
 
 No negotiation. Subjective sizing is rejected.
+
+## Pre-Build review (before `/implement`)
+
+Separate agent review of ticket + plan. Record ≥2 concrete findings (gaps, risks, missing seams). Surfaces problems before code is written. Taught and practiced on Day 3 before the first `/implement`.
 
 ## `/implement` exact behavior
 
@@ -321,4 +326,4 @@ The course succeeds only when engineers ship higher-quality work with less rewor
 - Stop inventing personal “when to use what” frameworks. Start from `/ask-matt` transcripts only.
 - Stop letting the course lead the living process. Start updating modules and this textbook only after the process document changes.
 
-This is the hardened instructor textbook. Modules and workshop agenda must lag it.
+This is the hardened instructor textbook. Modules and workshop agenda must lag the living process document.

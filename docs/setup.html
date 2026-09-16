@@ -36,7 +36,16 @@
           <ul>
             <li>Install mattpocock/skills into Cursor.</li>
             <li>Run <code>/setup-matt-pocock-skills</code> once in a real repo and show inspectable output.</li>
-            <li>State: Rules = always-on; Skills = on-demand.</li>
+            <li>State the Rules vs Skills difference (see below).</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Rules vs Skills</p>
+          <h3>Always-on vs on-demand</h3>
+          <ul>
+            <li><strong>Rules</strong> = always-on static context in <code>.cursor/rules/</code> (short, specific, point at examples). Loaded every session.</li>
+            <li><strong>Skills</strong> = on-demand workflows invoked by typing <code>/skill-name</code>. Cost context only when invoked.</li>
           </ul>
         </div>
 
@@ -54,7 +63,7 @@
             <li>Select official engineering skills <strong>and</strong> <code>/setup-matt-pocock-skills</code>.</li>
             <li>Open your <strong>real</strong> working repo.</li>
             <li>Run <code>/setup-matt-pocock-skills</code>; answer tracker / labels / doc layout.</li>
-            <li>Verify files written.</li>
+            <li>Verify files written (<code>docs/agents/triage-labels.md</code>, <code>CONTEXT.md</code>, <code>docs/adr/</code>).</li>
             <li>Recommended: <code>/setup-pre-commit</code> so local gates match CI.</li>
           </ol>
         </div>
