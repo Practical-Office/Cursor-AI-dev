@@ -49,7 +49,7 @@ No Module 1 until setup output (tracker, labels, domain-doc layout) exists in th
 ## MODULE 1 — Reality Check & Core Setup (Day 1)
 
 ### Goal
-Make the cost of undisciplined AI usage visible. Install taxonomy. Drill triage-before-grill until automatic.
+Make the cost of undisciplined AI usage visible. Install taxonomy. Drill route-before-grill until automatic.
 
 ### Why for a new Dev
 Most new Cursor users treat the agent as autocomplete. Accept → ship → discover mess later. Cost is rework hours and review cycles, not first-draft speed. This module makes the cost visible on a real ticket.
@@ -68,7 +68,7 @@ Most new Cursor users treat the agent as autocomplete. Accept → ship → disco
 
 Typing `/code-review` or `/domain-modeling` as primary flow = architecture misunderstanding. `/implement` reaches `/code-review`. `/grill-with-docs` reaches `/domain-modeling`.
 
-**Triage before grill**
+**Route before grill** (not the same as `/triage` tracker skill)
 | Situation | Typed skill |
 |-----------|-------------|
 | Foggy / >1 session | `/wayfinder` |
@@ -76,6 +76,9 @@ Typing `/code-review` or `/domain-modeling` as primary flow = architecture misun
 | No codebase yet | Prime, then `/grill-with-docs` once code exists |
 
 Never default every item into `/grill-with-docs`.
+
+**`/triage` — tracker intake (separate)**  
+User-invoked tracker skill that moves existing issues through the label state machine defined at Setup. Use when issues need role movement — not as substitute for route-before-grill on new work.
 
 **Three Pillars** (grilling engine properties)
 1. Context Engineering — correct `@` files/folders first. Wrong context → confident wrong answers.
@@ -94,17 +97,17 @@ Grilling without all three = theater.
 Students state the difference in one sentence each.
 
 ### Practice (pairs)
-Two real backlog items each. Write one-sentence triage decision. Run correct user-invoked skill.  
+Two real backlog items each. Write one-sentence route-before-grill decision. Run correct user-invoked skill.  
 **Deliverable (binary):** committed CONTEXT.md entry or ADR stub per item. Verbal share does not count. No artifact → no credit.
 
 ### Success criteria (binary)
 - [ ] Setup gate still holds
 - [ ] ≥1 committed CONTEXT.md / ADR from real item
-- [ ] Correct triage of new item without prompting
+- [ ] Correct route decision for new item without prompting
 - [ ] User-invoked vs model-invoked stated with examples
 
 ### Stop / Start
-- Stop defaulting everything to `/grill-with-docs`. Start triage first.
+- Stop defaulting everything to `/grill-with-docs`. Start route before grill.
 - Stop accepting verbal share. Start requiring committed artifact.
 
 ### Instructor enforcement
@@ -115,7 +118,7 @@ Kill pairs still "just chatting." Force the artifact. If they cannot name the pi
 ## MODULE 2 — Advanced Grilling + Specification (Day 2)
 
 ### Goal
-Triage-then-grill becomes default. Produce a 3-section, implementable specification via synthesis only.
+Route-then-grill becomes default. Produce a 3-section, implementable specification via synthesis only.
 
 ### Why
 Polished ticket never grilled = fiction. `/to-spec` synthesizes; it does not think. Skipping the grill produces specs that look complete and fail under implementation.
@@ -129,11 +132,11 @@ Polished ticket never grilled = fiction. `/to-spec` synthesizes; it does not thi
 Same grilled conversation → weak-context `/to-spec` (soft output) vs properly primed `/to-spec` (implementable). Critique section by section.
 
 ### Practice
-Triage → full three-pillar grill → `/to-spec`. Group review of **every** spec. Incomplete sections rejected in the room.
+Route before grill → full three-pillar grill → `/to-spec`. Group review of **every** spec. Incomplete sections rejected in the room.
 
 ### Success criteria (binary)
 - [ ] Every published spec has all three mandatory sections (inspected)
-- [ ] ≥1 item correctly triaged with written reasoning
+- [ ] ≥1 item correctly routed with written reasoning
 - [ ] Instructor spot-checked underlying grill transcript for ≥1 spec per student
 
 ### Stop / Start
@@ -145,14 +148,14 @@ Triage → full three-pillar grill → `/to-spec`. Group review of **every** spe
 ## MODULE 3 — Tickets + Implementation (Day 3)
 
 ### Goal
-Convert 3-section spec into tracer-bullet tickets that pass the binary kill test. Implement Red→Green only. Local verification matches real CI commands.
+Convert 3-section spec into tracer-bullet tickets that pass the slice test. Implement Red→Green only. Local verification matches real CI commands.
 
 ### Why
 Good spec never sliced → large unreviewable diffs and context pollution. Horizontal slicing ("all schema first") is the most common failure. "Just implement the whole spec" produces balls of mud.
 
 ### Core concepts
 - **Tracer-bullet tickets:** vertical slices, end-to-end observable behavior, declare blockers, sized for one agent session.
-- **Binary kill test:** fails if missing one-sentence user-observable behavior **or** missing/circular blockers. Re-slice immediately. No negotiation.
+- **Slice test:** fails if missing one-sentence user-observable behavior **or** missing/circular blockers. Re-slice immediately. No negotiation. Formerly “binary kill test”; not BML kill criteria.
 - **`/implement`:** Red→Green only at seams. Refactor is a `/code-review` output, not part of the loop. Runs CI-equivalent commands. Auto-invokes `/code-review`. Context cleared between tickets.
 - **Local verification matches CI:** "tests pass in session" is not done. Pipeline commands must be green before commit is complete.
 
@@ -160,7 +163,7 @@ Good spec never sliced → large unreviewable diffs and context pollution. Horiz
 Same small ticket: "just build it" vs full `/implement` (Red→Green + CI + auto review). Compare diff, coverage, findings, residual risk.
 
 ### Practice
-Convert Day 2 spec → tickets. Pair-review applies kill test to every ticket; failures re-sliced on the spot. One ticket through `/implement`. Confirm Red→Green only, CI green, review auto-fired.
+Convert Day 2 spec → tickets. Pair-review applies slice test to every ticket; failures re-sliced on the spot. One ticket through `/implement`. Confirm Red→Green only, CI green, review auto-fired.
 
 ### Success criteria (binary)
 - [ ] Zero circular blockers; zero tickets failing one-sentence test
@@ -169,7 +172,7 @@ Convert Day 2 spec → tickets. Pair-review applies kill test to every ticket; f
 
 ### Stop / Start
 - Stop teaching red-green-**refactor** inside implement. Start Red→Green only; refactor in review.
-- Stop subjective sizing. Start binary kill test on every ticket.
+- Stop subjective sizing. Start slice test on every ticket.
 
 ---
 
@@ -219,7 +222,7 @@ Process practiced only under low pressure is not learned. Day 5 = execution + ar
 - Real open work only.
 
 ### Executed chain
-triage (`/wayfinder` | `/grill-with-docs`) → `/to-spec` (if multi-session) → `/to-tickets` (kill test) → `/implement` (Red→Green, CI, clear context) → `/code-review` (auto)
+route before grill (`/wayfinder` | `/grill-with-docs`; `/triage` when tracker intake) → `/to-spec` (if multi-session) → `/to-tickets` (slice test) → `/implement` (Red→Green, CI, clear context) → `/code-review` (auto)
 
 ### Group reviews
 Diffs + dual-axis output. What would ship? Residual risk explicit. Smells named.
@@ -243,9 +246,9 @@ Three real scenarios from student's week → skill routing decision → one sent
 Within 5 business days, submit on **real shipping work**:
 
 1. Proof of `/setup-matt-pocock-skills` completion
-2. Triage decision + transcript
+2. Route-before-grill decision + transcript
 3. Published 3-section spec
-4. Ticket graph passing kill test
+4. Ticket graph passing slice test
 5. ≥1 Red→Green `/implement` diff + CI-green evidence
 6. Dual-axis review naming ≥2 Fowler smells + committed must-fixes
 7. Three `/ask-matt` transcripts + agreement/deviation
