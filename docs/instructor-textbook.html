@@ -77,8 +77,10 @@
 → /to-spec                 (synthesis only; three mandatory sections)
 → /to-tickets              (tracer-bullet vertical slices; slice test)
 → pre-Build review         (ticket + plan; ≥2 concrete findings)
-→ /implement               (Red→Green only at seams; CI-matching commands; auto-closes with /code-review)
-→ /code-review             (model-invoked; Standards ‖ Spec)</code></pre>
+→ /implement               (Red→Green only at seams; CI-matching commands)
+    └─ auto /code-review   (model-invoked; Standards ‖ Spec)
+→ must-fix committed</code></pre>
+          <p style="margin-top:0.75rem;font-size:0.9rem;color:var(--ink-faint)"><code>/code-review</code> is nested under <code>/implement</code> — not a separate typed chain step.</p>
 <p>Supporting skills (<code>/prototype</code>, <code>/diagnosing-bugs</code>, <code>/ask-matt</code>, <code>/improve-codebase-architecture</code>, etc.) are reached when the main chain surfaces the exact failure mode they solve. They are not optional decoration.</p>
 <p>The rest of this book states the exact failure mode each piece attacks, the artifact that proves the step occurred, the instructor reset script when the step is skipped, and the binary evidence required for credit.</p>
 </div>
@@ -129,7 +131,7 @@
 <thead><tr><th>Situation</th><th>Typed skill</th></tr></thead><tbody>
 <tr><td>Foggy or &gt;1 agent session</td><td><code>/wayfinder</code></td></tr>
 <tr><td>Scoped + codebase exists</td><td><code>/grill-with-docs</code></td></tr>
-<tr><td>No codebase yet</td><td>light priming → <code>/grill-with-docs</code> the moment code exists</td></tr>
+<tr><td>No codebase yet</td><td>route via <code>/wayfinder</code> or scaffold minimal repo; attach minimal correct <code>@</code> when code exists → <code>/grill-with-docs</code></td></tr>
 </tbody>
 </table></div>
 <p><strong><code>/triage</code> (tracker intake)</strong> — separate block: existing issue/PR needs categorize, state, verify, brief. May grill inside triage. Do not collapse with the route-before-grill gate.</p>

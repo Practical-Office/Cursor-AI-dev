@@ -14,7 +14,7 @@ Published HTML lives alongside this stub. Instructional density source: [MODULES
 1. Reality Check & Core Setup
 2. Advanced Grilling + Specification
 3. Tickets + Implementation
-4. Debugging, Review, Architecture, Prototype
+4. Debug, Review, Architecture, Prototype
 5. Full Workflow + Reality Check
 
 Course modules lag the living process. Never lead it.

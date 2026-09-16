@@ -1,5 +1,5 @@
 (() => {
-  const STORAGE_KEY = "cursor-ai-dev-progress-v3";
+  const STORAGE_KEY = "cursor-ai-dev-progress-v4";
   const THEME_KEY = "cursor-ai-dev-theme";
 
   const MODULES = [
@@ -23,7 +23,7 @@
     "setup-c1", "setup-c2", "setup-c3", "setup-c4",
     "m1-c1", "m1-c2", "m1-c3", "m1-c4",
     "m2-c1", "m2-c2", "m2-c3",
-    "m3-c1", "m3-c2", "m3-c3",
+    "m3-c1", "m3-c2", "m3-c3", "m3-c4",
     "m4-c1", "m4-c2", "m4-c3", "m4-c4",
     "m5-c1", "m5-c2", "m5-c3",
     "cert-1", "cert-2", "cert-3", "cert-4", "cert-5", "cert-6", "cert-7", "cert-8",
@@ -46,11 +46,12 @@
   const REPO_URL = "https://github.com/Practical-Office/Cursor-AI-dev";
 
   const CHAIN_TEMPLATE = `setup → route (/wayfinder | /grill-with-docs)
-  → /to-spec (acceptance · non-goals · residual risks)
+  → /to-spec (3 sections · synthesis only)
   → /to-tickets (slice test)
   → pre-Build review (≥2 findings)
-  → /implement (Red→Green + CI-equivalent green → auto /code-review)
-  → must-fix committed same day`;
+  → /implement (Red→Green + CI)
+      └─ auto /code-review
+  → must-fix committed`;
 
   const body = document.body;
   const base = body.dataset.base || "";

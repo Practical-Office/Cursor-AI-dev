@@ -60,7 +60,7 @@ Students who type `/domain-modeling` or `/code-review` as a primary flow step ha
 ```
 SETUP (once per repo — hard gate)
   /setup-matt-pocock-skills
-  /setup-pre-commit          (local gates must match CI)
+  (Recommended) /setup-pre-commit — local gates match CI before implement work
 
 ROUTE BEFORE GRILL (typed — not the /triage skill)
   Foggy / >1 session?          → /wayfinder
@@ -80,8 +80,8 @@ MAIN BUILD
                           (gaps, risks, missing seams) before code is written
   5. /implement         — Red → Green only at seams; runs project CI-equivalent commands;
                           auto-invokes /code-review at closeout
-                          (refactor is a code-review output, never inside the loop)
-  6. /code-review       — dual-axis (Standards ‖ Spec) — model-invoked
+                          (dual-axis Standards ‖ Spec — model-invoked, not typed;
+                           refactor is a code-review output, never inside the loop)
 
 SUPPORTING (model-invoked or opportunistic)
   /prototype            — throwaway answer to one design question (LOGIC or UI branch)

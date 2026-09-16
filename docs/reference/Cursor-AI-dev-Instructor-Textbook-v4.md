@@ -24,9 +24,12 @@ Preferred chain (non-negotiable):
 → /to-spec                 (synthesis only; three mandatory sections)
 → /to-tickets              (tracer-bullet vertical slices; slice test)
 → pre-Build review         (ticket + plan; ≥2 concrete findings)
-→ /implement               (Red→Green only at seams; CI-matching commands; auto-closes with /code-review)
-→ /code-review             (model-invoked; Standards ‖ Spec)
+→ /implement               (Red→Green only at seams; CI-matching commands)
+    └─ auto /code-review   (model-invoked; Standards ‖ Spec)
+→ must-fix committed
 ```
+
+`/code-review` is nested under `/implement` — not a separate typed chain step.
 
 Supporting skills (`/prototype`, `/diagnosing-bugs`, `/ask-matt`, `/improve-codebase-architecture`, etc.) are reached when the main chain surfaces the exact failure mode they solve. They are not optional decoration.
 
@@ -93,7 +96,7 @@ Most common early-cohort failure: default every item into `/grill-with-docs`. Th
 |-----------|-------------|
 | Foggy or >1 agent session | `/wayfinder` |
 | Scoped + codebase exists | `/grill-with-docs` |
-| No codebase yet | light priming → `/grill-with-docs` the moment code exists |
+| No codebase yet | route via `/wayfinder` or scaffold minimal repo; attach minimal correct `@` when code exists → `/grill-with-docs` |
 
 **`/triage` (tracker intake)** — separate block: existing issue/PR needs categorize, state, verify, brief. May grill inside triage. Do not collapse with the route-before-grill gate.
 
