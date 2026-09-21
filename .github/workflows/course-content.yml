@@ -1,0 +1,14 @@
+name: Course content
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  print-nonnegotiables:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check print quick-ref non-negotiables
+        run: bash scripts/check-print-nonnegotiables.sh

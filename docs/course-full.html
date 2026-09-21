@@ -101,7 +101,15 @@
 
       <section class="module" id="ref">
         <div class="module-header"><div class="module-badge">⚡</div><div><h2>Quick reference</h2></div></div>
-        <p>Reject incomplete specs · slice-test failures · refactor inside implement · unacted must-fix · prototypes merged to default branch.</p>
+        <h3>Non-negotiables</h3>
+        <ul>
+          <li>Spec missing any of: acceptance criteria / non-goals / residual risks → reject</li>
+          <li>Ticket fails slice test (one-sentence behavior or blockers) → re-slice</li>
+          <li>Refactor is <strong>not</strong> inside implement; it is a <code>/code-review</code> output</li>
+          <li>CI = same commands as PR pipeline — “agent said tests passed” ≠ done</li>
+          <li>Must-fix review findings committed the same day</li>
+          <li>Prototype is throwaway branch/folder; never merge to default branch</li>
+        </ul>
         <p>Live: <a href="quick-reference.html">quick-reference.html</a></p>
       </section>
     </main>
