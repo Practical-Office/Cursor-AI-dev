@@ -305,6 +305,12 @@ pre code {
   color: var(--ink);
 }
 
+.nav-link--external-sop {
+  border-left: 3px solid var(--brand);
+  font-size: 0.85rem;
+  opacity: 0.95;
+}
+
 .nav-num {
   width: 1.5rem;
   height: 1.5rem;
