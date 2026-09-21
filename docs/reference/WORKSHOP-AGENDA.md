@@ -4,7 +4,7 @@
 **Audience:** Competent software engineers with basic Cursor experience  
 **Artifacts:** Published Course HTML (`docs/`), this agenda, living process, [Instructor Textbook](../instructor-textbook.html) (`docs/reference/Cursor-AI-dev-Instructor-Textbook-v4.md`), certification evidence pack  
 **Living process:** CURSOR-MATT-SKILLS-PROCESS.md  
-**Certification:** Evidence Pack + lead review (`docs/certification.html`)
+**Certification:** Evidence Pack (8 required artifacts; #8 = throwaway `/prototype` + verdict) + lead review (`docs/certification.html`)
 
 > Facilitator plan only — not a slide deck.  
 > Point learners at the live pages; use this table for timing.
