@@ -153,7 +153,7 @@
         <p class="nav-section-label">Modules</p>
         ${moduleLinks}
         <p class="nav-section-label">Reference</p>
-        <a class="nav-link" href="${HUB_SKILLS_URL}"><span class="nav-num">/</span> Skills</a>
+        <a class="nav-link nav-link--external-sop" href="${HUB_SKILLS_URL}" target="_blank" rel="noopener noreferrer" title="Course chain only — external hub may list banned SOPs (/to-issues, refactor-in-loop /tdd)"><span class="nav-num">⚠</span> External skills (course chain only)</a>
         ${refLinks}
         <a class="nav-link" href="${href("course-full.html")}"><span class="nav-num">PDF</span> Save as PDF</a>
         <a class="nav-link" href="${LIVING_PROCESS_URL}" target="_blank" rel="noopener noreferrer"><span class="nav-num">SOP</span> Living process</a>
