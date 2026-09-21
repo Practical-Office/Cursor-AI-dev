@@ -372,7 +372,7 @@ Deliverable: three transcripts + three sentences. Not freeform prose.
 | 1 | Committed CONTEXT.md / ADR + routing decision |
 | 2 | Three-section spec (all sections complete) |
 | 3 | Slice-test ticket graph + pre-Build review (≥2 findings) + Red→Green implement diff + CI evidence |
-| 4 | Dual-axis review + committed must-fix + prototype verdict (if used) |
+| 4 | Dual-axis review + committed must-fix + prototype verdict (Evidence Pack artifact 8) |
 | 5 | Full chain on real work + three `/ask-matt` logs |
 
 ### Week success criteria (binary, inspected)
@@ -394,6 +394,8 @@ Key terms: route before grill, `/triage` tracker skill, foggy/weak-context, prop
 
 ## CERTIFICATION (evidence pack)
 
+**Policy (locked):** Exactly **eight required** binary artifacts on real shipping work. Artifact **8** is the throwaway `/prototype` branch/folder + verdict (not on default branch). Day 4 cohort practice produces artifact 8; certification item 8 is not optional “if used.”
+
 Within 5 business days, submit on **real shipping work**:
 
 1. Proof of `/setup-matt-pocock-skills` completion
@@ -403,7 +405,7 @@ Within 5 business days, submit on **real shipping work**:
 5. ≥1 Red→Green `/implement` diff + CI-green evidence (same commands as PR pipeline)
 6. Dual-axis review naming ≥2 concrete code-quality patterns + committed must-fixes
 7. Three `/ask-matt` transcripts + agreement/deviation sentences
-8. (If used) `/prototype` throwaway branch/folder + verdict (not on default branch)
+8. `/prototype` throwaway branch/folder + verdict (not on default branch) — required artifact 8
 
 Missing any required artifact → fail. No partial credit. Measure only real experiments.
 

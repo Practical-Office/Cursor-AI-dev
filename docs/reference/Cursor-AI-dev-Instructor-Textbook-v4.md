@@ -262,7 +262,7 @@ In the repo and the tracker:
 - At least one Red→Green `/implement` diff with CI-matching commands green.
 - Dual-axis review (Spec ‖ Standards) with committed fixes for every must-fix.
 - Three `/ask-matt` transcripts with written agreement or deviation.
-- (If used) prototype on throwaway branch with recorded verdict.
+- Prototype on throwaway branch with recorded verdict (Evidence Pack artifact 8 — required).
 
 Self-reported confidence is not a metric. The Evidence Pack is the metric.
 
@@ -304,7 +304,7 @@ Within 5 business days the student submits the Evidence Pack on real shipping wo
 5. At least one Red→Green implement diff; CI commands green; no in-loop refactor.
 6. Dual-axis review (Spec ‖ Standards); every must-fix has a committed fix same day.
 7. Three `/ask-matt` transcripts + one-sentence agreement/deviation each.
-8. (If claimed) prototype on throwaway branch, verdict recorded, never merged to default branch.
+8. Prototype on throwaway branch, verdict recorded, never merged to default branch (required artifact 8).
 
 Missing any required artifact → fail. No partial credit. No self-report accepted.
 
