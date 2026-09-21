@@ -100,7 +100,7 @@
       setup: ["setup-c1", "setup-c2", "setup-c3", "setup-c4"],
       "module-1": ["m1-c1", "m1-c2", "m1-c3", "m1-c4"],
       "module-2": ["m2-c1", "m2-c2", "m2-c3"],
-      "module-3": ["m3-c1", "m3-c2", "m3-c3"],
+      "module-3": ["m3-c1", "m3-c2", "m3-c3", "m3-c4"],
       "module-4": ["m4-c1", "m4-c2", "m4-c3", "m4-c4"],
       "module-5": ["m5-c1", "m5-c2", "m5-c3"],
       certification: ["cert-1", "cert-2", "cert-3", "cert-4", "cert-5", "cert-6", "cert-7", "cert-8"],
