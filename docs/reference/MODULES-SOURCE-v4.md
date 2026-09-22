@@ -388,7 +388,7 @@ Deliverable: three transcripts + three sentences. Not freeform prose.
 
 ## GLOSSARY (learner surface: docs/glossary.html)
 
-Key terms: route before grill, `/triage` tracker skill, foggy/weak-context, properly primed, user-invoked, model-invoked, three-section spec, tracer-bullet ticket, slice test, group review, Red→Green only, refactor, CI, dual-axis review, pre-Build review, must-fix, evidence artifact, `/prototype`, kill test (BML only).
+Key terms: route before grill, `/triage` tracker skill, `@` files, foggy/weak-context, properly primed, grilling engine, seam, user-invoked, model-invoked, three-section spec, tracer-bullet ticket, slice test, group review, Red→Green only, refactor, CI, dual-axis review, pre-Build review, must-fix, evidence artifact, `/prototype`, kill test (BML only).
 
 ---
 

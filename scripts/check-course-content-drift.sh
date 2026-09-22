@@ -7,6 +7,7 @@ PROCESS="$ROOT/docs/reference/CURSOR-MATT-SKILLS-PROCESS.md"
 V4="$ROOT/docs/reference/MODULES-SOURCE-v4.md"
 CERT="$ROOT/docs/certification.html"
 HUB="$ROOT/docs/index.html"
+PRINT="$ROOT/docs/course-full.html"
 JS="$ROOT/docs/js/cursor-ai-dev.js"
 
 SYNC_BADGE="Last synced with process v1.1 (2026-09-22)"
@@ -19,7 +20,7 @@ PACK_PHRASES=(
   "honor-system only"
 )
 
-for f in "$PROCESS" "$V4" "$CERT" "$HUB"; do
+for f in "$PROCESS" "$V4" "$CERT" "$HUB" "$PRINT"; do
   if [[ ! -f "$f" ]]; then
     echo "missing file: $f"
     exit 1
@@ -62,6 +63,11 @@ done
 
 if ! grep -qF 'Do not keep prompting the agent to "make it work."' "$JS"; then
   echo "cursor-ai-dev.js missing escalate strip text"
+  exit 1
+fi
+
+if ! grep -qF "Learner-summary-only" "$PRINT"; then
+  echo "course-full.html missing learner-summary-only label"
   exit 1
 fi
 

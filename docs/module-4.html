@@ -34,22 +34,34 @@
             </div>
           </div>
 
-          <div class="section-card">
+          <nav class="section-card module-toc no-print" aria-label="On this page">
+            <p class="eyebrow">On this page</p>
+            <ul class="module-toc-list">
+              <li><a href="#m4-goal">Goal</a></li>
+              <li><a href="#m4-why">Why</a></li>
+              <li><a href="#m4-hard-truth">Practice gate</a></li>
+              <li><a href="#m4-core">Core concepts</a></li>
+              <li><a href="#m4-diagnosing">Diagnosing example</a></li>
+              <li><a href="#m4-success">Success criteria</a></li>
+            </ul>
+          </nav>
+
+          <div class="section-card" id="m4-goal">
             <p class="eyebrow">Goal</p>
             <p>Repeatable disciplines for cleaning AI mess and settling design questions that cannot be answered on paper: model-invoked diagnosing, review, and prototype; user-invoked <code>/improve-codebase-architecture</code> when you choose to deepen structure.</p>
           </div>
 
-          <div class="section-card">
+          <div class="section-card" id="m4-why">
             <p class="eyebrow">Why</p>
             <p>AI creates mess at speed. Without systematic diagnosis, dual-axis review, and throwaway prototyping, teams ship the mess or invent ad-hoc cleanup every time.</p>
           </div>
 
-          <div class="hard-truth">
+          <div class="hard-truth" id="m4-hard-truth">
             <h3>Practice gate</h3>
             <p>Every must-fix has a committed diff before day end. A review with zero fixes is a failed exercise. Prototypes are throwaway — never harden in place, never merge to the default branch.</p>
           </div>
 
-          <div class="section-card">
+          <div class="section-card" id="m4-core">
             <p class="eyebrow">Core concepts</p>
             <ul>
               <li><strong><code>/diagnosing-bugs</code>:</strong> reproduce → minimise → hypothesise → instrument → fix → regression-test. State hypothesis + next smallest experiment <strong>before</strong> changing code. Model-invoked.</li>
@@ -71,7 +83,7 @@
             </ul>
           </div>
 
-          <div class="section-card">
+          <div class="section-card" id="m4-diagnosing">
             <p class="eyebrow">Worked example — diagnosing loop cue</p>
             <h3>Hypothesis before code</h3>
             <p><strong>Bad:</strong> “Fix the timeout” → agent edits retry logic with no hypothesis.</p>
@@ -83,7 +95,7 @@
             <p>Every must-fix committed before day end. ≥1 prototype on throwaway branch/folder, removed from default branch, verdict recorded — this satisfies Evidence Pack <strong>artifact 8</strong>. (Pre-Build review was taught on Day 3 — apply before every <code>/implement</code>.)</p>
           </div>
 
-          <div class="section-card">
+          <div class="section-card" id="m4-success">
             <p class="eyebrow">Success criteria</p>
             <ul class="checklist">
               <li><label><input type="checkbox" data-progress="m4-c1" /> Diagnosing loop; hypothesis before each fix</label></li>

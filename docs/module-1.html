@@ -34,24 +34,40 @@
             </div>
           </div>
 
-          <div class="section-card">
+          <nav class="section-card module-toc no-print" aria-label="On this page">
+            <p class="eyebrow">On this page</p>
+            <ul class="module-toc-list">
+              <li><a href="#m1-goal">Goal</a></li>
+              <li><a href="#m1-why">Why</a></li>
+              <li><a href="#m1-hard-truth">Hard truth</a></li>
+              <li><a href="#m1-surfaces">Cursor surfaces</a></li>
+              <li><a href="#m1-taxonomy">Skill taxonomy</a></li>
+              <li><a href="#m1-route">Route before grill</a></li>
+              <li><a href="#m1-pillars">Three Pillars</a></li>
+              <li><a href="#m1-demo">Live demo</a></li>
+              <li><a href="#m1-practice">Practice</a></li>
+              <li><a href="#m1-success">Success criteria</a></li>
+            </ul>
+          </nav>
+
+          <div class="section-card" id="m1-goal">
             <p class="eyebrow">Goal</p>
             <h3>What this day is for</h3>
             <p>Make the cost of undisciplined AI usage visible. Install taxonomy. Drill <strong>route before grill</strong> until automatic. Practice one worked example of each Three Pillar.</p>
             <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--ink-faint)">Day 2 publishes a three-section spec — it does not re-drill routing. Nail routing here.</p>
           </div>
 
-          <div class="section-card">
+          <div class="section-card" id="m1-why">
             <p class="eyebrow">Why for competent engineers</p>
             <p>Even experienced engineers treat the agent as autocomplete. Accept → ship → discover mess later. Cost is rework hours and review cycles, not first-draft speed. This module makes the cost visible on a real ticket.</p>
           </div>
 
-          <div class="hard-truth">
+          <div class="hard-truth" id="m1-hard-truth">
             <h3>Hard truth</h3>
             <p>Grilling without all Three Pillars is theater. Verbal “share what changed” does not count — committed <code>CONTEXT.md</code> / ADR is the deliverable.</p>
           </div>
 
-          <div class="section-card">
+          <div class="section-card" id="m1-surfaces">
             <p class="eyebrow">Core concepts</p>
             <h3>Cursor surfaces</h3>
             <ul>
@@ -62,7 +78,7 @@
             </ul>
           </div>
 
-          <div class="section-card">
+          <div class="section-card" id="m1-taxonomy">
             <h3>Skill taxonomy (architecture)</h3>
             <p><strong>User-invoked</strong> (you type): ask-matt, grill-with-docs, wayfinder, triage, improve-codebase-architecture, setup-matt-pocock-skills, to-spec, to-tickets, implement</p>
             <p style="margin-top:0.5rem"><strong>Model-invoked</strong> (agent reaches; not typed as normal flow step): prototype, diagnosing-bugs, research, tdd, domain-modeling, codebase-design, code-review, resolving-merge-conflicts</p>
@@ -70,14 +86,18 @@
             <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--ink-faint)">Process: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/CURSOR-MATT-SKILLS-PROCESS.md" target="_blank" rel="noopener noreferrer">living process</a>. External <a href="https://practical-office.github.io/dev-sops/skills.html">skills hub</a> may list SOP names this course bans — use this course chain only.</p>
           </div>
 
-          <div class="section-card">
+          <div class="section-card" id="m1-route">
             <h3>Route before grill</h3>
             <p>Before any grilling skill, write a one-sentence routing decision. See <a href="glossary.html">glossary</a> for <code>/triage</code> (tracker intake — separate from routing).</p>
+            <ul style="margin-top:0.75rem">
+              <li><strong><code>/wayfinder</code>:</strong> charts decision tickets for foggy or multi-session work until the map is buildable — delivers decisions, not code.</li>
+              <li><strong><code>/grill-with-docs</code>:</strong> sharpens scoped work in one session with minimal correct <code>@</code> files — leaves committed domain artifacts.</li>
+            </ul>
             <div class="table-wrap">
               <table>
                 <thead><tr><th>Situation</th><th>Typed skill</th></tr></thead>
                 <tbody>
-                  <tr><td><strong>Foggy</strong> — underspecified or &gt;1 session; <a href="glossary.html#weak-context">weak-context</a> (cannot name correct <code>@</code> files yet)</td><td><code>/wayfinder</code></td></tr>
+                  <tr><td><strong>Foggy</strong> — underspecified or &gt;1 session; <a href="glossary.html#weak-context">weak-context</a> (cannot name correct <a href="glossary.html#at-files"><code>@</code> files</a> yet)</td><td><code>/wayfinder</code></td></tr>
                   <tr><td><strong>Scoped + codebase</strong> — <a href="glossary.html#properly-primed">properly primed</a> with minimal correct <code>@</code> attach</td><td><code>/grill-with-docs</code></td></tr>
                   <tr><td>No codebase yet</td><td>Route via <code>/wayfinder</code> or scaffold minimal repo; when code exists, attach minimal correct <code>@</code> → <code>/grill-with-docs</code></td></tr>
                 </tbody>
@@ -86,9 +106,9 @@
             <p style="margin-top:0.75rem">Never default every item into <code>/grill-with-docs</code>.</p>
           </div>
 
-          <div class="section-card">
+          <div class="section-card" id="m1-pillars">
             <h3>Three Pillars</h3>
-            <p>Properties of the grilling engine — not exclusive to one skill. Day 1: one worked example of each pillar on a real item.</p>
+            <p>Properties of the <a href="glossary.html#grilling-engine">grilling engine</a> — not exclusive to one skill. Day 1: one worked example of each pillar on a real item.</p>
             <ol>
               <li><strong>Context Engineering</strong> — correct <code>@</code> files/folders first. Wrong context → confident wrong answers.</li>
               <li><strong>Assumption Destruction</strong> — force assumptions open; attack them. Facts = look up yourself; decisions = grill.</li>
@@ -96,7 +116,7 @@
             </ol>
           </div>
 
-          <div class="section-card">
+          <div class="section-card" id="m1-demo">
             <p class="eyebrow">Live demo (instructor)</p>
             <ol>
               <li>Real small backlog item.</li>
@@ -108,7 +128,7 @@
             <p style="margin-top:0.75rem">Students state the difference in one sentence each.</p>
           </div>
 
-          <div class="section-card">
+          <div class="section-card" id="m1-practice">
             <p class="eyebrow">Practice (pairs)</p>
             <p>Two real backlog items each. Write one-sentence <strong>routing</strong> decision (not just “triage”). Run the correct user-invoked skill.</p>
             <p style="margin-top:0.75rem"><strong>Deliverable (binary):</strong> committed <code>CONTEXT.md</code> entry or ADR stub per item. Verbal share does not count. No artifact → no credit.</p>
@@ -119,7 +139,7 @@
             <p>Kill pairs still “just chatting.” Force the artifact. If they cannot name the pillar used, the grill failed.</p>
           </div>
 
-          <div class="section-card">
+          <div class="section-card" id="m1-success">
             <p class="eyebrow">Success criteria</p>
             <ul class="checklist">
               <li><label><input type="checkbox" data-progress="m1-c1" /> Setup gate still holds — I can point at tracker, labels, and domain-doc path files from <a href="setup.html">Setup</a></label></li>

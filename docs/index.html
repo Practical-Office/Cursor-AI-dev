@@ -48,6 +48,27 @@
           <p>Most engineers treat the agent as autocomplete. Accept → ship → discover mess later. Without a common chain, teams invent prompt habits and ship unreviewed AI diffs. This course installs one end-to-end path so engineers produce committed domain artifacts, slice-test tickets, pre-Build review, and CI-green implement loops — not theater.</p>
           <p style="margin-top:0.75rem"><strong>Principles:</strong> <strong>Route before grill</strong> (one-sentence routing decision before any grilling skill — see <a href="module-1.html">Module 1</a>) · Three Pillars (Context Engineering, Assumption Destruction, Stress Testing) · <strong>Spec synthesis only</strong> (<code>/to-spec</code> publishes; it does not interview — see <a href="module-2.html">Module 2</a>) · Ticket <strong>slice test</strong> (one-sentence user-observable behavior + non-circular blockers; reserve <em>kill test</em> for BML) · Red→Green only in <code>/implement</code> · Must-fix same day · Prototypes are throwaway · Domain decisions require committed <code>CONTEXT.md</code> / ADR.</p>
           <p style="margin-top:0.75rem"><strong>Skills chain:</strong> <code>/setup-matt-pocock-skills</code> → route (<code>/wayfinder</code> | <code>/grill-with-docs</code>; tracker <code>/triage</code> when issues need label movement) → <code>/to-spec</code> → <code>/to-tickets</code> → pre-Build review → <code>/implement</code> (auto <code>/code-review</code>). <a href="glossary.html">Glossary →</a></p>
+          <div class="diagram-wrap workflow-diagram" role="img" aria-label="Preferred skills chain workflow">
+            <svg viewBox="0 0 700 168" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><marker id="wf-arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--muted, #64748b)"/></marker></defs>
+              <rect class="wf-box" x="4" y="58" width="88" height="36" rx="6"/><text x="48" y="80" text-anchor="middle" font-size="10">/setup</text>
+              <line class="wf-arrow" x1="92" y1="76" x2="108" y2="76" marker-end="url(#wf-arrowhead)"/>
+              <rect class="wf-box" x="108" y="58" width="72" height="36" rx="6"/><text x="144" y="80" text-anchor="middle" font-size="10">route</text>
+              <line class="wf-arrow" x1="180" y1="76" x2="196" y2="76" marker-end="url(#wf-arrowhead)"/>
+              <rect class="wf-box" x="196" y="58" width="76" height="36" rx="6"/><text x="234" y="80" text-anchor="middle" font-size="10">/to-spec</text>
+              <line class="wf-arrow" x1="272" y1="76" x2="288" y2="76" marker-end="url(#wf-arrowhead)"/>
+              <rect class="wf-box" x="288" y="58" width="88" height="36" rx="6"/><text x="332" y="80" text-anchor="middle" font-size="10">/to-tickets</text>
+              <line class="wf-arrow" x1="376" y1="76" x2="392" y2="76" marker-end="url(#wf-arrowhead)"/>
+              <rect class="wf-box" x="392" y="48" width="96" height="56" rx="6"/><text x="440" y="72" text-anchor="middle" font-size="9">pre-Build</text><text x="440" y="86" text-anchor="middle" font-size="9">review</text>
+              <line class="wf-arrow" x1="488" y1="76" x2="504" y2="76" marker-end="url(#wf-arrowhead)"/>
+              <rect class="wf-box" x="504" y="58" width="88" height="36" rx="6"/><text x="548" y="80" text-anchor="middle" font-size="10">/implement</text>
+              <line class="wf-arrow" x1="592" y1="76" x2="608" y2="76" marker-end="url(#wf-arrowhead)"/>
+              <rect class="wf-box" x="608" y="48" width="88" height="56" rx="6"/><text x="652" y="72" text-anchor="middle" font-size="9">auto</text><text x="652" y="86" text-anchor="middle" font-size="9">/code-review</text>
+              <text x="350" y="28" text-anchor="middle" font-size="11" font-weight="600">Preferred chain (non-negotiable)</text>
+              <text x="350" y="140" text-anchor="middle" font-size="10" fill="#64748b">/triage = tracker intake when labels move — not a substitute for route-before-grill</text>
+            </svg>
+            <p class="diagram-caption">Visual map of the main flow. Full terms: <a href="quick-reference.html">Quick reference</a> · <a href="glossary.html">Glossary</a>.</p>
+          </div>
           <p style="margin-top:0.75rem;font-size:0.9rem;color:var(--ink-faint)"><strong>External skills hub:</strong> <a href="https://practical-office.github.io/dev-sops/skills.html">dev-sops/skills.html</a> may list SOP names this course bans (e.g. <code>/to-issues</code>, refactor-in-loop <code>/tdd</code>). Use this course chain and living process only.</p>
         </div>
         <div class="card-grid">
@@ -100,7 +121,7 @@
         </div>
         <div class="print-actions no-print">
           <p class="eyebrow">Save as PDF</p>
-          <p>Open the <a href="course-full.html">full course page</a>, then <strong>Print → Save as PDF</strong>.</p>
+          <p>Open the <a href="course-full.html">learner-summary-only</a> print page (condensed — not the full interactive course), then <strong>Print → Save as PDF</strong>.</p>
           <button type="button" class="btn btn-primary" id="printCourse" onclick="location.href='course-full.html'">Open printable course →</button>
         </div>
         <div class="page-nav no-print" id="pageNav"></div>
