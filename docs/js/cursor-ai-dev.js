@@ -51,7 +51,8 @@
   const HONOR_PROGRESS_NOTE =
     "Honor-system only — self-reported on this device, not CI or certification.";
 
-  const PROCESS_SYNC_BADGE = "Last synced with process v1.1 (2026-09-22)";
+  const PROCESS_SYNC_BADGE =
+    "HTML synced 2026-09-22 to process v1.1 (process dated 2026-09-16)";
 
   const ESCALATE_PAGES = new Set(["setup", "module-1", "module-2", "module-3", "module-4", "module-5"]);
 

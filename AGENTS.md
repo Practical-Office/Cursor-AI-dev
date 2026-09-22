@@ -17,6 +17,10 @@
 
 `/setup-matt-pocock-skills` → route (`/wayfinder` | `/grill-with-docs`; `/triage` when tracker intake) → `/to-spec` → `/to-tickets` → pre-Build review (≥2 findings) → `/implement` (Red→Green + CI-matching verification; auto `/code-review` nested — model-invoked, not typed)
 
+## Course content CI
+
+`scripts/check-course-content-drift.sh` (GitHub Actions on `main`) locks selected phrase/policy strings and module sync-badge text — it does **not** regenerate HTML from `MODULES-SOURCE-v4.md` or assert full structural equality between source and published pages. Regenerating or realigning HTML modules from v4 remains a **manual** contributor step when instructional density changes.
+
 ## Non-negotiables for agent work in this repo
 
 - Do not invent requirements when no spec exists.

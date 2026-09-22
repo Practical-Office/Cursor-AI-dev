@@ -25,6 +25,8 @@ Not prompt monkeys. Not first-draft speed. Measured by rework reduction, domain-
 
 Course modules **lag** the living process document. Never the reverse.
 
+**Content drift CI:** `scripts/check-course-content-drift.sh` enforces phrase/policy locks and sync-badge wording — not a full HTML ↔ `MODULES-SOURCE-v4.md` regenerate. Aligning published HTML with v4 after source edits is manual.
+
 ## Skills source
 
 https://github.com/mattpocock/skills (canonical)
