@@ -12,3 +12,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check print quick-ref non-negotiables
         run: bash scripts/check-print-nonnegotiables.sh
+      - name: Check course content drift (Pack #8, sync badges, stale sources)
+        run: bash scripts/check-course-content-drift.sh
