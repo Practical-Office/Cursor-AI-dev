@@ -45,6 +45,16 @@
     "https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/CURSOR-MATT-SKILLS-PROCESS.md";
   const REPO_URL = "https://github.com/Practical-Office/Cursor-AI-dev";
 
+  const ESCALATE_STRIP_TEXT =
+    'When stuck: stop. Ask a human lead or facilitator — give your repo path and what you already tried. Do not keep prompting the agent to "make it work."';
+
+  const HONOR_PROGRESS_NOTE =
+    "Honor-system only — self-reported on this device, not CI or certification.";
+
+  const PROCESS_SYNC_BADGE = "Last synced with process v1.1 (2026-09-22)";
+
+  const ESCALATE_PAGES = new Set(["setup", "module-1", "module-2", "module-3", "module-4", "module-5"]);
+
   const CHAIN_TEMPLATE = `setup → route (/wayfinder | /grill-with-docs)
   → /to-spec (3 sections · synthesis only)
   → /to-tickets (slice test)
@@ -143,6 +153,7 @@
         <div class="progress-track" aria-hidden="true">
           <div class="progress-fill" id="progressFill"></div>
         </div>
+        <p class="progress-honor-note">${HONOR_PROGRESS_NOTE}</p>
       </div>
       <nav class="sidebar-nav">
         <p class="nav-section-label">Start</p>
@@ -165,6 +176,22 @@
         <a href="https://p-ai.net" target="_blank" rel="noopener noreferrer">p-ai.net</a>
       </div>`;
     sidebar.dataset.built = "1";
+  }
+
+  function injectEscalateStrip() {
+    if (!ESCALATE_PAGES.has(pageId)) return;
+    const main = document.querySelector("main.content");
+    const nav = document.getElementById("pageNav");
+    if (!main || main.querySelector(".escalate-strip")) return;
+    const strip = document.createElement("aside");
+    strip.className = "escalate-strip no-print";
+    strip.setAttribute("role", "note");
+    strip.innerHTML = `<p class="eyebrow">When stuck</p><p>${ESCALATE_STRIP_TEXT}</p>`;
+    if (nav) {
+      main.insertBefore(strip, nav);
+    } else {
+      main.appendChild(strip);
+    }
   }
 
   function injectHubButton() {
@@ -296,6 +323,7 @@
   if (!isPrintPage) {
     buildSidebar();
     injectHubButton();
+    injectEscalateStrip();
     setupPrevNext();
     bindChecks();
     bindMobileNav();

@@ -145,7 +145,21 @@ Missing any section → reject on the spot.
 
 ---
 
-## 8. Updating This Document
+## 8. Evidence Pack (certification)
+
+Exactly **eight required** binary artifacts on real shipping work. **Artifact 8** is the throwaway `/prototype` branch/folder + verdict (not on default branch) — **required, not optional**.
+
+- **Non-waivable** on full and intensive schedules. Agenda completion does not waive artifact 8. No lead-waiver path.
+- **Self-attest is not approval.** A lead must still review the pack.
+- **Policy master:** this document. `MODULES-SOURCE-v4.md` and published HTML **mirror** the process; they never lead it.
+
+**Course progress UI:** Sidebar and page checklists use `localStorage` on the learner device. They are **honor-system only** — not verified by CI, certification reviewers, or unlock gates.
+
+**When stuck:** Stop. Ask a human lead or facilitator — give your repo path and what you already tried. Do not keep prompting the agent to "make it work."
+
+---
+
+## 9. Updating This Document
 
 This is a living document.  
 Propose improvements via a ticket on the course repo using the same process.  

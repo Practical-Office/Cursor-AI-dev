@@ -394,7 +394,7 @@ Key terms: route before grill, `/triage` tracker skill, foggy/weak-context, prop
 
 ## CERTIFICATION (evidence pack)
 
-**Policy (locked):** Exactly **eight required** binary artifacts on real shipping work. Artifact **8** is the throwaway `/prototype` branch/folder + verdict (not on default branch). Day 4 cohort practice produces artifact 8; certification item 8 is not optional “if used.”
+**Policy (locked):** Exactly **eight required** binary artifacts on real shipping work. Artifact **8** is the throwaway `/prototype` branch/folder + verdict (not on default branch) — **required, not optional**. Non-waivable on full and intensive schedules; agenda completion does not waive artifact 8. Self-attest is not approval. Day 4 cohort practice produces artifact 8.
 
 Within 5 business days, submit on **real shipping work**:
 
@@ -408,6 +408,8 @@ Within 5 business days, submit on **real shipping work**:
 8. `/prototype` throwaway branch/folder + verdict (not on default branch) — required artifact 8
 
 Missing any required artifact → fail. No partial credit. Measure only real experiments.
+
+**Course progress UI:** Sidebar and module checklists are honor-system only (`localStorage` on device) — not CI or certification.
 
 ---
 

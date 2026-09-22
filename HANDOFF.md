@@ -9,6 +9,9 @@ https://practical-office.github.io/Cursor-AI-dev/ — hub + Setup + Modules 1–
 2. `docs/reference/MODULES-SOURCE-v4.md` (instructional density)
 3. Published HTML modules (must lag the above)
 
+### Learner progress
+Sidebar and module checklists are **honor-system only** (`localStorage` on device) — not CI, certification, or unlock gates.
+
 ### Non-negotiables that must not regress
 - User-invoked vs model-invoked taxonomy
 - Route before grill (distinct from `/triage` tracker intake)

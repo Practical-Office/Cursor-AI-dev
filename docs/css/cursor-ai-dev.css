@@ -1095,3 +1095,33 @@ body.nav-open .sidebar {
     display: none;
   }
 }
+
+.sync-badge {
+  margin: 0.35rem 0 0;
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  font-family: var(--font-body);
+}
+
+.progress-honor-note {
+  margin: 0.5rem 0 0;
+  font-size: 0.7rem;
+  line-height: 1.35;
+  color: var(--sidebar-muted);
+}
+
+.escalate-strip {
+  margin-top: 1.5rem;
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--info-soft);
+}
+
+.escalate-strip p {
+  margin: 0;
+}
+
+.escalate-strip .eyebrow {
+  margin-bottom: 0.35rem;
+}
