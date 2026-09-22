@@ -34,7 +34,21 @@
             </div>
           </div>
 
-          <div class="concept-block">
+          <nav class="section-card module-toc no-print" aria-label="On this page">
+            <p class="eyebrow">On this page</p>
+            <ul class="module-toc-list">
+              <li><a href="#m2-context">Context Engineering</a></li>
+              <li><a href="#m2-goal">Goal</a></li>
+              <li><a href="#m2-why">Why</a></li>
+              <li><a href="#m2-hard-truth">Hard truth</a></li>
+              <li><a href="#m2-fences">Structures &amp; fences</a></li>
+              <li><a href="#m2-core">Core concepts</a></li>
+              <li><a href="#m2-spec-compare">Bad vs good spec</a></li>
+              <li><a href="#m2-success">Success criteria</a></li>
+            </ul>
+          </nav>
+
+          <div class="concept-block" id="m2-context">
             <p class="eyebrow">Concept — Context Engineering</p>
             <h3>What context is</h3>
             <p>Context is everything the agent can see: <strong>rules</strong>, <strong>skills</strong>, <strong><code>@</code> files</strong>, <strong>chat history</strong>, and <strong>tool results</strong>. It costs tokens.</p>
@@ -54,22 +68,23 @@
             </div>
           </div>
 
-          <div class="section-card">
+          <div class="section-card" id="m2-goal">
             <p class="eyebrow">Goal</p>
-            <p>Publish a three-section, implementable specification via synthesis only. Routing was Day 1 — today’s focus is spec quality.</p>
+            <p><strong><code>/to-spec</code>:</strong> synthesizes the grilled conversation into a published three-section spec — does not interview.</p>
+            <p style="margin-top:0.5rem">Publish a three-section, implementable specification via synthesis only. Routing was Day 1 — today’s focus is spec quality.</p>
           </div>
 
-          <div class="section-card">
+          <div class="section-card" id="m2-why">
             <p class="eyebrow">Why</p>
             <p>Polished ticket never grilled = fiction. <code>/to-spec</code> synthesizes; it does not think. Skipping the grill produces specs that look complete and fail under implementation.</p>
           </div>
 
-          <div class="hard-truth">
+          <div class="hard-truth" id="m2-hard-truth">
             <h3>Hard truth</h3>
             <p><code>/to-spec</code> does <strong>not</strong> interview. Missing any of acceptance criteria, non-goals, or residual risks → reject on the spot.</p>
           </div>
 
-          <div class="concept-block">
+          <div class="concept-block" id="m2-fences">
             <p class="eyebrow">Concept — Structures &amp; fences</p>
             <h3>Why fences exist</h3>
             <p>Each fence blocks a predictable failure mode:</p>
@@ -81,7 +96,7 @@
             </ul>
           </div>
 
-          <div class="section-card">
+          <div class="section-card" id="m2-core">
             <p class="eyebrow">Core concepts</p>
             <ul>
               <li><code>/to-spec</code> publishes a clean spec from the conversation that already happened.</li>
@@ -91,7 +106,7 @@
             </ul>
           </div>
 
-          <div class="section-card">
+          <div class="section-card" id="m2-spec-compare">
             <p class="eyebrow">Worked example — bad vs good spec</p>
             <div class="spec-compare">
               <div class="spec-bad">
@@ -121,7 +136,7 @@
             <p style="margin-top:0.75rem"><strong>Group review:</strong> Every spec is reviewed by peers (or instructor). <strong>Who reviews:</strong> another pair or rotating reviewer — not the author. <strong>Reject rule:</strong> any missing or vague mandatory section → sent back immediately; no partial credit.</p>
           </div>
 
-          <div class="section-card">
+          <div class="section-card" id="m2-success">
             <p class="eyebrow">Success criteria</p>
             <ul class="checklist">
               <li><label><input type="checkbox" data-progress="m2-c1" /> Every published spec has all three mandatory sections (inspected)</label></li>

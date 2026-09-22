@@ -42,6 +42,10 @@
               <dt><code>/triage</code> (tracker skill)</dt>
               <dd>User-invoked skill that moves existing issues through the label state machine defined at setup. Use when issues need role movement in the tracker — not as a substitute for route-before-grill on new work.</dd>
             </div>
+            <div class="glossary-term" id="at-files">
+              <dt><code>@</code> files</dt>
+              <dd>Files and folders you attach in Cursor so the agent can read them. Part of context — not optional decoration. Wrong attach list → confident fiction; kitchen-sink attach → diluted attention. See <a href="#properly-primed">properly primed</a>.</dd>
+            </div>
             <div class="glossary-term" id="weak-context">
               <dt>Foggy / weak-context</dt>
               <dd>Backlog item is underspecified, spans more than one session, or you cannot name the correct <code>@</code> files yet. Route to <code>/wayfinder</code> first — do not force a single-session grill.</dd>
@@ -64,9 +68,13 @@
               <dt>Model-invoked skill</dt>
               <dd>Reached by the agent or an orchestrator. Never a typed primary flow step — e.g. <code>/code-review</code> (auto from <code>/implement</code>), <code>/tdd</code>, <code>/domain-modeling</code>.</dd>
             </div>
+            <div class="glossary-term" id="grilling-engine">
+              <dt>Grilling engine</dt>
+              <dd>The interview discipline behind grilling skills — not a single typed skill. It runs Context Engineering, Assumption Destruction, and Stress Testing (the <strong>Three Pillars</strong>). Grilling without all three is theater.</dd>
+            </div>
             <div class="glossary-term">
               <dt>Three Pillars</dt>
-              <dd>Properties of the grilling engine: Context Engineering, Assumption Destruction, Stress Testing. Not exclusive to one skill.</dd>
+              <dd>Properties of the <a href="#grilling-engine">grilling engine</a>: Context Engineering, Assumption Destruction, Stress Testing. Not exclusive to one skill.</dd>
             </div>
           </dl>
         </div>
@@ -96,9 +104,13 @@
         <div class="section-card">
           <p class="eyebrow">Implementation &amp; review</p>
           <dl>
+            <div class="glossary-term" id="seam">
+              <dt>Seam</dt>
+              <dd>Boundary where modules meet — API, service interface, UI hook. Put tests at the seam: a failing test at the boundary you are about to change proves the contract before you edit internals.</dd>
+            </div>
             <div class="glossary-term">
               <dt>Red→Green only</dt>
-              <dd>TDD loop inside <code>/implement</code>: failing test at the seam, then minimal code to pass. Refactor is deferred to <code>/code-review</code>.</dd>
+              <dd>TDD loop inside <code>/implement</code>: failing test at the <a href="#seam">seam</a>, then minimal code to pass. Refactor is deferred to <code>/code-review</code>.</dd>
             </div>
             <div class="glossary-term">
               <dt>Refactor</dt>

@@ -35,6 +35,16 @@
           <p><strong>User-invoked</strong> (you type): ask-matt, grill-with-docs, wayfinder, triage, improve-codebase-architecture, setup-matt-pocock-skills, to-spec, to-tickets, implement</p>
           <p style="margin-top:0.5rem"><strong>Model-invoked</strong> (agent reaches): prototype, diagnosing-bugs, research, tdd, domain-modeling, codebase-design, code-review, resolving-merge-conflicts</p>
           <p style="margin-top:0.75rem;font-size:0.9rem;color:var(--ink-faint)">Do not type model-invoked skills as primary flow steps. <code>/implement</code> reaches <code>/tdd</code> and auto <code>/code-review</code>; <code>/grill-with-docs</code> reaches <code>/domain-modeling</code>.</p>
+          <p style="margin-top:0.75rem"><strong>Chain one-liners:</strong></p>
+          <ul style="margin-top:0.5rem">
+            <li><strong><code>/setup-matt-pocock-skills</code>:</strong> installs the Matt skill taxonomy once per repo — hard gate before chain work.</li>
+            <li><strong><code>/wayfinder</code>:</strong> charts decision tickets for foggy or multi-session work until buildable.</li>
+            <li><strong><code>/grill-with-docs</code>:</strong> sharpens scoped work with correct <code>@</code> files; commits domain artifacts.</li>
+            <li><strong><code>/to-spec</code>:</strong> synthesizes grilled conversation into a three-section spec — does not interview.</li>
+            <li><strong><code>/to-tickets</code>:</strong> splits the spec into tracer-bullet tickets that pass the slice test.</li>
+            <li><strong><code>/implement</code>:</strong> Red→Green at seams per ticket; auto <code>/code-review</code>; clear context between tickets.</li>
+            <li><strong><code>/ask-matt</code>:</strong> routes when unsure which typed skill fits the situation.</li>
+          </ul>
         </div>
 
         <div class="section-card">
@@ -49,6 +59,25 @@
 
         <div class="section-card">
           <h3>Main chain</h3>
+          <div class="diagram-wrap workflow-diagram" role="img" aria-label="Preferred skills chain workflow">
+            <svg viewBox="0 0 700 168" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><marker id="wf-arrowhead-qr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--muted, #64748b)"/></marker></defs>
+              <rect class="wf-box" x="4" y="58" width="88" height="36" rx="6"/><text x="48" y="80" text-anchor="middle" font-size="10">/setup</text>
+              <line class="wf-arrow" x1="92" y1="76" x2="108" y2="76" marker-end="url(#wf-arrowhead-qr)"/>
+              <rect class="wf-box" x="108" y="58" width="72" height="36" rx="6"/><text x="144" y="80" text-anchor="middle" font-size="10">route</text>
+              <line class="wf-arrow" x1="180" y1="76" x2="196" y2="76" marker-end="url(#wf-arrowhead-qr)"/>
+              <rect class="wf-box" x="196" y="58" width="76" height="36" rx="6"/><text x="234" y="80" text-anchor="middle" font-size="10">/to-spec</text>
+              <line class="wf-arrow" x1="272" y1="76" x2="288" y2="76" marker-end="url(#wf-arrowhead-qr)"/>
+              <rect class="wf-box" x="288" y="58" width="88" height="36" rx="6"/><text x="332" y="80" text-anchor="middle" font-size="10">/to-tickets</text>
+              <line class="wf-arrow" x1="376" y1="76" x2="392" y2="76" marker-end="url(#wf-arrowhead-qr)"/>
+              <rect class="wf-box" x="392" y="48" width="96" height="56" rx="6"/><text x="440" y="72" text-anchor="middle" font-size="9">pre-Build</text><text x="440" y="86" text-anchor="middle" font-size="9">review</text>
+              <line class="wf-arrow" x1="488" y1="76" x2="504" y2="76" marker-end="url(#wf-arrowhead-qr)"/>
+              <rect class="wf-box" x="504" y="58" width="88" height="36" rx="6"/><text x="548" y="80" text-anchor="middle" font-size="10">/implement</text>
+              <line class="wf-arrow" x1="592" y1="76" x2="608" y2="76" marker-end="url(#wf-arrowhead-qr)"/>
+              <rect class="wf-box" x="608" y="48" width="88" height="56" rx="6"/><text x="652" y="72" text-anchor="middle" font-size="9">auto</text><text x="652" y="86" text-anchor="middle" font-size="9">/code-review</text>
+            </svg>
+            <p class="diagram-caption">Same chain as the living process. <code>/triage</code> when tracker labels need movement — separate from routing.</p>
+          </div>
           <div class="copy-row no-print" style="margin-bottom:0.75rem">
             <button type="button" class="btn btn-primary btn-sm" data-copy-template>Copy chain</button>
             <span class="copy-feedback" aria-live="polite"></span>

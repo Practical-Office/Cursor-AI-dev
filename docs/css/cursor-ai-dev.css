@@ -962,6 +962,42 @@ body.nav-open .sidebar {
   color: var(--muted);
 }
 
+.module-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  font-size: 0.88rem;
+}
+
+.module-toc-list a {
+  color: var(--brand);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.module-toc-list a:hover {
+  text-decoration: underline;
+}
+
+.workflow-diagram svg text {
+  fill: var(--ink);
+}
+
+.workflow-diagram .wf-box {
+  fill: var(--surface);
+  stroke: var(--border);
+  stroke-width: 1.5;
+}
+
+.workflow-diagram .wf-arrow {
+  stroke: var(--muted);
+  stroke-width: 1.5;
+  fill: none;
+}
+
 .template-block {
   position: relative;
   margin: 1rem 0;
