@@ -30,7 +30,7 @@
             <div>
               <h2>Tickets + Implementation</h2>
               <p class="module-time">Day 3</p>
-              <p class="sync-badge">HTML synced 2026-09-22 to process v1.1 (process dated 2026-09-16)</p>
+              <p class="sync-badge">HTML synced 2026-10-28 to process v1.2 (process dated 2026-10-28)</p>
             </div>
           </div>
 
@@ -108,6 +108,7 @@
               <li><strong>Refactor:</strong> improving structure without changing behavior. Happens in <code>/code-review</code> — not inside the <code>/implement</code> loop.</li>
               <li><strong><code>/implement</code>:</strong> Red→Green only at seams. Runs <strong>CI-equivalent commands</strong> (same checks as your PR pipeline). Auto-invokes <code>/code-review</code>. Context cleared between tickets.</li>
               <li><strong>CI = pipeline green:</strong> “Agent said tests passed” ≠ done. Run the same commands your PR runs. Pipeline green before commit is complete.</li>
+              <li><strong><code>/implement-spec</code> (alternate, not the Day 3 exercise):</strong> user-invoked. One spec, one integration branch. Tickets are a task graph. Implementer subagents work the ready frontier, each with <code>/tdd</code>, and the branch fast-forwards. Closeout is <code>/code-review</code>. The goal is the integration branch. A draft pull request opens only if the tracker closes work through pull requests, or you ask, and only after the first merge. Slice test and pre-Build review still apply.</li>
             </ul>
           </div>
 
@@ -118,7 +119,7 @@
 
           <div class="section-card">
             <p class="eyebrow">Practice</p>
-            <p>Convert Day 2 spec → tickets. Pair-review applies <strong>slice test</strong> to every ticket; failures re-sliced on the spot. <strong>Pre-Build review</strong> on the ticket you will implement (≥2 findings recorded). One ticket through <code>/implement</code>. Confirm Red→Green only, CI green, review auto-fired.</p>
+            <p>Convert Day 2 spec → tickets. Pair-review applies <strong>slice test</strong> to every ticket; failures re-sliced on the spot. <strong>Pre-Build review</strong> on the ticket you will implement (≥2 findings recorded). One ticket through <code>/implement</code>. Confirm Red→Green only, CI green, review auto-fired. Name <code>/implement-spec</code> only as the alternate for a spec whose tickets already pass the slice test. Do not use it to skip the exercise.</p>
           </div>
 
           <div class="section-card" id="m3-success">

@@ -30,7 +30,7 @@
             <div>
               <h2>Debug, Review, Architecture, Prototype</h2>
               <p class="module-time">Day 4</p>
-              <p class="sync-badge">HTML synced 2026-09-22 to process v1.1 (process dated 2026-09-16)</p>
+              <p class="sync-badge">HTML synced 2026-10-28 to process v1.2 (process dated 2026-10-28)</p>
             </div>
           </div>
 
@@ -58,7 +58,7 @@
 
           <div class="hard-truth" id="m4-hard-truth">
             <h3>Practice gate</h3>
-            <p>Every must-fix has a committed diff before day end. A review with zero fixes is a failed exercise. Prototypes are throwaway — never harden in place, never merge to the default branch.</p>
+            <p>Every must-fix has a committed diff before day end. A review with zero fixes is a failed exercise. Prototypes are throwaway — never harden the shell into production code, never merge the <code>prototype/…</code> branch, and do not delete it after the verdict.</p>
           </div>
 
           <div class="section-card" id="m4-core">
@@ -73,13 +73,15 @@
                 Must-fix findings require a committed diff before you leave.
               </li>
               <li><strong><code>/improve-codebase-architecture</code>:</strong> HTML report of deepenings → skill grills the selected opportunity. Reject large-rewrite proposals.</li>
-              <li><strong><code>/prototype</code>:</strong> throwaway answer to <strong>one</strong> design question on a <strong>throwaway branch or folder</strong>.
+              <li><strong><code>/prototype</code>:</strong> throwaway answer to <strong>one</strong> design question. Kept as runnable evidence on a <code>prototype/…</code> branch, not merged and not deleted.
                 <ul>
-                  <li>Logic/state feel right? → LOGIC terminal app (print full state).</li>
-                  <li>What should it look like? → UI variants on one route + floating toggle bar.</li>
-                  <li>Rules: marked throwaway, next to real code, one command to run, no persistence default, no polish, capture verdict, <strong>never merge to default branch</strong>.</li>
+                  <li>Logic or state? → one shareable HTML file (plain HTML/CSS/JS, no build). Labelled state, free-play buttons, tabbed guided walkthroughs. A non-developer can open it by double-click.</li>
+                  <li>What should it look like? → several UI variations on one route, switchable from a floating bar and a URL parameter.</li>
+                  <li>Rules: marked throwaway, next to the real module, trivial to run, no persistence by default, no polish. When answered, fold the validated decision into real code, commit the prototype on <code>prototype/…</code> (not the default branch), point at that branch from the implementation issue, and record the verdict plus the question. <strong>Do not merge the branch. Do not delete it. Do not harden the shell into production code.</strong></li>
                 </ul>
               </li>
+              <li><strong><code>/pr</code></strong> (model-invoked, not a typed chain step): when a pull request body is written, make the summary the smallest visual that shows the change, show before/after evidence that it works, and call the merge danger (one-way or two-way door, plus blast radius).</li>
+              <li><strong><code>/retro</code></strong> (user-invoked close, taught as the session end on Day 5): suggestions for the agent’s environment, most severe first. Not a code change. <code>/diagnosing-bugs</code> does not hand off into <code>/improve-codebase-architecture</code>. After a fix lands, <code>/retro</code> asks what would have prevented the bug. Use <code>/improve-codebase-architecture</code> when the finding is a missing seam.</li>
             </ul>
           </div>
 
@@ -92,7 +94,7 @@
 
           <div class="section-card">
             <p class="eyebrow">Practice</p>
-            <p>Every must-fix committed before day end. ≥1 prototype on throwaway branch/folder, removed from default branch, verdict recorded — this satisfies Evidence Pack <strong>artifact 8</strong>. (Pre-Build review was taught on Day 3 — apply before every <code>/implement</code>.)</p>
+            <p>Every must-fix committed before day end. ≥1 prototype on a <code>prototype/…</code> branch (not the default branch), verdict and question recorded on the issue or an ADR — this satisfies Evidence Pack <strong>artifact 8</strong>. Leave the branch in place. (Pre-Build review was taught on Day 3 — apply before every <code>/implement</code>.)</p>
           </div>
 
           <div class="section-card" id="m4-success">
@@ -101,7 +103,7 @@
               <li><label><input type="checkbox" data-progress="m4-c1" /> Diagnosing loop; hypothesis before each fix</label></li>
               <li><label><input type="checkbox" data-progress="m4-c2" /> Review names ≥2 concrete code-quality patterns + spec-axis findings</label></li>
               <li><label><input type="checkbox" data-progress="m4-c3" /> Every must-fix committed before leaving</label></li>
-              <li><label><input type="checkbox" data-progress="m4-c4" /> One prototype: throwaway branch/folder, verdict recorded, not on default branch</label></li>
+              <li><label><input type="checkbox" data-progress="m4-c4" /> One prototype: <code>prototype/…</code> branch, verdict recorded, not merged to the default branch</label></li>
             </ul>
           </div>
 
@@ -110,7 +112,7 @@
             <ul>
               <li><strong>Stop</strong> leaving findings unacted. <strong>Start</strong> requiring committed fixes before close.</li>
               <li><strong>Stop</strong> settling “does this feel right?” during implement. <strong>Start</strong> <code>/prototype</code> first.</li>
-              <li><strong>Stop</strong> merging prototype branches. <strong>Start</strong> capturing verdict and deleting throwaway work.</li>
+              <li><strong>Stop</strong> merging prototype branches or deleting them after the answer. <strong>Start</strong> keeping the prototype on <code>prototype/…</code> and recording the verdict on the issue.</li>
             </ul>
           </div>
 

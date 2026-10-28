@@ -3,10 +3,11 @@
 **Print this. Keep it on the desk.** Full terms: `docs/glossary.html`.
 
 ## Taxonomy
-- **User-invoked** (you type): ask-matt, grill-with-docs, wayfinder, triage, improve-codebase-architecture, setup-matt-pocock-skills, to-spec, to-tickets, implement
-- **Model-invoked** (agent reaches): prototype, diagnosing-bugs, research, tdd, domain-modeling, codebase-design, code-review, resolving-merge-conflicts
+- **User-invoked** (you type): ask-matt, grill-with-docs, wayfinder, triage, improve-codebase-architecture, setup-matt-pocock-skills, to-spec, to-tickets, implement, implement-spec, retro
+- **Model-invoked** (agent reaches): prototype, diagnosing-bugs, research, tdd, domain-modeling, codebase-design, code-review, pr, wizard
+- **Productivity** (you type; not the build chain): wait-what, to-questionnaire
 
-Do not type model-invoked skills as primary flow steps. `/implement` reaches `/tdd` and auto `/code-review`; `/grill-with-docs` reaches `/domain-modeling`.
+Do not type model-invoked skills as primary flow steps. `/implement` reaches `/tdd` and auto `/code-review`; `/grill-with-docs` reaches `/domain-modeling`. `/implement-spec` is the alternate for one integration branch. `/retro` closes a session (environment, not code) and is not an Evidence Pack item.
 
 ## Route before grill
 - **Foggy** / weak-context / >1 session → `/wayfinder`
@@ -20,9 +21,10 @@ setup → route (/wayfinder | /grill-with-docs)
   → /to-spec (3 sections · synthesis only)
   → /to-tickets (slice test)
   → pre-Build review (≥2 findings)
-  → /implement (Red→Green + CI)
+  → /implement (Red→Green + CI)   # alternate: /implement-spec
       └─ auto /code-review
   → must-fix committed
+  → /retro (environment, not code; not an Evidence Pack item)
 ```
 
 ## Three Pillars
@@ -36,7 +38,7 @@ setup → route (/wayfinder | /grill-with-docs)
 - Refactor is **not** inside implement; it is a `/code-review` output
 - CI = same commands as PR pipeline — "agent said tests passed" ≠ done
 - Must-fix review findings committed the same day
-- Prototype is throwaway branch/folder; never merge to default branch
+- Prototype: one shareable HTML file (logic/state) or UI variations on one route; keep on `prototype/…`; record the verdict; never merge; never delete; never harden the shell
 
 ## Router
 `/ask-matt` when unsure. Log: "For [situation], I routed to `/skill` because [reason]. Agreed / deviated because [one sentence]."

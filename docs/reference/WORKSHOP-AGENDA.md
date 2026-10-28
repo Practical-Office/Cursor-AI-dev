@@ -4,7 +4,9 @@
 **Audience:** Competent software engineers with basic Cursor experience  
 **Artifacts:** Published Course HTML (`docs/`), this agenda, living process, [Instructor Textbook](../instructor-textbook.html) (`docs/reference/Cursor-AI-dev-Instructor-Textbook-v4.md`), certification evidence pack  
 **Living process:** CURSOR-MATT-SKILLS-PROCESS.md  
-**Certification:** Evidence Pack (8 required artifacts; #8 = throwaway `/prototype` + verdict) + lead review (`docs/certification.html`)
+**Certification:** Evidence Pack (8 required artifacts; #8 = `/prototype` on a `prototype/…` branch + verdict) + lead review (`docs/certification.html`)  
+**Skills pin:** mattpocock/skills v1.3.x (verified 1.3.1 on 2026-10-28). Living process v1.2.  
+**Last updated:** October 28, 2026.
 
 > Facilitator plan only — not a slide deck.  
 > Point learners at the live pages; use this table for timing.
@@ -30,10 +32,10 @@ If Setup is incomplete for most of the room, spend the first block verifying ins
 | Block | Time | Content | Facilitator notes |
 |-------|------|---------|-------------------|
 | 0 | 15 m | Hub Why + principles | First-draft speed is not scored. Rework is. |
-| 1 | 20 m | Native tools speedrun | Chat vs Composer Agent — one live diff only |
+| 1 | 20 m | Native tools speedrun | Agent is the building surface. One live diff only. Side chat is not a second builder. Read the Setup note on cloud agents, remote control, and the Agent SDK — note only, not graded |
 | 2 | 20 m | Install + setup gate | `/setup-matt-pocock-skills` must succeed per student repo |
-| 3 | 60 m | Taxonomy + route-before-grill table | User-invoked vs model-invoked; `/wayfinder` vs `/grill-with-docs`; `/triage` = tracker intake |
-| 4 | 80 m | Paired route + grill | Mandatory committed CONTEXT.md / ADR artifact |
+| 3 | 60 m | Taxonomy + route-before-grill table | User-invoked vs model-invoked; name `/implement-spec`, `/retro`, `/pr`, `/wizard`, `/wait-what`, `/to-questionnaire` without leaving the spine; `/wayfinder` vs `/grill-with-docs`; `/triage` = tracker intake |
+| 4 | 80 m | Paired route + grill | Mandatory committed GLOSSARY.md / ADR artifact |
 | 5 | 75 m | Three Pillars deep dive | Practice Engineering, Assumption Destruction, Stress Testing |
 | 6 | 90 m | Extended practice + artifact critique | Every pair’s artifact inspected |
 | Close | 30 m | Recap + homework | Overnight triage + grill with artifact |
@@ -66,7 +68,7 @@ If Setup is incomplete for most of the room, spend the first block verifying ins
 | 1 | 85 m | `/to-tickets` + slice test | Vertical only; one-sentence behavior + blockers |
 | 2 | 75 m | Spec → Tickets practice | Slice test applied to every ticket |
 | 3 | 30 m | Pre-Build review (taught once) | Ticket + plan; ≥2 concrete findings recorded |
-| 4 | 75 m | `/implement` Red→Green | Refactor deferred; CI-matching commands required |
+| 4 | 75 m | `/implement` Red→Green | Refactor deferred; CI-matching commands required. Name `/implement-spec` as the alternate (one integration branch). Do not switch the exercise to it |
 | 5 | 90 m | Full implement practice | Context cleared; review auto-fires |
 | Close | 30 m | Recap + homework | Finish one ticket overnight |
 
@@ -82,7 +84,7 @@ If Setup is incomplete for most of the room, spend the first block verifying ins
 | 1 | 85 m | `/diagnosing-bugs` | Hypothesis before every code change |
 | 2 | 90 m | Dual-axis `/code-review` | Must-fix committed same day |
 | 3 | 75 m | `/improve-codebase-architecture` | HTML report → built-in grill |
-| 4 | 45 m | `/prototype` | Correct branch; throwaway; capture verdict |
+| 4 | 45 m | `/prototype` | Logic = one shareable HTML file. UI = variations on one route. Commit on `prototype/…`. Record verdict. Do not merge. Do not delete. Mention `/pr` as model-invoked when a pull request body is written |
 | 5 | 60 m | Combined practice + fix gate | Every must-fix has a committed diff |
 | Close | 30 m | Recap + homework | Apply one skill overnight with fixes |
 
@@ -99,7 +101,7 @@ If Setup is incomplete for most of the room, spend the first block verifying ins
 | 2 | 90 m | Group code reviews | Spec ‖ Standards; residual risk stated |
 | 3 | 45 m | Reality under pressure | Grounded only in today’s artifacts |
 | 4 | 45 m | `/ask-matt` decision log | Three transcripts + agreement/deviation sentences |
-| Close | 15 m | Final artifact inspection | Certification path explained |
+| Close | 15 m | Final artifact inspection | Certification path explained. Optional `/retro` on today’s session (environment, not code; not artifact 9). `/pr` only if a pull request body was written |
 
 **Hard stop/start:** Stop hand-building personal frameworks. Start from `/ask-matt` transcripts.
 

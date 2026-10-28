@@ -2,15 +2,16 @@
 ## Instructor Textbook (v4 — operational)
 
 **Audience:** Instructors who must teach and enforce the course under real pressure, and engineers who must defend the process.  
-**Companion artifacts:** Living process (`CURSOR-MATT-SKILLS-PROCESS.md`), module source (`MODULES-SOURCE-v4.md`), workshop agenda, Evidence Pack.  
+**Last updated:** October 28, 2026  
+**Companion artifacts:** Living process (`CURSOR-MATT-SKILLS-PROCESS.md` v1.2), module source (`MODULES-SOURCE-v4.md`), workshop agenda, Evidence Pack.  
 **Rule:** Course modules lag the living process. This textbook lags both and expands them for enforcement. It does not invent process.  
-**Skills pin:** `npx skills@latest add mattpocock/skills` (official engineering set + `/setup-matt-pocock-skills`). Detect drift by comparing skill front-matter against the living process taxonomy every cohort.
+**Skills pin:** mattpocock/skills **v1.3.x** (verified release 1.3.1). Install with `npx skills@latest add mattpocock/skills -a cursor` (engineering set + `setup-matt-pocock-skills`). Detect drift by comparing skill front-matter against the living process taxonomy every cohort.
 
 ---
 
 # Introduction — Why this course exists
 
-Most engineers treat the agent as faster autocomplete. First draft appears quickly. Cost appears later: rework, review thrash, tickets that cannot be verified, domain language that does not match `CONTEXT.md`.
+Most engineers treat the agent as faster autocomplete. First draft appears quickly. Cost appears later: rework, review thrash, tickets that cannot be verified, domain language that does not match `GLOSSARY.md`.
 
 An unconstrained agent invents requirements, skips edge cases, produces horizontal slices, and leaves a large unreviewable diff. Capability rose; mess size rose faster.
 
@@ -26,12 +27,14 @@ Preferred chain (non-negotiable):
 → pre-Build review         (ticket + plan; ≥2 concrete findings)
 → /implement               (Red→Green only at seams; CI-matching commands)
     └─ auto /code-review   (model-invoked; Standards ‖ Spec)
+   OR /implement-spec      (alternate: one integration branch; not the Day 3 exercise)
 → must-fix committed
+→ /retro                  (environment; not an Evidence Pack item)
 ```
 
 `/code-review` is nested under `/implement` — not a separate typed chain step.
 
-Supporting skills (`/prototype`, `/diagnosing-bugs`, `/ask-matt`, `/improve-codebase-architecture`, etc.) are reached when the main chain surfaces the exact failure mode they solve. They are not optional decoration.
+Supporting skills (`/prototype`, `/diagnosing-bugs`, `/ask-matt`, `/improve-codebase-architecture`, `/pr`, `/wizard`, etc.) are reached when the main chain surfaces the exact failure mode they solve. They are not optional decoration. `/implement-spec` is the alternate at implement. `/retro` closes a real session and is not a certification artifact.
 
 The rest of this book states the exact failure mode each piece attacks, the artifact that proves the step occurred, the instructor reset script when the step is skipped, and the binary evidence required for credit.
 
@@ -47,18 +50,18 @@ Agent improvises process because tracker location, triage labels, and domain-doc
 
 `/setup-matt-pocock-skills` is user-invoked, once per repo. It writes:
 - issue-tracker config
-- triage-label vocabulary (`docs/agents/triage-labels.md`)
-- domain-doc layout (CONTEXT.md + `docs/adr/`)
+- triage-label vocabulary (`docs/agents/triage-labels.md`) only when `/triage` is installed
+- domain-doc layout (`GLOSSARY.md`, or `GLOSSARY-MAP.md` when the repo indexes more than one glossary, plus `docs/adr/`)
 
 Until those files exist and are pointed at by the student, no later module begins. Verbal confirmation is rejected.
 
 Rules (`.cursor/rules` or project rules) are always-on static context — short, specific, point at real examples. Skills are loaded only when invoked and refuse to write code until their process steps complete. That refusal is the point.
 
 **Taxonomy (architecture, not preference):**
-- User-invoked (typed, `disable-model-invocation: true`): `/ask-matt`, `/grill-with-docs`, `/wayfinder`, `/triage`, `/improve-codebase-architecture`, `/setup-matt-pocock-skills`, `/to-spec`, `/to-tickets`, `/implement`
-- Model-invoked (agent or orchestrator reaches; never typed as normal flow step): `/prototype`, `/diagnosing-bugs`, `/research`, `/tdd`, `/domain-modeling`, `/codebase-design`, `/code-review`, `/resolving-merge-conflicts`
+- User-invoked (typed, `disable-model-invocation: true`): `/ask-matt`, `/grill-with-docs`, `/wayfinder`, `/triage`, `/improve-codebase-architecture`, `/setup-matt-pocock-skills`, `/to-spec`, `/to-tickets`, `/implement`, `/implement-spec`, `/retro`
+- Model-invoked (agent or orchestrator reaches; never typed as normal flow step): `/prototype`, `/diagnosing-bugs`, `/research`, `/tdd`, `/domain-modeling`, `/codebase-design`, `/code-review`, `/pr`, `/wizard`
 
-Student who types `/code-review` or `/domain-modeling` as primary command has misunderstood the architecture. `/implement` reaches `/tdd` + `/code-review`. `/grill-with-docs` reaches `/domain-modeling`.
+Student who types `/code-review`, `/domain-modeling`, `/tdd`, `/pr`, or `/prototype` as a primary command has misunderstood the architecture. `/implement` reaches `/tdd` + `/code-review`. `/grill-with-docs` reaches `/domain-modeling`. `/implement-spec` reaches `/tdd` inside each implementer and `/code-review` at closeout.
 
 ## Instructor pre-flight (mandatory before Day 1)
 
@@ -79,14 +82,19 @@ Do not lecture taxonomy for twenty minutes. Install → run setup in each studen
 
 ## Failure mode
 
-Engineer pastes feature request into Agent, accepts bulk suggestions, merges. Happy path works. Edge case appears two weeks later. Domain language does not match CONTEXT.md. Diff was large; original request never became a verifiable specification. Root cause is missing shared understanding before code, not model quality.
+Engineer pastes feature request into Agent, accepts bulk suggestions, merges. Happy path works. Edge case appears two weeks later. Domain language does not match GLOSSARY.md. Diff was large; original request never became a verifiable specification. Root cause is missing shared understanding before code, not model quality.
 
 ## Cursor surfaces (precise)
 
-- Chat = thinking, exploration, questions. Not the building surface.
-- Composer / Agent = multi-file edits, terminal, primary surface for any change that touches more than one file.
+- Agent = the building surface. Multi-file edits, terminal, browser. Do not teach a Chat-versus-Composer split. That framing is outdated.
+- Side chat = a question or tangent that must not steer the main thread. Not a second builder.
 
-Students leave able to state in one sentence why Agent is preferred for multi-file work.
+Students leave able to state in one sentence why Agent is the surface for multi-file work.
+
+**Note only (October 28, 2026). Not graded. Not certified.**
+- Cloud agents run in a Cursor-managed environment and can produce interactive canvases. They do not replace the local agent for this course.
+- Remote control shows the local agent on the Cursor iOS app. The agent stays on the computer. Enterprise organizations keep it off until an admin turns it on.
+- The Agent SDK packages an agent you ship as a folder (`instructions.md`, `tools/`, on-demand `skills/`). `npx @cursor/agent-sdk init` starts one. That packaging is not the mattpocock/skills install.
 
 ## Route before grill (mandatory — not the `/triage` skill)
 
@@ -103,18 +111,18 @@ Most common early-cohort failure: default every item into `/grill-with-docs`. Th
 ## Three Pillars (properties of the grilling engine)
 
 1. **Context Engineering** — correct `@` files/folders before the grill starts. Wrong context → confident wrong answers.
-2. **Assumption Destruction** — force every assumption open and attack it. Facts that can be answered by reading the codebase are answered by reading the codebase. Decisions that require trade-offs are grilled. (v1.1+ explicit facts-vs-decisions distinction.)
+2. **Assumption Destruction** — force every assumption open and attack it. Facts that can be answered by reading the codebase are answered by reading the codebase. Decisions that require trade-offs are grilled. (facts vs decisions, explicit since skills v1.1 and still the rule on v1.3.x.)
 3. **Stress Testing** — failure modes, scale, future regret, removal test. Expensive decisions become ADRs.
 
 Grilling that skips any pillar is theater.
 
 ## Durable artifact standard
 
-Verbal summary is not an artifact. Committed entry in CONTEXT.md or short ADR under `docs/adr/` is an artifact. Pairs that only talk have not completed the exercise. This trains the Evidence Pack reflex: if it is not in the repo or tracker, it did not happen.
+Verbal summary is not an artifact. Committed entry in GLOSSARY.md or short ADR under `docs/adr/` is an artifact. Pairs that only talk have not completed the exercise. This trains the Evidence Pack reflex: if it is not in the repo or tracker, it did not happen.
 
 ## Live demo (required)
 
-Same real backlog item, three paths, side-by-side residual risk and CONTEXT.md update:
+Same real backlog item, three paths, side-by-side residual risk and GLOSSARY.md update:
 - Path A: raw accept-everything
 - Path B: weak grill (no pillars, no artifact)
 - Path C: full three-pillar `/grill-with-docs` with correct priming
@@ -124,7 +132,7 @@ Students state the difference in residual risk and reviewability in one sentence
 ## Instructor reset scripts
 
 - Defaulting to grill: “Route decision missing. State the one-sentence reason for the skill you chose. Restart.”
-- No artifact: “CONTEXT.md / ADR not committed. Credit is zero until the file exists.”
+- No artifact: “GLOSSARY.md / ADR not committed. Credit is zero until the file exists.”
 - Typing model-invoked skill as primary: “Architecture misunderstanding. `/implement` reaches `/code-review`. Restart from the correct user-invoked skill.”
 
 ---
@@ -186,6 +194,12 @@ Separate agent review of ticket + plan. Record ≥2 concrete findings (gaps, ris
 
 Each `/implement` starts from a clean context loaded with the ticket. Carrying prior conversation forward produces self-approval bias.
 
+## `/implement-spec` (alternate, not the Day 3 exercise)
+
+User-invoked. Use it when the spec’s tickets should land together on one integration branch. The skill reads the tickets as a task graph and runs implementer subagents across the ready frontier. Each implementer confirms its worktree is based on the integration branch, builds with `/tdd`, and merges the integration tip back so the merge fast-forwards. Closeout is `/code-review`. The goal is the integration branch, not a pull request. A draft pull request opens only when the tracker closes work through pull requests, or the student asks, and only after the first merge.
+
+Day 3 practice stays on per-ticket `/implement`. Do not let a student skip the slice test or pre-Build review by choosing this path. Artifact 5 is still one Red→Green diff plus CI-green evidence, whether that diff came from `/implement` or from an implementer inside `/implement-spec`.
+
 ## Live demo
 
 Same small ticket: “just build it” vs full `/implement`. Show diffs, test coverage at seams, review findings, residual risk. Students feel the difference; the lecture is unnecessary.
@@ -218,21 +232,25 @@ Gate: every must-fix finding is committed as a fix the same day. Findings withou
 
 ## Prototype (throwaway answer to one design question)
 
-Two exclusive branches:
-- LOGIC — tiny interactive terminal app that drives the state machine and prints full state after every action.
+Two exclusive branches (skills v1.2, still current on v1.3.1):
+- LOGIC / state — one shareable HTML file (plain HTML/CSS/JS, no build). Labelled state, free-play buttons, tabbed guided walkthroughs. A non-developer opens it by double-click. The HTML shell is the throwaway. A portable logic module may lift into real code only after the verdict.
 - UI — several radically different variations on a single route, switchable via floating bar + URL parameter.
 
-Rules (from current skill):
+Rules (from the current skill):
 - Throwaway from day one, clearly marked.
 - Lives next to the real module.
-- One command to start.
+- Trivial to run (double-click the HTML file, or one project command for a UI route).
 - No persistence by default.
 - No tests or abstractions beyond runnable.
-- When answered: fold validated decision into real code; capture prototype on throwaway branch; leave pointer on the issue; record verdict. Hardening in place is process failure.
+- When answered: fold the validated decision into real code; commit the prototype on a `prototype/…` branch off the default branch; leave a pointer on the implementation issue; record the verdict and the question. Do not merge the branch. Do not delete it. Hardening the shell into production code is process failure.
+
+## `/pr` (model-invoked)
+
+When a pull request body is written, the shape is: a summary that is the smallest visual that makes the change clear, before/after evidence that it works, and a merge-danger call (one-way or two-way door, plus blast radius). Students do not type `/pr` as a chain step. Do not add it to the Evidence Pack.
 
 ## Instructor enforcement on Day 4
 
-Force dual-axis Spec ‖ Standards findings. Force same-day commits for every must-fix. Force at least one correctly branched throwaway prototype (never merged to default branch) with a recorded verdict. Use real diffs from Day 3.
+Force dual-axis Spec ‖ Standards findings. Force same-day commits for every must-fix. Force at least one prototype on a `prototype/…` branch (never merged, not deleted) with a recorded verdict. Use real diffs from Day 3. `/diagnosing-bugs` does not hand off into `/improve-codebase-architecture`. After a fix lands, `/retro` (Day 5) asks what would have prevented the bug. Architecture deepening is for a missing seam.
 
 **Pre-Build agent review (taught once):** After tickets and plan exist, before Build / `/implement`, run a separate review agent on ticket + plan; capture ~2 concrete findings (plan note or issue comment). Not a substitute for dual-axis closeout review.
 
@@ -244,7 +262,7 @@ Reset language: “Must-fix finding has no committed fix. Day is not complete. F
 
 ## Why no new theory
 
-Process practiced only when there is no deadline is not learned. Day 5 is pure execution on real open work, group review of artifacts, and structured `/ask-matt` decision log.
+Process practiced only when there is no deadline is not learned. Day 5 is pure execution on real open work, group review of artifacts, and structured `/ask-matt` decision log. `/retro` is a short close after that work (environment suggestions, most severe first, not product code). It is not a new lecture and not an Evidence Pack item. `/pr` fires only if a pull request body is actually written.
 
 Instructor job: enforcement only. Force missing pillars, kill tickets that fail the slice test, stop context pollution, protect the working session from new lecture content. Any “reality check” discussion is grounded solely in the artifacts just produced.
 
@@ -262,7 +280,7 @@ In the repo and the tracker:
 - At least one Red→Green `/implement` diff with CI-matching commands green.
 - Dual-axis review (Spec ‖ Standards) with committed fixes for every must-fix.
 - Three `/ask-matt` transcripts with written agreement or deviation.
-- Prototype on throwaway branch with recorded verdict (Evidence Pack artifact 8 — required).
+- Prototype on a `prototype/…` branch with recorded verdict (Evidence Pack artifact 8 — required). Not merged. Not deleted.
 
 Self-reported confidence is not a metric. The Evidence Pack is the metric.
 
@@ -304,7 +322,7 @@ Within 5 business days the student submits the Evidence Pack on real shipping wo
 5. At least one Red→Green implement diff; CI commands green; no in-loop refactor.
 6. Dual-axis review (Spec ‖ Standards); every must-fix has a committed fix same day.
 7. Three `/ask-matt` transcripts + one-sentence agreement/deviation each.
-8. Prototype on throwaway branch, verdict recorded, never merged to default branch (required artifact 8).
+8. Prototype on a `prototype/…` branch, verdict recorded, never merged to the default branch, branch left in place (required artifact 8).
 
 Missing any required artifact → fail. No partial credit. No self-report accepted.
 

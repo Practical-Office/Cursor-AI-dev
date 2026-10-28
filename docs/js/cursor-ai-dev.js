@@ -52,7 +52,7 @@
     "Honor-system only — self-reported on this device, not CI or certification.";
 
   const PROCESS_SYNC_BADGE =
-    "HTML synced 2026-09-22 to process v1.1 (process dated 2026-09-16)";
+    "HTML synced 2026-10-28 to process v1.2 (process dated 2026-10-28)";
 
   const ESCALATE_PAGES = new Set(["setup", "module-1", "module-2", "module-3", "module-4", "module-5"]);
 
@@ -60,9 +60,10 @@
   → /to-spec (3 sections · synthesis only)
   → /to-tickets (slice test)
   → pre-Build review (≥2 findings)
-  → /implement (Red→Green + CI)
+  → /implement (Red→Green + CI)   # alternate: /implement-spec
       └─ auto /code-review
-  → must-fix committed`;
+  → must-fix committed
+  → /retro (environment, not code; not an Evidence Pack item)`;
 
   const body = document.body;
   const base = body.dataset.base || "";
