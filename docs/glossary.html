@@ -28,7 +28,7 @@
         <section class="hero">
           <span class="status-chip">Domain language</span>
           <h1>Course <em>glossary</em></h1>
-          <p class="hero-lede">Exact terms used across modules. Sourced from <code>CONTEXT.md</code> and teaching vocabulary. Use these words consistently in artifacts and reviews.</p>
+          <p class="hero-lede">Exact terms used across modules. Sourced from repo-root <code>GLOSSARY.md</code> and teaching vocabulary. Use these words consistently in artifacts and reviews. Skills pin: mattpocock/skills v1.3.x (verified 1.3.1 on October 28, 2026).</p>
         </section>
 
         <div class="section-card">
@@ -132,6 +132,30 @@
               <dt>Must-fix</dt>
               <dd>Review finding that blocks merge. Requires a committed diff before end of session — not a verbal promise.</dd>
             </div>
+            <div class="glossary-term">
+              <dt><code>/implement-spec</code></dt>
+              <dd>User-invoked alternate to per-ticket <code>/implement</code>. One spec, one integration branch, implementer subagents on the ready frontier, each using <code>/tdd</code>, closeout <code>/code-review</code>. The goal is the branch. Not the Day 3 exercise. Slice test and pre-Build review still apply.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt><code>/pr</code></dt>
+              <dd>Model-invoked shape of a pull request body: smallest visual that makes the change clear, before/after evidence that it works, and a merge-danger call (one-way or two-way door, plus blast radius). Not a typed chain step.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt><code>/retro</code></dt>
+              <dd>User-invoked close after review. Suggestions for the agent’s environment (navigation, checks, standards, steering files, tooling), most severe first. Not a product-code change. Not an Evidence Pack artifact.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt><code>/wizard</code></dt>
+              <dd>Model-invoked. An interactive script for steps only a human can perform. The agent still does the steps it can do itself.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt><code>/wait-what</code></dt>
+              <dd>User-invoked. The moment a message does not land, the agent re-pitches it in plain language using <code>GLOSSARY.md</code>. Repairs one message. Does not replace <code>/grill-with-docs</code>.</dd>
+            </div>
+            <div class="glossary-term">
+              <dt><code>/to-questionnaire</code></dt>
+              <dd>User-invoked. A decision you cannot answer alone, written as a questionnaire for the person who can. The interview is about the send (who it is for, what you need back), not the subject.</dd>
+            </div>
           </dl>
         </div>
 
@@ -144,7 +168,7 @@
             </div>
             <div class="glossary-term">
               <dt>Issue tracker</dt>
-              <dd>Tool hosting repo issues (GitHub Issues, Linear, or local <code>.scratch/</code> markdown). Skills such as <code>/to-tickets</code>, <code>/to-spec</code>, <code>/triage</code> read and write here.</dd>
+              <dd>Tool hosting repo issues, or local <code>.scratch/</code> markdown. Skills such as <code>/to-tickets</code>, <code>/to-spec</code>, and <code>/triage</code> read and write here.</dd>
             </div>
             <div class="glossary-term">
               <dt>Issue</dt>
@@ -152,7 +176,7 @@
             </div>
             <div class="glossary-term">
               <dt>Evidence artifact</dt>
-              <dd>Inspectable committed output proving a step occurred — e.g. <code>CONTEXT.md</code> entry, ADR stub, spec link, CI log. Chat recap alone does not count.</dd>
+              <dd>Inspectable committed output proving a step occurred — e.g. <code>GLOSSARY.md</code> entry, ADR stub, spec link, CI log. Chat recap alone does not count.</dd>
             </div>
           </dl>
         </div>
@@ -162,7 +186,7 @@
           <dl>
             <div class="glossary-term">
               <dt><code>/prototype</code></dt>
-              <dd>Throwaway answer to one design question. Lives on a throwaway branch or folder; verdict captured; never merged to the default branch.</dd>
+              <dd>Throwaway answer to one design question. Logic or state → one shareable HTML file (no build step). UI → several variations on one route. Kept on a <code>prototype/…</code> branch off the default branch, with the verdict and the question recorded on the issue or an ADR. Do not merge the branch. Do not delete it. Do not harden the shell into production code.</dd>
             </div>
             <div class="glossary-term">
               <dt>Kill test (BML only)</dt>
@@ -171,7 +195,7 @@
           </dl>
         </div>
 
-        <p class="footer-note">Canonical definitions: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/CONTEXT.md" target="_blank" rel="noopener noreferrer">CONTEXT.md</a> in the repo root.</p>
+        <p class="footer-note">Canonical definitions: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/GLOSSARY.md" target="_blank" rel="noopener noreferrer">GLOSSARY.md</a> in the repo root. Last updated October 28, 2026.</p>
 
         <div class="page-nav no-print" id="pageNav"></div>
       </main>

@@ -1,6 +1,8 @@
 # Handoff — Cursor-AI-dev
 
-## Current state (v4)
+## Current state (v4, process v1.2, 2026-10-28)
+
+Skills pin: mattpocock/skills v1.3.x (verified 1.3.1). Domain file is `GLOSSARY.md`. Changelog is §10 of the living process. Evidence Pack is still eight artifacts. `/retro` is not a ninth.
 
 https://practical-office.github.io/Cursor-AI-dev/ — hub + Setup + Modules 1–5 + quick-ref + certification + printable path, aligned with `MODULES-SOURCE-v4.md` for competent engineers with basic Cursor experience.
 

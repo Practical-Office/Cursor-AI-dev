@@ -34,7 +34,7 @@
           <p class="eyebrow">Before you start</p>
           <h3>Prerequisites</h3>
           <ul>
-            <li>Cursor Agent or Composer access</li>
+            <li>Cursor Agent access (local agent in the desktop app)</li>
             <li>Node/npm installed</li>
             <li>Git commit rights on a real repo</li>
             <li>≥1 backlog item ready</li>
@@ -70,14 +70,25 @@
           <p class="eyebrow">Exact steps</p>
           <h3>Install and verify</h3>
           <ol>
-            <li>Cursor open; Composer/Agent available (building surface). Chat is for thinking.</li>
-            <li><pre class="code-block"><code>npx skills@latest add mattpocock/skills</code></pre></li>
-            <li>Select official engineering skills <strong>and</strong> <code>/setup-matt-pocock-skills</code>.</li>
+            <li>Cursor open on the <strong>Agent</strong> surface. That is where you build. A side chat is for a question that must not steer the main thread. See the note below.</li>
+            <li><pre class="code-block"><code>npx skills@latest add mattpocock/skills -a cursor</code></pre></li>
+            <li>Select the engineering skills <strong>and</strong> <code>setup-matt-pocock-skills</code>. If this repo was installed before October 2026, run <code>npx skills@latest update</code>, then <code>add</code> again, so skills added on the v1.3.x line are present.</li>
             <li>Open your <strong>real</strong> working repo.</li>
-            <li>Run <code>/setup-matt-pocock-skills</code>; answer tracker / labels / doc layout.</li>
-            <li>Verify files written (<code>docs/agents/triage-labels.md</code>, <code>CONTEXT.md</code>, <code>docs/adr/</code>).</li>
-            <li>Recommended: <code>/setup-pre-commit</code> so local gates match CI.</li>
+            <li>Run <code>/setup-matt-pocock-skills</code>; answer tracker, labels (only if triage is installed), and doc layout.</li>
+            <li>Verify <code>GLOSSARY.md</code> (or the path setup recorded) and <code>docs/adr/</code>. If you installed <code>/triage</code>, also verify <code>docs/agents/triage-labels.md</code>. Setup skips that labels file when triage is not installed. A repo that indexes several glossaries uses <code>GLOSSARY-MAP.md</code>. Skills read only those names. If an older setup left a differently named glossary, rename it (the previous filename is in the <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/CURSOR-MATT-SKILLS-PROCESS.md" target="_blank" rel="noopener noreferrer">living-process changelog</a>).</li>
+            <li>Plan to run the same commands CI runs before you call <code>/implement</code> done. mattpocock/skills v1.3.x does not ship a pre-commit setup skill.</li>
           </ol>
+        </div>
+
+        <div class="section-card" id="agent-surfaces">
+          <p class="eyebrow">Agent surfaces · October 28, 2026</p>
+          <h3>Where this course runs</h3>
+          <p>Work the chain in the <strong>local Cursor Agent</strong>. The three surfaces below are current. They are not a substitute for the install, and this course does not grade or certify them. Day 1 repeats this note: <a href="module-1.html#m1-surfaces">Module 1</a>.</p>
+          <ul>
+            <li><strong>Cloud agents</strong> run in a Cursor-managed environment and can produce interactive canvases.</li>
+            <li><strong>Remote control</strong> lets you see and reply to a local agent from the Cursor iOS app. The agent stays on your computer. Enterprise organizations keep it off until an admin turns it on.</li>
+            <li><strong>Agent SDK</strong> packages an agent you ship as a folder (<code>instructions.md</code>, <code>tools/</code>, on-demand <code>skills/</code>). Start with <code>npx @cursor/agent-sdk init</code>. That packaging is not how you install mattpocock/skills into the repo you are learning in.</li>
+          </ul>
         </div>
 
         <div class="section-card">

@@ -30,7 +30,7 @@
             <div>
               <h2>Reality Check &amp; Core Setup</h2>
               <p class="module-time">Day 1</p>
-              <p class="sync-badge">HTML synced 2026-09-22 to process v1.1 (process dated 2026-09-16)</p>
+              <p class="sync-badge">HTML synced 2026-10-28 to process v1.2 (process dated 2026-10-28)</p>
             </div>
           </div>
 
@@ -64,24 +64,32 @@
 
           <div class="hard-truth" id="m1-hard-truth">
             <h3>Hard truth</h3>
-            <p>Grilling without all Three Pillars is theater. Verbal “share what changed” does not count — committed <code>CONTEXT.md</code> / ADR is the deliverable.</p>
+            <p>Grilling without all Three Pillars is theater. Verbal “share what changed” does not count — committed <code>GLOSSARY.md</code> / ADR is the deliverable.</p>
           </div>
 
           <div class="section-card" id="m1-surfaces">
             <p class="eyebrow">Core concepts</p>
             <h3>Cursor surfaces</h3>
             <ul>
-              <li><strong>Chat</strong> = thinking / Q&amp;A. Not the building surface.</li>
-              <li><strong>Composer / Agent</strong> = multi-file building, terminal, primary surface for code changes.</li>
+              <li><strong>Agent</strong> = the building surface for this course. Multi-file edits, terminal, and browser. Do not look for a separate Chat-versus-Composer split.</li>
+              <li><strong>Side chat</strong> = a question or tangent that must not steer the main agent thread. Not a second builder.</li>
               <li><strong>Rules</strong> = always-on static context (short, specific, point at examples).</li>
-              <li><strong>Skills</strong> = on-demand workflows; cost context only when invoked.</li>
+              <li><strong>Skills</strong> = on-demand workflows; cost context only when invoked. Install mattpocock/skills into the repo and type them in Agent.</li>
+            </ul>
+            <p style="margin-top:0.75rem"><strong>Other Cursor surfaces (note only, October 28, 2026).</strong> Not graded. Not certified. Same note as <a href="setup.html#agent-surfaces">Setup</a>.</p>
+            <ul>
+              <li><strong>Cloud agents</strong> run in a Cursor-managed environment and can produce interactive canvases. They do not replace a local agent in your repo for this chain.</li>
+              <li><strong>Remote control</strong> lets you see and reply to a local agent from the Cursor iOS app. The agent stays on your computer. Enterprise organizations keep it off until an admin turns it on.</li>
+              <li><strong>Agent SDK</strong> packages an agent you ship as a folder (<code>instructions.md</code>, <code>tools/</code>, on-demand <code>skills/</code>). Test with evals, then deploy to Cursor or your own infrastructure (<code>npx @cursor/agent-sdk init</code>). That is not how you install mattpocock/skills for these modules.</li>
             </ul>
           </div>
 
           <div class="section-card" id="m1-taxonomy">
             <h3>Skill taxonomy (architecture)</h3>
-            <p><strong>User-invoked</strong> (you type): ask-matt, grill-with-docs, wayfinder, triage, improve-codebase-architecture, setup-matt-pocock-skills, to-spec, to-tickets, implement</p>
-            <p style="margin-top:0.5rem"><strong>Model-invoked</strong> (agent reaches; not typed as normal flow step): prototype, diagnosing-bugs, research, tdd, domain-modeling, codebase-design, code-review, resolving-merge-conflicts</p>
+            <p><strong>User-invoked</strong> (you type): ask-matt, grill-with-docs, wayfinder, triage, improve-codebase-architecture, setup-matt-pocock-skills, to-spec, to-tickets, implement, implement-spec, retro</p>
+            <p style="margin-top:0.5rem"><strong>Model-invoked</strong> (agent reaches; not typed as normal flow step): prototype, diagnosing-bugs, research, tdd, domain-modeling, codebase-design, code-review, pr, wizard</p>
+            <p style="margin-top:0.5rem"><strong>Productivity</strong> (you type; not on the build chain): wait-what, to-questionnaire. <code>/wait-what</code> re-pitches one message that did not land, using <code>GLOSSARY.md</code>. <code>/to-questionnaire</code> turns a decision you cannot answer alone into a questionnaire for the person who can. The interview is about the send, not the subject.</p>
+            <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--ink-faint)"><code>/implement-spec</code> is the alternate to per-ticket <code>/implement</code> (Module 3). <code>/retro</code> closes a session with environment suggestions, not code changes (Module 5). <code>/pr</code> shapes a pull request body. <code>/wizard</code> scripts steps only a human can perform. Neither <code>/pr</code> nor <code>/wizard</code> is a typed chain step.</p>
             <p style="margin-top:0.75rem"><strong>Worked example — user-invoked vs model-invoked:</strong> You type <code>/implement</code> on a tracer-bullet ticket (user-invoked). The agent reaches <code>/tdd</code> for Red→Green, then auto-invokes <code>/code-review</code> (model-invoked). You do <strong>not</strong> type <code>/code-review</code> as a separate chain step.</p>
             <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--ink-faint)">Process: <a href="https://github.com/Practical-Office/Cursor-AI-dev/blob/main/docs/reference/CURSOR-MATT-SKILLS-PROCESS.md" target="_blank" rel="noopener noreferrer">living process</a>. External <a href="https://practical-office.github.io/dev-sops/skills.html">skills hub</a> may list SOP names this course bans — use this course chain only.</p>
           </div>
@@ -121,7 +129,7 @@
             <ol>
               <li>Real small backlog item.</li>
               <li><strong>Path A:</strong> Agent, accept most suggestions, “ship”.</li>
-              <li><strong>Path B:</strong> weak grill (few questions, no pillars, no CONTEXT update).</li>
+              <li><strong>Path B:</strong> weak grill (few questions, no pillars, no GLOSSARY.md update).</li>
               <li><strong>Path C:</strong> full three-pillar <code>/grill-with-docs</code> with correct <code>@</code> priming.</li>
               <li>Side-by-side: questions, assumptions destroyed, residual risk, plan clarity, durable artifact?</li>
             </ol>
@@ -131,7 +139,7 @@
           <div class="section-card" id="m1-practice">
             <p class="eyebrow">Practice (pairs)</p>
             <p>Two real backlog items each. Write one-sentence <strong>routing</strong> decision (not just “triage”). Run the correct user-invoked skill.</p>
-            <p style="margin-top:0.75rem"><strong>Deliverable (binary):</strong> committed <code>CONTEXT.md</code> entry or ADR stub per item. Verbal share does not count. No artifact → no credit.</p>
+            <p style="margin-top:0.75rem"><strong>Deliverable (binary):</strong> committed <code>GLOSSARY.md</code> entry or ADR stub per item. Verbal share does not count. No artifact → no credit.</p>
           </div>
 
           <div class="section-card">
@@ -143,7 +151,7 @@
             <p class="eyebrow">Success criteria</p>
             <ul class="checklist">
               <li><label><input type="checkbox" data-progress="m1-c1" /> Setup gate still holds — I can point at tracker, labels, and domain-doc path files from <a href="setup.html">Setup</a></label></li>
-              <li><label><input type="checkbox" data-progress="m1-c2" /> ≥1 committed CONTEXT.md / ADR from real item</label></li>
+              <li><label><input type="checkbox" data-progress="m1-c2" /> ≥1 committed GLOSSARY.md / ADR from real item</label></li>
               <li><label><input type="checkbox" data-progress="m1-c3" /> Correct routing of new item without prompting (one-sentence reason recorded)</label></li>
               <li><label><input type="checkbox" data-progress="m1-c4" /> User-invoked vs model-invoked stated with examples (e.g. /implement → auto /code-review)</label></li>
             </ul>
@@ -153,7 +161,7 @@
             <p class="eyebrow">Stop / Start</p>
             <ul>
               <li><strong>Stop</strong> defaulting everything to <code>/grill-with-docs</code>. <strong>Start</strong> route before grill with a written one-sentence reason.</li>
-              <li><strong>Stop</strong> treating chat recap as the graded record. <strong>Start</strong> requiring committed <code>CONTEXT.md</code> / ADR before credit.</li>
+              <li><strong>Stop</strong> treating chat recap as the graded record. <strong>Start</strong> requiring committed <code>GLOSSARY.md</code> / ADR before credit.</li>
             </ul>
           </div>
 
