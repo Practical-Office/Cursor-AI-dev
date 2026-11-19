@@ -1,9 +1,9 @@
 # MODULES-SOURCE v4 — Cursor-AI-dev
 
-**Version:** 4.0 | **Updated:** 2026-09-10  
+**Version:** 4.1 | **Updated:** 2026-10-28  
 **Audience:** Competent software engineers with basic Cursor experience  
 **Tone:** Direct. Process-first. Zero cheerleading.  
-**Source of truth:** `CURSOR-MATT-SKILLS-PROCESS.md` — modules lag it.  
+**Source of truth:** `CURSOR-MATT-SKILLS-PROCESS.md` — modules lag it. Process v1.2, skills pin mattpocock/skills v1.3.x (verified 1.3.1).  
 **Published HTML:** `docs/*.html` — learner surface. This file is instructional density for regeneration and review.
 
 **Preferred chain (non-negotiable):**
@@ -16,12 +16,14 @@
 → pre-Build review         (ticket + plan; ≥2 concrete findings)
 → /implement               (Red→Green only at seams; CI-matching commands)
     └─ auto /code-review   (model-invoked; Standards ‖ Spec)
+   OR /implement-spec      (alternate: one integration branch; not the Day 3 exercise)
 → must-fix committed same day
+→ /retro                  (environment suggestions; not an Evidence Pack item)
 ```
 
 **Tracker skill (separate from routing):** `/triage` moves existing issues through the label state machine defined at setup.
 
-**Glossary:** `docs/glossary.html` — domain language for learners. Canonical terms in repo-root `CONTEXT.md`.
+**Glossary:** `docs/glossary.html` — domain language for learners. Canonical terms in repo-root `GLOSSARY.md`. Skills read that filename (or `GLOSSARY-MAP.md` when a repo indexes more than one).
 
 **Teacher Manual:** Instructor Textbook v4 (`docs/instructor-textbook.html`) + `WORKSHOP-AGENDA.md`. Learner HTML is the student surface; textbook is enforcement.
 
@@ -47,13 +49,13 @@ No Module 1 until setup output (tracker, labels, domain-doc layout) exists in th
 - **Skills** = on-demand workflows invoked by typing `/skill-name`. Cost context only when invoked.
 
 ### Exact steps
-1. Cursor open; Composer/Agent available (building surface). Chat is for thinking.
-2. `npx skills@latest add mattpocock/skills`
-3. Select official engineering skills **and** `/setup-matt-pocock-skills`
+1. Cursor open on the Agent surface (the building surface). A side chat is for a question that must not steer the main thread. See the agent-surfaces note in Module 1. Cloud agents, remote control, and the Agent SDK are not graded.
+2. `npx skills@latest add mattpocock/skills -a cursor`
+3. Select engineering skills **and** `setup-matt-pocock-skills`. If the repo was installed before October 2026, run `npx skills@latest update`, then `add` again.
 4. Open **real** working repo
-5. Run `/setup-matt-pocock-skills`; answer tracker / labels / doc layout
-6. Verify files written (`docs/agents/triage-labels.md`, `CONTEXT.md`, `docs/adr/`)
-7. Recommended: `/setup-pre-commit` so local gates match CI
+5. Run `/setup-matt-pocock-skills`; answer tracker, labels (only if triage is installed), and doc layout
+6. Verify `GLOSSARY.md` (or the path setup recorded) and `docs/adr/`. Verify `docs/agents/triage-labels.md` only when `/triage` was installed. Multi-glossary repos use `GLOSSARY-MAP.md`.
+7. Local commands inside `/implement` must match CI. mattpocock/skills v1.3.x does not ship a pre-commit setup skill.
 
 ### Binary checklist
 - [ ] install completed
@@ -81,19 +83,21 @@ Day 2 publishes a three-section spec — it does not re-drill routing. Nail rout
 Even experienced engineers treat the agent as autocomplete. Accept → ship → discover mess later. Cost is rework hours and review cycles, not first-draft speed. This module makes the cost visible on a real ticket.
 
 ### Hard truth
-Grilling without all Three Pillars is theater. Verbal "share what changed" does not count — committed `CONTEXT.md` / ADR is the deliverable.
+Grilling without all Three Pillars is theater. Verbal "share what changed" does not count — committed `GLOSSARY.md` / ADR is the deliverable.
 
 ### Core concepts that must land
 
 **Cursor surfaces**
-- Chat = thinking / Q&A. Not building surface.
-- Composer / Agent = multi-file building, terminal, primary surface for code changes.
+- Agent = building surface (multi-file edits, terminal, browser). There is no Chat-versus-Composer split to teach.
+- Side chat = a question that must not steer the main thread. Not a second builder.
 - Rules = always-on static context (short, specific, point at examples).
 - Skills = on-demand workflows; cost context only when invoked.
+- Note only (October 28, 2026; not graded, not certified): cloud agents (Cursor-managed environment, can produce canvases); remote control (see and reply to the local agent from the Cursor iOS app; the agent stays on the computer; Enterprise off until an admin enables it); Agent SDK (an agent you ship as a folder: `instructions.md`, `tools/`, on-demand `skills/`; `npx @cursor/agent-sdk init`). The SDK is not how learners install mattpocock/skills.
 
 **Skill taxonomy (architecture)**
-- **User-invoked** (you type): ask-matt, grill-with-docs, wayfinder, triage, improve-codebase-architecture, setup-matt-pocock-skills, to-spec, to-tickets, implement
-- **Model-invoked** (agent reaches; not typed as normal flow step): prototype, diagnosing-bugs, research, tdd, domain-modeling, codebase-design, code-review, resolving-merge-conflicts
+- **User-invoked** (you type): ask-matt, grill-with-docs, wayfinder, triage, improve-codebase-architecture, setup-matt-pocock-skills, to-spec, to-tickets, implement, implement-spec, retro
+- **Model-invoked** (agent reaches; not typed as normal flow step): prototype, diagnosing-bugs, research, tdd, domain-modeling, codebase-design, code-review, pr, wizard
+- **Productivity** (you type; not the build chain): wait-what, to-questionnaire
 
 **Worked example — user-invoked vs model-invoked:** Student types `/implement` on a tracer-bullet ticket (user-invoked). Agent reaches `/tdd` for Red→Green, then auto-invokes `/code-review` (model-invoked). Do **not** type `/code-review` as a separate chain step.
 
@@ -117,7 +121,7 @@ Never default every item into `/grill-with-docs`. For existing issues that need 
 ### Live demo (instructor)
 1. Real small backlog item.
 2. Path A: Agent, accept most suggestions, "ship".
-3. Path B: weak grill (few questions, no pillars, no CONTEXT update).
+3. Path B: weak grill (few questions, no pillars, no GLOSSARY.md update).
 4. Path C: full three-pillar `/grill-with-docs` with correct `@` priming.
 5. Side-by-side: questions, assumptions destroyed, residual risk, plan clarity, durable artifact?
 
@@ -125,17 +129,17 @@ Students state the difference in one sentence each.
 
 ### Practice (pairs)
 Two real backlog items each. Write one-sentence **routing** decision (not just "triage"). Run correct user-invoked skill.  
-**Deliverable (binary):** committed CONTEXT.md entry or ADR stub per item. Verbal share does not count. No artifact → no credit.
+**Deliverable (binary):** committed GLOSSARY.md entry or ADR stub per item. Verbal share does not count. No artifact → no credit.
 
 ### Success criteria (binary)
 - [ ] Setup gate still holds — student can point at tracker, labels, domain-doc path files from Setup
-- [ ] ≥1 committed CONTEXT.md / ADR from real item
+- [ ] ≥1 committed GLOSSARY.md / ADR from real item
 - [ ] Correct routing of new item without prompting (one-sentence reason recorded)
 - [ ] User-invoked vs model-invoked stated with examples (e.g. /implement → auto /code-review)
 
 ### Stop / Start
 - Stop defaulting everything to `/grill-with-docs`. Start route before grill with written one-sentence reason.
-- Stop treating chat recap as the graded record. Start requiring committed CONTEXT.md / ADR before credit.
+- Stop treating chat recap as the graded record. Start requiring committed GLOSSARY.md / ADR before credit.
 
 ### Instructor enforcement
 Kill pairs still "just chatting." Force the artifact. If they cannot name the pillar used, the grill failed.
@@ -261,6 +265,7 @@ Separate agent review of ticket + plan. Record ≥2 concrete findings (gaps, ris
 - **Slice test:** one-sentence user-observable behavior + recorded blockers. Fail either → re-slice.
 - **Refactor:** improving structure without changing behavior. Happens in `/code-review` — not inside `/implement` loop.
 - **`/implement`:** Red→Green only at seams. Runs **CI-equivalent commands** (same checks as PR pipeline). Auto-invokes `/code-review`. Context cleared between tickets.
+- **`/implement-spec` (alternate, not the Day 3 exercise):** user-invoked. One spec, one integration branch. Tickets are a task graph. Implementer subagents work the ready frontier, each with `/tdd`, and the branch fast-forwards. Closeout is `/code-review`. The goal is the integration branch. A draft pull request opens only if the tracker closes work through pull requests, or you ask, and only after the first merge. Slice test and pre-Build review still apply.
 - **CI = pipeline green:** "Agent said tests passed" ≠ done. Run the same commands your PR runs.
 
 ### Live demo
@@ -300,10 +305,12 @@ Every must-fix has a committed diff before day end. A review with zero fixes is 
   - **Spec** — does the diff match the originating ticket? ("no spec available" if none).
   Must-fix findings require committed diff before leaving.
 - **`/improve-codebase-architecture`:** HTML report of deepenings → skill grills the selected opportunity. Reject large-rewrite proposals.
-- **`/prototype`:** throwaway answer to **one** design question on **throwaway branch or folder**.
-  - Logic/state feel right? → LOGIC terminal app (print full state).
+- **`/prototype`:** throwaway answer to **one** design question, kept on a `prototype/…` branch.
+  - Logic or state? → one shareable HTML file (plain HTML/CSS/JS, no build): labelled state, free-play buttons, tabbed guided walkthroughs.
   - What should it look like? → UI variants on one route + floating toggle bar.
-  - Rules: marked throwaway, next to real code, one command to run, no persistence default, no polish, capture verdict, **never merge to default branch**.
+  - Rules: marked throwaway, next to the real module, trivial to run, no persistence by default, no polish. Fold the validated decision into real code. Commit the prototype on `prototype/…` (not the default branch). Point at that branch from the implementation issue. Record the verdict and the question. **Do not merge. Do not delete. Do not harden the shell.**
+- **`/pr`** (model-invoked): pull request body = smallest visual of the change, before/after evidence, merge-danger call (one-way or two-way door, plus blast radius). Not a typed chain step.
+- **`/retro`** (user-invoked close, Day 5): environment suggestions, most severe first. Not a code change. `/diagnosing-bugs` does not hand off into `/improve-codebase-architecture`. After a fix, `/retro` asks what would have prevented it. Use `/improve-codebase-architecture` for a missing seam.
 
 ### Worked example — diagnosing loop cue
 
@@ -312,18 +319,18 @@ Every must-fix has a committed diff before day end. A review with zero fixes is 
 **Good:** "Hypothesis: upstream API returns 503 under load. Next experiment: log response status on failing path only. If 503 confirmed, add circuit breaker at client seam."
 
 ### Practice
-Every must-fix committed before day end. ≥1 prototype on throwaway branch/folder, removed from default branch, verdict recorded. (Pre-Build review was taught on Day 3 — apply it before every `/implement`.)
+Every must-fix committed before day end. ≥1 prototype on a `prototype/…` branch (not the default branch), verdict and question recorded. Leave the branch in place. (Pre-Build review was taught on Day 3 — apply it before every `/implement`.)
 
 ### Success criteria (binary)
 - [ ] Diagnosing loop; hypothesis before each fix
 - [ ] Review names ≥2 concrete code-quality patterns + spec-axis findings
 - [ ] Every must-fix committed before leaving
-- [ ] One prototype: throwaway branch/folder, verdict recorded, not on default branch
+- [ ] One prototype: `prototype/…` branch, verdict recorded, not merged to the default branch
 
 ### Stop / Start
 - Stop leaving findings unacted. Start requiring committed fixes before close.
 - Stop settling "does this feel right?" during implement. Start `/prototype` first.
-- Stop merging prototype branches. Start capturing verdict and deleting throwaway work.
+- Stop merging prototype branches or deleting them after the answer. Start keeping the prototype on `prototype/…` and recording the verdict on the issue.
 
 ---
 
@@ -352,7 +359,9 @@ Process practiced only under low pressure is not learned. Day 5 = execution + ar
 → /implement  (Red→Green + CI-equivalent green)
     └─ auto /code-review  (model-invoked; Standards ‖ Spec)
 → must-fix committed
+→ /retro  (environment; not an Evidence Pack item)
 ```
+`/implement-spec` is the alternate at implement (one integration branch). Not the Day 3 exercise. `/pr` is model-invoked when a pull request body is written.
 `/code-review` is nested under `/implement` — not a separate typed chain step.
 
 ### Group reviews
@@ -369,10 +378,10 @@ Deliverable: three transcripts + three sentences. Not freeform prose.
 | Day | Artifact type |
 |-----|---------------|
 | Setup | Inspectable setup output (tracker, labels, domain-doc path) |
-| 1 | Committed CONTEXT.md / ADR + routing decision |
+| 1 | Committed GLOSSARY.md / ADR + routing decision |
 | 2 | Three-section spec (all sections complete) |
 | 3 | Slice-test ticket graph + pre-Build review (≥2 findings) + Red→Green implement diff + CI evidence |
-| 4 | Dual-axis review + committed must-fix + prototype verdict (Evidence Pack artifact 8) |
+| 4 | Dual-axis review + committed must-fix + prototype verdict on `prototype/…` (Evidence Pack artifact 8) |
 | 5 | Full chain on real work + three `/ask-matt` logs |
 
 ### Week success criteria (binary, inspected)
@@ -388,13 +397,13 @@ Deliverable: three transcripts + three sentences. Not freeform prose.
 
 ## GLOSSARY (learner surface: docs/glossary.html)
 
-Key terms: route before grill, `/triage` tracker skill, `@` files, foggy/weak-context, properly primed, grilling engine, seam, user-invoked, model-invoked, three-section spec, tracer-bullet ticket, slice test, group review, Red→Green only, refactor, CI, dual-axis review, pre-Build review, must-fix, evidence artifact, `/prototype`, kill test (BML only).
+Key terms: route before grill, `/triage` tracker skill, `@` files, foggy/weak-context, properly primed, grilling engine, seam, user-invoked, model-invoked, three-section spec, tracer-bullet ticket, slice test, group review, Red→Green only, refactor, CI, dual-axis review, pre-Build review, must-fix, evidence artifact, `/prototype`, `/implement-spec`, `/pr`, `/retro`, `/wizard`, `/wait-what`, `/to-questionnaire`, kill test (BML only).
 
 ---
 
 ## CERTIFICATION (evidence pack)
 
-**Policy (locked):** Exactly **eight required** binary artifacts on real shipping work. Artifact **8** is the throwaway `/prototype` branch/folder + verdict (not on default branch) — **required, not optional**. Non-waivable on full and intensive schedules; agenda completion does not waive artifact 8. Self-attest is not approval. Day 4 cohort practice produces artifact 8.
+**Policy (locked):** Exactly **eight required** binary artifacts on real shipping work. Artifact **8** is the throwaway `/prototype` branch (`prototype/…`, not on the default branch) + recorded verdict — **required, not optional**. Non-waivable on full and intensive schedules; agenda completion does not waive artifact 8. Self-attest is not approval. Day 4 cohort practice produces artifact 8. `/retro` is not a ninth artifact.
 
 Within 5 business days, submit on **real shipping work**:
 
@@ -405,7 +414,7 @@ Within 5 business days, submit on **real shipping work**:
 5. ≥1 Red→Green `/implement` diff + CI-green evidence (same commands as PR pipeline)
 6. Dual-axis review naming ≥2 concrete code-quality patterns + committed must-fixes
 7. Three `/ask-matt` transcripts + agreement/deviation sentences
-8. `/prototype` throwaway branch/folder + verdict (not on default branch) — required artifact 8
+8. `/prototype` on a `prototype/…` branch + recorded verdict (not merged to the default branch) — required artifact 8
 
 Missing any required artifact → fail. No partial credit. Measure only real experiments.
 

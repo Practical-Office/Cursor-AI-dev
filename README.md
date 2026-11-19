@@ -9,7 +9,7 @@ Living process + published onboarding course for disciplined Cursor + Matt Pococ
 
 ## Purpose
 
-Make competent engineers efficient and disciplined with Cursor + the current mattpocock/skills system (v1.1+).  
+Make competent engineers efficient and disciplined with Cursor + the current mattpocock/skills system (v1.3.x; verified 1.3.1 on 2026-10-28).  
 Not prompt monkeys. Not first-draft speed. Measured by rework reduction, domain-model clarity, and verifiable tickets.
 
 ## Source of truth
@@ -24,6 +24,8 @@ Not prompt monkeys. Not first-draft speed. Measured by rework reduction, domain-
 | Certification | `docs/certification.html` |
 
 Course modules **lag** the living process document. Never the reverse.
+
+**Last updated:** October 28, 2026. Living process v1.2. Changelog: [`docs/reference/CURSOR-MATT-SKILLS-PROCESS.md`](docs/reference/CURSOR-MATT-SKILLS-PROCESS.md) §10. Domain language: [`GLOSSARY.md`](GLOSSARY.md).
 
 **Content drift CI:** `scripts/check-course-content-drift.sh` enforces phrase/policy locks and sync-badge wording — not a full HTML ↔ `MODULES-SOURCE-v4.md` regenerate. Aligning published HTML with v4 after source edits is manual.
 

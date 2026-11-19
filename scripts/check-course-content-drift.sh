@@ -10,7 +10,7 @@ HUB="$ROOT/docs/index.html"
 PRINT="$ROOT/docs/course-full.html"
 JS="$ROOT/docs/js/cursor-ai-dev.js"
 
-SYNC_BADGE="HTML synced 2026-09-22 to process v1.1 (process dated 2026-09-16)"
+SYNC_BADGE="HTML synced 2026-10-28 to process v1.2 (process dated 2026-10-28)"
 
 PACK_PHRASES=(
   "eight required"

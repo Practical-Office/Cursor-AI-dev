@@ -9,13 +9,13 @@
 - Living process lives in `docs/reference/CURSOR-MATT-SKILLS-PROCESS.md`. Course modules lag it.
 - Instructional density for HTML modules: `docs/reference/MODULES-SOURCE-v4.md`.
 - Instructor textbook (enforcement): `docs/reference/Cursor-AI-dev-Instructor-Textbook-v4.md` → online page `docs/instructor-textbook.html`.
-- All domain language is defined in CONTEXT.md. Use exact terms.
-- Skills are installed via `npx skills@latest add mattpocock/skills`. Run `/setup-matt-pocock-skills` once per student repo before any engineering skill work.
+- All domain language is defined in GLOSSARY.md. Use exact terms.
+- Skills pin is mattpocock/skills v1.3.x. Install with `npx skills@latest add mattpocock/skills -a cursor`. Run `/setup-matt-pocock-skills` once per student repo before any engineering skill work.
 - Prefer the current mattpocock/skills taxonomy and main flow over any custom or outdated versions.
 
 ## Preferred skill chain (summary)
 
-`/setup-matt-pocock-skills` → route (`/wayfinder` | `/grill-with-docs`; `/triage` when tracker intake) → `/to-spec` → `/to-tickets` → pre-Build review (≥2 findings) → `/implement` (Red→Green + CI-matching verification; auto `/code-review` nested — model-invoked, not typed)
+`/setup-matt-pocock-skills` → route (`/wayfinder` | `/grill-with-docs`; `/triage` when tracker intake) → `/to-spec` → `/to-tickets` → pre-Build review (≥2 findings) → `/implement` (Red→Green + CI-matching verification; auto `/code-review` nested — model-invoked, not typed). Alternate at implement: `/implement-spec` (one integration branch). `/retro` after review is environment-only and is not an Evidence Pack item.
 
 ## Course content CI
 
